@@ -1,0 +1,80 @@
+<div class="{{block_prefix}}card  {{block_mod}}">
+	<div class="{{block_prefix}}preview  {{block_mod}}" style="background-image: url({{block_preview}})">
+		<h4 class="{{block_prefix}}heading  {{block_mod}}">{{block_heading}}</h4>
+		<div class="{{block_prefix}}rating  is--star  is--heading  {{block_mod}}"  data-reviews="comments (248)">
+			<select class="star-green-dim" name="rating" autocomplete="off">
+				<option value="1">1.0</option>
+				<option value="2">2.0</option>
+				<option value="3">3.0</option>
+				<option value="4" selected="selected">4.0</option>
+				<option value="5">5.0</option>
+			</select>
+		</div>
+	</div>
+	<div class="{{block_prefix}}elem-group  {{block_mod}}">
+		<div class="{{block_prefix}}elem  is--sm  {{block_mod}}">			
+			<div class="{{block_prefix}}icon-item  is--address  {{block_mod}}">
+				<div class="{{block_prefix}}icon  {{block_mod}}">
+					[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="icon-map" ]]
+				</div>
+				{{block_address}}
+			</div>
+		</div>
+		<div class="{{block_prefix}}elem  is--sm  {{block_mod}}">			
+			<a href="http://{{block_site}}" target="_blank" class="{{block_prefix}}icon-item  is--site  {{block_mod}}">
+				<div class="{{block_prefix}}icon  {{block_mod}}">
+					[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="icon-site" ]]
+				</div>
+				{{block_site}}
+			</a>
+		</div>
+		<div class="{{block_prefix}}elem  is--sm  {{block_mod}}">			
+			<a href="tel:{{block_tel}}" target="_blank" class="{{block_prefix}}icon-item  is--site  {{block_mod}}">
+				<div class="{{block_prefix}}icon  {{block_mod}}">
+					[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="icon-phone" ]]
+				</div>
+				{{block_phone}}
+			</a>
+		</div>
+		<div class="{{block_prefix}}elem  {{block_mod}}">
+			<div class="{{block_prefix}}icon-item  is--time  {{block_mod}}">
+				<div class="{{block_prefix}}icon  {{block_mod}}">
+					[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="icon-time" ]]
+				</div>
+				{{block_time}}
+			</div>
+		</div>
+		<div class="{{block_prefix}}elem  is--lg  {{block_mod}}">
+			<div class="{{block_prefix}}heading-small  {{block_mod}}">Description:</div>
+			<div class="{{block_prefix}}text  {{block_mod}}">
+				<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores asperiores voluptates earum, numquam minima.</div>
+			</div>
+		</div>
+
+		<div class="{{block_prefix}}elem  {{block_mod}}">
+			<!--<a href="#" class="{{block_prefix}}link  {{block_mod}}">
+				<div class="{{block_prefix}}link-icon  is--icon  {{block_mod}}">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="icon-360" ]]</div>
+				<img src="http://via.placeholder.com/200x95" alt="">
+			</a>-->
+			<a href="#" data-target="#modal-photo" data-toggle="modal" class="{{block_prefix}}link  {{block_mod}}">
+				<div class="{{block_prefix}}link-icon  {{block_mod}}">19 photo</div>
+				<img src="http://via.placeholder.com/110x95" alt="">
+			</a>
+		</div>	
+		<div class="{{block_prefix}}elem  is--mb0  {{block_mod}}">
+			<div class="{{block_prefix}}heading-small  {{block_mod}}">Rating</div>
+			<div class="{{block_prefix}}rating  is--star  is--xl  {{block_mod}}">
+				<select class="star-green-dim" name="rating" autocomplete="off">
+					<option value="1">1.0</option>
+					<option value="2">2.0</option>
+					<option value="3">3.0</option>
+					<option value="4" selected="selected">4.0</option>
+					<option value="5">5.0</option>
+				</select>
+			</div>
+			<div class="{{block_prefix}}rating-link  {{block_mod}}">
+				<a href="#" data-target="#modal-comments" data-toggle="modal">Read the comments (248)</a>			
+			</div>
+		</div>
+	</div>
+</div>

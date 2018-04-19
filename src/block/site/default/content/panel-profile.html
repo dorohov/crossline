@@ -1,0 +1,60 @@
+<div class="{{content_prefix}}panel  {{content_mod}}">
+	<div class="{{content_prefix}}inner  {{content_mod}}  is--full-btn">
+		<div class="{{content_prefix}}scroller mCustomScrollbar scroller  {{content_mod}}" data-mcs-theme="green-dim"> 
+			<div class="{{content_prefix}}container container  {{content_mod}}">
+				[[azbntple 
+					tpl="/src/block/site/default/page-header/heading.html" 
+					header_prefix="page-header__" 
+					header_mod="{{block_heading_mod}}"
+					header_level="h1"
+					header="{{block_heading}}"
+				]]
+				<div class="{{content_prefix}}row row  is--wrap  is--gutter  {{content_mod}}">
+					<div class="{{content_prefix}}cols cols  is--left  {{content_mod}}">
+						[[azbntple 
+							tpl="/src/block/site/default/card/card-user-profile.html" 
+							block_prefix="card-item__"
+							block_mod="is--profile"
+							block_preview="{{url-path-img}}/temp/profile-preview-290x290.jpg"
+						]]
+					</div> 
+					<div class="{{content_prefix}}cols cols  is--right  {{content_mod}}">
+						[[azbntple 
+							tpl="/src/block/site/default/form/panel-profile.html" 
+							form_prefix="form__"
+							form_mod="is--profile"	
+							form_id="fpf"	
+							form_color="  "
+						]]
+					</div> 
+				</div> 
+			</div> 
+		</div>
+	</div>
+	<div class="{{content_prefix}}btn-block  {{content_mod}}">
+		<div class="{{content_prefix}}container container  {{content_mod}}  is--nopadding">	
+			<div class="{{content_prefix}}row row  is--wrap  is--gutter  is--aic  {{content_mod}}">
+				<div class="{{content_prefix}}cols cols  is--btn  {{content_mod}}">
+					[[azbntple 
+						tpl="/src/block/site/default/button/link-icon-name.html"
+						button_prefix="btn-link__" 
+						button_mod="is--back"
+						button_link="{{page.index}}"
+						button_name="Return back"
+						button_icon="slick-left" 
+						button_attr="  " 
+					]]
+				</div>
+				<div class="{{content_prefix}}cols cols  is--btn  {{content_mod}}">
+					[[azbntple 
+						tpl="/src/block/site/default/button/button.html"
+						button_prefix="btn__" 
+						button_mod="is--md"
+						button_type="submit"
+						button_name="Save" 
+					]]
+				</div>
+			</div>
+		</div>
+	</div>
+</div> 

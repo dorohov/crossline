@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+	<head>
+		[[azbntple 
+			tpl="/src/block/site/default/head/.html" 
+			title=" "
+			description=" "
+		]] 		
+	</head>
+	<body class="is--login"> 
+		[[azbntple 
+			tpl="/src/block/site/default/navbar/panel-login.html"
+			navbar_prefix="navbar-login__"   
+			navbar_mod="  "     
+		]] 
+		[[azbntple  
+			tpl="/src/block/site/default/content/panel-create.html"
+			content_prefix="content-block__"
+			content_mod="is--login"
+			block_heading="Create to account"
+			block_heading_mod="is--login-heading"
+		]]
+		[[azbntple tpl="/src/block/site/default/script/script.html" ]]
+	</body>
+</html>

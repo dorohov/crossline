@@ -1,0 +1,47 @@
+<div class="{{block_prefix}}card  {{block_mod}}">
+	<div class="{{block_prefix}}row row  is--wrap  is--gutter  {{block_mod}}">
+		<div class="{{block_prefix}}cols cols  is--preview  {{block_mod}}">
+			<div class="{{block_prefix}}preview  {{block_mod}}  is--sm">
+				<img src="{{block_preview}}" alt="{{block_heading}}">		
+				[[azbntple 
+					tpl="/src/block/site/default/button/link-icon.html"
+					button_prefix="btn__" 
+					button_mod="{{block_mod}} is--photo"
+					button_icon="icon-photo" 
+					button_link="{{page.photos}}"
+				]]
+			</div>
+		</div>
+		<div class="{{block_prefix}}cols cols  is--desc  {{block_mod}}">
+			<div class="{{block_prefix}}btn  {{block_mod}}">
+				[[azbntple 
+					tpl="/src/block/site/default/button/link.html"
+					button_prefix="btn__" 
+					button_mod="is--xs"
+					button_link="{{page.index}}"
+					button_name="Send message"
+					button_attr="  "
+				]]
+			</div>
+			[[azbntple 
+				tpl="/src/block/site/default/page-header/heading.html" 
+				header_prefix="page-header__" 
+				header_mod="is--page-heading-xs"
+				header_level="h4"
+				header="Contacts"
+			]]
+			<div class="{{block_prefix}}elem-icon  {{block_mod}}">
+				<a href="tel:+55852689999" class="{{block_prefix}}icon-item  {{block_mod}}">
+					<div class="{{block_prefix}}icon  {{block_mod}}">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="icon-phone" ]]</div>
+					5 (585) 268-99-99
+				</a>
+			</div>
+			<div class="{{block_prefix}}elem-icon  {{block_mod}}">
+				<a href="mailto:helen@gmal.com" class="{{block_prefix}}icon-item  {{block_mod}}">
+					<div class="{{block_prefix}}icon  {{block_mod}}">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="icon-message" ]]</div>
+					helen@gmal.com
+				</a>
+			</div>
+		</div>
+	</div>			
+</div>

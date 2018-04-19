@@ -1,0 +1,25 @@
+<div class="{{block_prefix}}card  {{block_mod}}  {{block_mess}}">
+	<div class="{{block_prefix}}row  row  is--gutter  is--wrap  {{block_mod}}">
+		<div class="{{block_prefix}}cols cols  is--user  {{block_mod}}">
+			[[azbntple 
+				tpl="/src/block/site/default/card/card-user-panel-xs.html" 
+				block_prefix="card-item__"
+				block_mod="{{block_mod}}"
+				block_preview="{{block_preview}}"
+				block_status="{{block_status}}"
+			]] 
+		</div>
+		<div class="{{block_prefix}}cols cols  is--text  {{block_mod}}">
+			<div class="{{block_prefix}}text  {{block_mod}}">
+				<div class="{{block_prefix}}heading  {{block_mod}}">{{block_heading}}</div>
+				{{block_text}}				
+			</div>
+		</div>
+		<div class="{{block_prefix}}cols cols  is--date  {{block_mod}}">
+			<time datetime="{{block_date_iso}} {{block_time_iso}}" class="{{block_prefix}}date  {{block_mod}}">
+				<div>{{block_time}}</div>
+				<div>{{block_date}}</div>
+			</time>
+		</div>
+	</div>
+</div>

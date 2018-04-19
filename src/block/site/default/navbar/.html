@@ -1,0 +1,76 @@
+<nav class="{{class}} navbar {{navbar_mod}}">
+	<div class="{{navbar_prefix}}inner">
+		<div class="container {{navbar_prefix}}container">
+			<div class="{{navbar_prefix}}header">
+				<div class="row {{navbar_prefix}}row-header ">
+					<div class="cols {{navbar_prefix}}cols-header  is--hamburger">
+						<div class="{{navbar_prefix}}hamburger">
+							<button class="{{navbar_prefix}}hamburger-btn hamburger__item"  data-target="#bs-navbar-collapse" aria-expanded="false" data-toggle-nav=".navbar-left__panel" data-body="html" data-collapse-nav="">
+								<span class="hamburger__line  is--left"></span>
+								<span class="hamburger__line  is--center"></span>
+								<span class="hamburger__line  is--right"></span>
+							</button>
+						</div>
+					</div>
+					<div class="cols {{navbar_prefix}}cols-header  is--brand">
+						<a class="{{navbar_prefix}}brand" href="{{page.index}}"><img src="{{url-path-img}}/default/logotip.png" alt=""></a> 
+					</div>
+					<div class="cols {{navbar_prefix}}cols-header  is--hamburger">
+						<div class="{{navbar_prefix}}hamburger-search">
+							<button class="{{navbar_prefix}}hamburger-search-btn" data-toggle-nav=".navbar__collapse" data-body="html" data-collapse-nav="">
+								[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="icon-search" ]]
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+				
+			<div class="{{navbar_prefix}}collapse" >
+				<div class="{{navbar_prefix}}collapse-inner">	
+					<div class="row {{navbar_prefix}}collapse-row">
+						<div class="cols {{navbar_prefix}}collapse-cols cols  is--left">
+							<a class="{{navbar_prefix}}brand" href="{{page.index}}"><img src="{{url-path-img}}/default/logotip.png" alt=""></a> 
+						</div>
+						<div class="cols {{navbar_prefix}}collapse-cols cols  is--right">
+							<div class="row {{navbar_prefix}}collapse-inner-row  is--inner">
+								<div class="cols {{navbar_prefix}}collapse-inner-cols cols  is--meeting">	
+									<div class="{{navbar_prefix}}meeting">
+										<div class="{{navbar_prefix}}meeting-icon">
+											[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="icon-map" ]]
+										</div>
+										Next meeting: <span class="{{navbar_prefix}}meeting-clock"><span>03.30</span> pm</span>
+									</div>
+								</div>
+								<div class="cols {{navbar_prefix}}collapse-inner-cols cols  is--timer">
+									<div class="{{navbar_prefix}}timer">
+										Timer: 02:01:25
+									</div>									
+								</div>
+								<div class="cols {{navbar_prefix}}collapse-inner-cols cols  is--search">
+									<div class="{{navbar_prefix}}search">
+										<input type="text" class="{{navbar_prefix}}search-input" placeholder="Search on a map...">
+										<button type="button" class="{{navbar_prefix}}search-btn">
+											[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="icon-search" ]]
+										</button>
+
+									</div>
+								</div>
+								<div class="cols {{navbar_prefix}}collapse-inner-cols cols  is--settings">
+									<button type="button" class="{{navbar_prefix}}btn-settings" data-target="#modal-search" data-toggle="modal">
+										Search by parameters
+										<span class="{{navbar_prefix}}btn-settings-icon  is--settings">
+											[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="icon-settings" ]]
+										</span>
+										<span class="{{navbar_prefix}}btn-settings-icon  is--close">
+											[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="modal-close" ]]
+										</span> 
+									</button>									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>

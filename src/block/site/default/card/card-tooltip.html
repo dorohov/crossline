@@ -1,0 +1,42 @@
+<div class="{{block_prefix}}card  {{block_mod}}">
+	<button type="button" class="{{block_prefix}}close  {{block_mod}}">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="modal-close" ]]</button>
+	<h4 class="{{block_prefix}}heading  {{block_mod}}"><a href="#" data-target="#{{block_modal}}" data-toggle="modal">{{block_heading}}</a></h4>
+	<div class="{{block_prefix}}elem-group  {{block_mod}}">
+		<div class="{{block_prefix}}elem  is--rating  {{block_mod}}">
+			<div class="{{block_prefix}}rating  is--star  {{block_mod}}"  data-reviews="(248)">
+				<select class="star-green-dim" name="rating" autocomplete="off">
+					<option value="1">1.0</option>
+					<option value="2">2.0</option>
+					<option value="3">3.0</option>
+					<option value="4" selected="selected">4.0</option>
+					<option value="5">5.0</option>
+				</select>
+			</div>
+		</div>
+		<div class="{{block_prefix}}elem  is--address  {{block_mod}}">
+			{{block_address}}
+		</div>
+		<div class="{{block_prefix}}elem  {{block_mod}}">
+			<time class="{{block_prefix}}elem-item  is--date  {{block_mod}}" datetime="{{block_date_iso}}">Date: <span>{{block_date}}</span></time>
+		</div>
+		<div class="{{block_prefix}}elem  {{block_mod}}">
+			<div class="{{block_prefix}}elem-item  is--time  {{block_mod}}">
+				Time: <span>{{block_time}}</span>
+			</div>
+		</div>
+		<div class="{{block_prefix}}elem  {{block_mod}}">
+			<div class="{{block_prefix}}elem-item  is--people  {{block_mod}}">
+				Number of people: <span>{{block_people}}</span>
+			</div>
+		</div>
+		<div class="{{block_prefix}}elem  is--btn  {{block_mod}}">			 	
+			[[azbntple 
+				tpl="/src/block/site/default/button/button-modal.html"
+				button_prefix="btn__" 
+				button_mod="is--md-small"
+				button_target="{{block_modal}}"
+				button_name="More" 
+			]]
+		</div>
+	</div>
+</div>

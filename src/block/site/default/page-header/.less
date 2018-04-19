@@ -1,0 +1,230 @@
+.page-header__{	
+	&panel{	
+		&.is--friends-card,
+		&.is--friends{
+			padding-bottom: 25px;
+			border-bottom: 2px solid @white-dim;
+			margin-bottom: 30px;
+			@media @media-point-screen {margin-bottom: 1.7vw;}
+		}
+	}	
+	&container{}
+	&block{	
+		margin-bottom: 30px;
+		@media @media-point-screen {margin-bottom: 3.3vw;}
+		&.is--page-heading{}
+		&.is--page-heading-sm{
+			@media @media-point-screen-lg {
+				margin-bottom: 1.9vw;
+			}
+		}
+		&.is--page-heading-xs{
+			margin-bottom: 20px;
+		}
+		&.is--mb0{
+			margin-bottom: 0;
+		}
+		//block
+		&.is--friends-card,
+		&.is--friends{
+			margin-bottom: 0;
+		}
+		&.is--modals{
+			padding-right: 30px;
+			@media @media-point-screen-lg {
+				margin-bottom: 1.8vw;
+			}
+		}
+	}
+	&inner{}
+	&row{
+		align-items: center;
+	}
+	&cols{
+		&.is--friends{
+			@media @media-point-xxs {
+				.makeCols(12, 12);
+			}
+			&.is--btn{
+				margin-left: auto;				
+			}
+		}
+		&.is--friends-card{
+			&.is--right{
+				margin-left: auto;				
+			}
+		}
+	}
+	&btn{
+		&.is--reviews{
+			@media @media-point-notsmart {
+				grid-column-start: 2;
+				grid-row-start: 2;
+				text-align: right;
+			}
+		}
+		&.is--friends{
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			//justify-content: space-between;
+		}
+	}
+	&heading{
+		//color: @page_header_color;
+		margin: 0;
+		position: relative;
+		sup{
+			letter-spacing: 0;
+			font-size: @b-fs;
+			margin-left: 10px;
+			color: @black-dim;
+		}
+		@media @media-point-smart {
+			br {display: none;}
+		}		
+		&.is--page-heading{
+			.heading1();
+			font-weight: 500;
+			color: @green;
+		}		
+		&.is--login-heading{
+			.heading1();
+			text-align: center;
+			font-weight: 400;
+		}		
+		&.is--page-heading-sm{
+			.heading2();
+			font-weight: 500;
+		}			
+		&.is--page-heading-xs{
+			.heading4();
+			letter-spacing: 1px;
+			font-weight: 400;
+			text-transform: uppercase;
+		}
+		&.is--modals{
+			color: @b-color-a-hover;
+			.heading2();
+		}
+		&.is--black-dim{
+			color: @black-dim;
+		}
+		&.is--photo{
+			color: @black-dim;
+			font-weight: 700; 
+		}
+		&.is--center{
+			text-align: center;
+			@media @media-point-smart {text-align: left;}
+		}	
+		&.is--form-panel{
+			.heading2();
+			font-weight: 500;
+		}
+	}
+	&heading-small{
+		.calcFontSize(19, 23, 320, 1680);
+		.calcLineHeight(23, 27, 320, 1680);
+		//color: @b-color;
+		font-weight: 400;
+		margin: 0;
+		letter-spacing: 0.2px;
+		.page-header__heading + &{
+			padding-top: 5px;
+		}
+		//color
+		&.is--white{
+			color: @white;
+		}
+		&.is--center{
+			text-align: center;
+			@media @media-point-smart {text-align: left;}
+		}
+		@media @media-point-smart {
+			br {display: none;}
+		}
+		&.is--heading{
+			//font-weight: 700;
+		}
+		&.is--form-panel{
+			.heading4();
+			letter-spacing: 1px;
+			margin-bottom: 0px;
+			padding-bottom: 3px;
+			.page-header__heading + &{
+				@media @media-point-screen {
+					padding-top: 3px;
+				}
+			}
+		}
+		&.is--modals{
+			font-weight: 300;
+			font-size: @b-fs - 4;
+			line-height: @b-lh - 8;
+			.page-header__heading + &{
+				padding-top: 10px;
+			}
+		}	
+	}
+	&icon-row{
+		margin-right: -5px;
+		margin-left: -5px;
+	}
+	&icon-cols{
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	&heading-icon{
+		&.is--icon{
+			display: block;
+			width: 20px;
+			height: 20px;			
+			@media @media-point-notsmart {
+				width: 40px;
+				height: 40px;
+			}			
+		}
+	}
+	&elem-group{
+		&.is--friends-card{
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+	&elem{
+		&.is--friends-card{
+			color: @black-dim;
+			font-size: @b-fs - 2;
+			font-weight: 300;
+			margin-right: 15px; 
+			@media @media-point-screen {
+				margin-left: 2vw;
+				margin-right: 0;
+				&.is--online{
+					margin-left: 4vw;
+				}
+			}
+			&.is--birthdey{
+				position: relative;	
+				padding-left: 26px;			
+			}
+			&.is--years{
+				color: @b-color;
+			}
+		}
+	}
+	&elem-icon{
+		&.is--friends-card{
+			&.is--birthdey{
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+				color: @green-dim;	
+				width: 20px;
+				height: 20px;			
+			}
+		}
+	}
+}

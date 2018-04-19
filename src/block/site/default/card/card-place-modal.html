@@ -1,0 +1,75 @@
+<div class="{{block_prefix}}card  {{block_mod}}">
+	<h4 class="{{block_prefix}}heading  {{block_mod}}"><a href="#" data-target="#{{block_modal}}" data-toggle="modal">{{block_heading}}</a></h4>
+	<div class="{{block_prefix}}elem-group  {{block_mod}}">
+		<div class="{{block_prefix}}elem  is--rating  {{block_mod}}">
+			<div class="{{block_prefix}}rating  is--star  {{block_mod}}"  data-reviews="(248)">
+				<select class="star-green-dim" name="rating" autocomplete="off">
+					<option value="1">1.0</option>
+					<option value="2">2.0</option>
+					<option value="3">3.0</option>
+					<option value="4" selected="selected">4.0</option>
+					<option value="5">5.0</option>
+				</select>
+			</div>
+		</div>
+		<div class="{{block_prefix}}elem  is--address  {{block_mod}}">
+			{{block_address}}
+		</div>
+		<div class="{{block_prefix}}elem  is--desc  {{block_mod}}">
+			<div class="{{block_prefix}}heading-small  {{block_mod}}">Description:</div>
+			<div class="{{block_prefix}}text  {{block_mod}}">
+				<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores asperiores voluptates earum, numquam minima. Expedita temporibus in id minima rem.</div>
+			</div>
+		</div>
+		<div class="{{block_prefix}}elem  is--mb0  {{block_mod}}">
+			<time class="{{block_prefix}}icon-item  is--date  {{block_mod}}" datetime="{{block_date_iso}}">
+				<div class="{{block_prefix}}icon  {{block_mod}}">
+					[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="icon-date" ]]
+				</div>
+				{{block_date}}
+			</time>
+		</div>
+		<div class="{{block_prefix}}elem  {{block_mod}}">
+			<div class="{{block_prefix}}icon-item  is--time  {{block_mod}}">
+				<div class="{{block_prefix}}icon  {{block_mod}}">
+					[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="icon-time" ]]
+				</div>
+				{{block_time}}
+			</div>
+		</div>
+		<div class="{{block_prefix}}elem  is--select-people  {{block_mod}}">
+			<div class="{{block_prefix}}heading-small  {{block_mod}}">Number of peolple:</div>
+			<div class="{{block_prefix}}rating  is--people  {{block_mod}}" data-value="max">
+				<select class="people-green" name="rating" autocomplete="off">
+					<option value="1">1</option>
+					<option value="2" selected="selected">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+		</div>
+		<div class="{{block_prefix}}elem  is--mb0  {{block_mod}}">
+			<div class="{{block_prefix}}heading-small  {{block_mod}}">Organizer data:</div>
+			[[azbntple 
+				tpl="/src/block/site/default/card/card-user-panel.html" 
+				block_prefix="card-item__"
+				block_mod="is--user  is--modal" 
+				block_link="##"
+				block_heading="Helen Richer" 
+				block_age="19 years"
+				block_preview="http://via.placeholder.com/55x55"
+				block_status="is--online"
+			]]
+			<div class="{{block_prefix}}btn  {{block_mod}}">						
+				[[azbntple 
+					tpl="/src/block/site/default/button/link.html"
+					button_prefix="btn-link__" 
+					button_mod="  "
+					button_link="{{page.messages_chat}}"
+					button_name="Send a message"
+				]]
+			</div>
+		</div>
+	</div>
+</div>

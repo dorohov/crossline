@@ -1,0 +1,133 @@
+<div class="{{modals_prefix}}modal {{modals_mod}}" id="{{modals_id}}" tabindex="-1"  aria-hidden="true">
+	<div class="{{modals_prefix}}dialog  {{modals_mod}}">
+		<div class="{{modals_prefix}}body  {{modals_mod}}">
+			<button type="button" class="{{modals_prefix}}close  {{modals_mod}}" data-dismiss="modal" aria-hidden="true">
+				[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="modal-close"]]
+			</button>
+			<h4 class="{{modals_prefix}}heading  {{modals_mod}}">{{block_heading}}</h4>
+			<div class="{{modals_prefix}}row row  is--gutter  is--wrap  {{modals_mod}}">
+				<div class="{{modals_prefix}}cols cols  is--radius  {{modals_mod}}">
+					<div class="{{modals_prefix}}filter  {{modals_mod}}">
+						<div class="{{modals_prefix}}filter-heading  {{modals_mod}}">
+							Radius
+						</div>	
+						<div class="{{modals_prefix}}filter-elem  {{modals_mod}}">
+							<input type="text" class="js-radius-slider" />
+						</div>				
+					</div>
+				</div>
+				<div class="{{modals_prefix}}cols cols  is--gender  {{modals_mod}}">
+					<div class="{{modals_prefix}}filter  {{modals_mod}}">
+						<div class="{{modals_prefix}}filter-heading  {{modals_mod}}">
+							Gender
+						</div>
+						<div class="{{modals_prefix}}filter-elem  {{modals_mod}}">
+							[[azbntple 
+								tpl="/src/block/site/default/form/elem-switch.html"
+								form_id="fg"
+								block_id="fg-switch1"
+								form_prefix="form__"
+								form_mod="{{modals_mod}}"
+								block_mod_elem="  "
+								block_color="  "
+								block_attr="  "
+								block_required="  "
+								block_label="Male"
+								block_text="Male"
+							]]
+						</div>
+						<div class="{{modals_prefix}}filter-elem  {{modals_mod}}">
+							[[azbntple 
+								tpl="/src/block/site/default/form/elem-switch.html"
+								form_id="fg"
+								block_id="fg-switch2"
+								form_prefix="form__"
+								form_mod="{{modals_mod}}"
+								block_mod_elem="  "
+								block_color="  "
+								block_attr="  "
+								block_required="  "
+								block_label="Famale"
+								block_text="Famale"
+							]]
+						</div>
+					</div>
+				</div>
+				<div class="{{modals_prefix}}cols cols  is--age  {{modals_mod}}">
+					<div class="{{modals_prefix}}filter  {{modals_mod}}">
+						<div class="{{modals_prefix}}filter-heading  {{modals_mod}}">
+							Age
+						</div>
+						<div class="{{modals_prefix}}filter-elem  {{modals_mod}}">
+							<input type="text" class="js-range-slider" />
+						</div>
+					</div>
+				</div>
+				<div class="{{modals_prefix}}cols cols  is--period  {{modals_mod}}">
+					<div class="{{modals_prefix}}filter  {{modals_mod}}">
+						<div class="{{modals_prefix}}filter-heading  {{modals_mod}}">
+							Period of time
+						</div>
+						<div class="{{modals_prefix}}filter-elem  {{modals_mod}}">
+							<div class="row {{modals_prefix}}row  is--select  {{modals_mod}}">
+								<div class="cols {{modals_prefix}}cols  is--select  {{modals_mod}}">
+									[[azbntple 
+										tpl="/src/block/site/default/form/elem-select.html"
+										form_id="{{form_id}}"
+										block_id="day"
+										block_prefix="form__"
+										block_mod="  "
+										block_mod_elem="is--day"
+										block_color="  "
+										block_attr="  "
+										block_required="required"
+										block_label="Day"
+										block_option="<option disabled selected>Day</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option><option>13</option><option>14</option><option>15</option><option>16</option><option>17</option><option>18</option><option>19</option><option>20</option><option>21</option><option>22</option><option>23</option><option>24</option><option>25</option><option>26</option><option>27</option><option>28</option><option>29</option><option>30</option><option>31</option>"
+									]]
+								</div>
+								<div class="cols {{modals_prefix}}cols  is--select  {{modals_mod}}">
+									[[azbntple 
+										tpl="/src/block/site/default/form/elem-select.html"
+										form_id="month"
+										block_id="month"
+										block_prefix="form__"
+										block_mod="  "
+										block_mod_elem="is--month"
+										block_color="  "
+										block_attr="  "
+										block_required="required"
+										block_label="Month"
+										block_option="<option disabled selected>Month</option><option>January</option><option>February</option><option>March</option><option>April</option><option>May</option><option>June</option><option>July</option><option>August</option><option>September</option><option>October</option><option>November</option><option>December</option>"
+									]]
+								</div>
+							</div>
+							[[azbntple 
+								tpl="/src/block/site/default/form/elem-time-xs.html"
+								form_id="{{form_id}}"
+								block_id="month"
+								block_prefix="form__"
+								block_mod="{{modals_mod}}"
+								block_mod_elem="is--time"
+								block_color="  "
+								block_type="input"
+								block_attr="max='12'"
+								block_required="required"
+								block_label="Period of time"
+								block_placeholder="00:00"
+							]]
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="{{modals_prefix}}btn  {{modals_mod}}">
+				[[azbntple 
+					tpl="/src/block/site/default/button/button.html"
+					button_prefix="btn__" 
+					button_mod="  "
+					button_type="button"
+					button_name="Search" 
+				]]
+			</div>
+		</div>		
+	</div>
+</div>  

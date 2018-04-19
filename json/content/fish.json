@@ -1,0 +1,40 @@
+{
+	"contacts":{
+		"name":"crossline",
+		"domain":"crossline",
+		"domain_link":"http://crossline.com/",
+		"agreement_page":"agreement",
+		"copyright":"",
+		"email":"info@crossline.com",
+		"phone":"+7 (903) 728-10-81",  
+		"phone_tel":"+79037281081",   
+		"clock":"с&nbsp;9 до&nbsp;1:30",  
+		"address":"г.&nbsp;Москва, ул.&nbsp;Долгоруковская, д.7, БЦ&nbsp;«Садовая плаза»",
+		"address2":"г.&nbsp;Орёл, ул.&nbsp;Ломоносова, д.6, БЦ&nbsp;«Модус»",
+		"inn":"",
+		"ogrninn":""
+	},
+	"soc":{
+		"vk":"https://vk.com/",
+		"fb":"https://www.facebook.com/",
+		"ok":"https://ok.ru/group/",
+		"tw":"https://twitter.com/",
+		"inst":"https://www.instagram.com/"
+	},
+	"page":{
+		"index":"/",
+		"login":"/login.html",
+		"create":"/create.html",
+		"profile":"/profile.html",
+		"messages":"/messages.html",
+		"messages_chat":"/messages-chat.html",
+		"friends":"/friends.html",
+		"friends_card":"/friends-card.html",
+		"photo":"/photo.html"
+	},	                           
+	"url-path-css":"/css",
+	"url-path-img":"/img",
+	"url-path-js":"/js",
+	"url-path-plugins":"/plugins",
+	"url-path-favicon":"/favicon"
+}

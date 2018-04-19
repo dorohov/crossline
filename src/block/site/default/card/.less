@@ -1,0 +1,1071 @@
+.card-item__{
+	&card{
+		display: block;
+		position: relative;
+		transition: @trs-site;
+		&.is--place-accordion{
+			background-color: @white-dim;
+			padding-left: ~"calc(30px - 5px)"; 
+			padding-right: ~"calc(30px - 5px)"; 
+			@media @media-point-screen {
+				padding-left: ~"calc(4vw - 5px)"; 
+				padding-right: ~"calc(3vw - 5px)"; 
+			}
+			&.is--open{
+				background-color: @white;
+			}
+		}	
+		&.is--user{
+			padding-left: 80px;
+			font-size: @b-fs - 2;
+			line-height: @b-lh - 6;
+			font-weight: 300;
+			margin-bottom: 20px;	
+			&.is--modal{
+				margin-top: 20px;
+				padding-left: 70px;
+			}
+			&.is--invite{
+				margin-bottom: 0;
+				.btn-clearfix();
+				display: block;
+				width: 100%;
+				text-align: left;
+				transition: @trs-site;
+				border-top: 1px solid @white-dim;
+				padding-top: 20px;
+				padding-bottom: 25px;
+				&:last-child{
+					border-bottom: 1px solid @white-dim;
+				}
+				&:hover,
+				&.is--active{
+					background-color: @white-dim;
+				}
+				padding-left: ~"calc(@{modal_invite_pad_lr_device} + 75px)";
+				padding-right: ~"calc(@{modal_invite_pad_lr_device} + @{modal_invite_pad_r})";
+				@media @media-point-screen-lg {
+					padding-left: ~"calc(@{modal_invite_pad_lr} + 75px)";
+					padding-right: ~"calc(@{modal_invite_pad_lr} + @{modal_invite_pad_r})";
+				}
+			}		
+		}
+		&.is--messages{
+			border-bottom: 1px solid @white-dim;
+			padding: 20px 15px;
+			@media @media-point-screen {
+				padding: 1.65vw;
+			}
+			&.is--new{
+				background-color: @white-dim;
+				border-top: 2px solid @white;
+			}
+		}
+		&.is--friends{
+			border-width: 2px;
+			border-style: solid;
+			border-color: fadeout(@green-dim, 100%);
+			border-radius: 5px;
+			padding: 20px 15px;
+			@media @media-point-screen {
+				padding: 1.65vw;
+			}
+			&:hover,
+			&.is--active{
+				border-color: fadeout(@green-dim, 0%);
+			}
+		}
+		&.is--meetings{
+			border: 1px solid @white-dim;
+			border-radius: 5px;
+			padding: 23px 17px 33px;
+			height: 100%;
+			&:hover{
+				border-color: @green-dim;
+			}
+		}
+		&.is--chat{
+			margin-bottom: 10px;
+			&:first-child{
+				margin-top: 0;
+			}
+			&:last-child{
+				margin-bottom: 0;
+			}
+			& + .card-item__card.is--chat.is--for,
+			& + .card-item__card.is--chat.is--you{
+				margin-top: 45px;
+			}
+			&.is--for + .card-item__card.is--chat.is--for,
+			&.is--you + .card-item__card.is--chat.is--you{
+				margin-top: 0px;
+			} 
+			&.is--for{
+				@media @media-point-smart {
+					margin-right: 25px;
+				}
+			}
+			&.is--you{
+				@media @media-point-smart {
+					margin-left: 25px;
+				}
+			}
+		}
+		&.is--photo{
+		}
+		&.is--comments{
+			border-bottom: 1px solid @white-dim;
+			padding-bottom: 25px;
+			margin-bottom: 30px;
+			@media @media-point-screen {
+				padding-bottom: 1.5vw;
+				margin-bottom: 1.5vw;
+			}
+			&:last-child{
+				padding-bottom: 0;
+				margin-bottom: 0;
+				border-bottom: none;
+			}
+		}
+		&.is--tooltip{
+			position: absolute;
+			z-index: 10;
+			width: 275px;
+			background-color: @white;
+			border-radius: 3px;
+			padding: 30px;
+			color: @black-dim;
+			font-size: @b-fs - 2;
+			line-height: @b-lh - 4;
+			@media @media-point-notsmart {
+				box-shadow: 0px 11px 24px 0px fadeout(@blue-dim, 55%);
+			}
+			
+			//
+			transform: translate(-50%, -50%);
+			left: 50%;
+			top: 50%;
+		}
+	}
+	&fancybox{
+		&.is--photo-fan{
+			display: block;
+			height: 120px;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+		&.is--friends-card{
+			width: 0;
+			height: 0;
+			visibility: hidden;
+		}		
+	}
+	&inner{
+		transition: @trs-site;
+		position: relative;	
+		&.is--meetings{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 5px;
+			background-color: @green-dim;
+			padding: 23px 17px 23px;
+			text-align: center;
+			color: @white;
+			opacity: 0;
+			visibility: hidden;
+			.card-item__card.is--meetings:hover &{
+				opacity: 1;
+				visibility: visible;
+			}
+		}	
+	}
+	&row{
+		&.is--messages{
+			align-items: center;
+		}	
+		&.is--chat{			
+			&.is--you{
+				justify-content: flex-end;
+			}
+		}
+		&.is--photo-fan{
+			margin-left: -2.5px;
+			margin-right: -2.5px;
+		}	
+	}
+	&cols{
+		&.is--profile{
+			&.is--preview{
+				.makeCols(12, 12);
+				@media @media-point-tablet {
+					.makeCols(4, 12);
+					max-width: 255px;
+				}
+			}
+			&.is--desc{
+				.makeCols(12, 12);
+				@media @media-point-tablet {
+					.makeCols(8, 12);
+				}
+			}
+			&.is--preview,
+			&.is--desc{
+				@media @media-point-screen {
+					.makeCols(12, 12);
+				}
+			}
+			&.is--friends-card{
+				&.is--preview{
+					.makeCols(12, 12);
+					@media @media-point-xs {
+						.makeCols(4, 12);
+					}
+					@media @media-point-sm {
+						.makeCols(4, 12);
+					}
+					@media @media-point-md {
+						.makeCols(4, 12);
+					}
+				}
+				&.is--desc{
+					.makeCols(12, 12);
+					@media @media-point-xs {
+						.makeCols(8, 12);
+					}
+					@media @media-point-sm {
+						.makeCols(8, 12);
+					}
+					@media @media-point-md {
+						.makeCols(8, 12);
+					}
+				}				
+			}
+		}
+		&.is--messages{
+			&.is--user{
+				@media @media-point-screen {
+					.makeCols(2.5, 12);
+				}
+			}
+			&.is--text{
+				@media @media-point-screen {
+					.makeCols(8, 12);
+				}
+			}
+			&.is--date{				
+				@media @media-point-screen {
+					.makeCols(1.5, 12);
+					text-align: right;
+				}
+			}
+		}	
+		&.is--chat{
+			&.is--user{
+				min-width: 85px;
+				@media @media-point-smart {
+					display: none;
+				}
+			}
+			&.is--text{
+				@media @media-point-screen {
+					.makeCols(8.8, 12);
+				}
+			}
+			&.is--date{
+			    align-self: center;
+			    @media @media-point-smart {
+			    	padding-top: 5px;
+			    }
+			}
+			&.is--you{
+				@media @media-point-notsmart {					
+					&.is--user{
+						order: 1;
+					}
+					&.is--date{
+						order: -1;				
+					}
+				}
+			}
+		}
+		&.is--photo-fan{
+			padding-left: 2.5px;
+			padding-right: 2.5px;
+			.makeCols(6, 12);
+			margin-bottom: 5px;
+		}	
+	}
+	&user{
+		position: relative;
+		padding-left: 75px;
+		&.is--chat{
+			padding-left: 0;
+		}	
+		&.is--user{
+			font-size: @b-fs - 2;
+			line-height: @b-lh - 6;
+			font-weight: 300;
+		}
+		&.is--comments{
+			margin-bottom: 15px;
+		}
+		&.is--modal{
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+	}
+	&user-preview{
+		display: block;	
+		border-radius: 50%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		img{
+			border-radius: 50%;
+		}		
+		&::after{
+			content: '';
+			position: absolute;
+			z-index: 2;
+			bottom: 0;
+			right: 0;
+			width: 15px;
+			height: 15px;
+			border-radius: 50%;
+			border: 1px solid @white;
+			background-color: @black-dim;
+		}
+		&.is--online{
+			&::after{
+				background-color: @green-dim;
+			}
+		}
+		&.is--chat{
+			position: relative;
+		}
+		&.is--notstatus{
+			&::after{
+				display: none;
+			}
+		}
+		&.is--comments{
+			width: 46px;
+			height: 46px;
+		}
+	}
+	&preview{
+		display: block;
+		&.is--place-card-modal{
+			position: relative;		
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;	
+			padding-left: 15px;
+			padding-right: 15px;
+			padding-top: 30px;
+			padding-bottom: 30px;
+			@media @media-point-screen-lg {						
+				padding-left: 3vw;
+				padding-right: 3vw;
+				padding-top: 3vw;
+				padding-bottom: 3vw;
+			}
+			@media @media-point-xxl {						
+				padding-left: 6vw;
+				padding-right: 6vw;
+			}
+			&::before{
+				content: '';
+				position: absolute;
+				z-index: 1;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: fadeout(@black, 50%);
+			}
+		}	
+		&.is--profile{
+			position: relative;
+			max-width: 205px;
+			margin-bottom: 30px;
+			&.is--sm{
+				margin-bottom: 0;
+			}
+			@media @media-point-screen {
+				margin-bottom: 3.4vw;
+				&.is--sm{
+					margin-bottom: 0;
+				}
+			}
+			img{
+				border-radius: 50%;
+			}
+		}	
+		&.is--user{
+			border-radius: 50%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			img{
+				border-radius: 50%;
+			}
+			&.is--online{
+				&::after{
+					content: '';
+					position: absolute;
+					z-index: 2;
+					bottom: 0;
+					right: 0;
+					width: 15px;
+					height: 15px;
+					border-radius: 50%;
+					border: 1px solid @white;
+					background-color: @green-dim;
+				}
+			}
+			&.is--invite{
+				top: 20px;
+				left: @modal_invite_pad_lr_device;
+				@media @media-point-screen-lg {
+					left: @modal_invite_pad_lr;				
+				}
+			}
+		}
+	}
+	&heading{
+		transition: @trs-site;	
+		&.is--place-accordion{
+			display: block;
+			border-bottom: 1px solid @white;
+			padding-top: 22px;
+    		padding-bottom: 22px;
+    		.card-item__card:last-child &{
+    			border-bottom: 0;
+    		}
+    		&[aria-expanded="true"]{
+    			font-weight: 700;
+    			padding-bottom: 0px;
+    		}
+		}	
+		&.is--place-modal{
+			color: @b-color-a-hover;
+			.heading1();
+			font-weight: 400;
+			margin-bottom: 0;
+			@media @media-point-device-lg {
+				padding-right: 30px;
+			}
+		}
+		&.is--place-card-modal{
+			position: relative;
+			z-index: 2;
+			color: @white;
+			.heading2();
+			font-weight: 700;
+			margin-bottom: 0;
+		}
+		&.is--user{			
+			font-weight: 400;
+			color: @black7;
+			.heading-lg();
+			margin-bottom: 10px;
+			&.is--modal{
+				margin-bottom: 0;
+			}
+		}
+		&.is--messages{
+			color: @black7;
+		}
+		&.is--friends{
+			color: @black7;
+			.heading-lg();
+			.card-item__card:hover &,
+			.card-item__card.is--active &{
+				color: @b-color-a;
+			}
+		}	
+		&.is--meetings{
+			font-weight: 700;
+			color: @b-color-a-hover;
+			line-height: @b-lh - 4;
+			margin-bottom: 5px;
+			&.is--inner{
+				color: @white;
+			}
+		}	
+		&.is--chat{
+			font-size: @b-fs - 1;
+			line-height: @b-lh - 5;
+			margin-bottom: 10px;
+			@media @media-point-smart {
+				display: none;
+			}
+		}
+		&.is--comments{
+			font-size: @b-fs - 2;
+			line-height: @b-lh - 4;			
+		}
+		&.is--tooltip{
+			.heading2();
+			margin-bottom: 0px;
+		}
+	}
+	&heading-small{
+		transition: @trs-site;
+		&.is--place-modal{
+			text-transform: uppercase;
+			color: @black-dim;
+			font-size: @b-fs - 3;
+			line-height: @b-lh - 5;
+			margin-bottom: 10px;
+		}		
+		&.is--place-card-modal{
+			text-transform: uppercase;
+			color: @black-dim;
+			font-size: @b-fs - 3;
+			line-height: @b-lh - 5;
+			margin-bottom: 10px;
+		}
+		&.is--friends,
+		&.is--messages{
+			color: @b-color;
+			font-weight: 300;
+			font-size: @b-fs - 2;
+		}	
+		&.is--meetings{
+			font-weight: 300;
+			font-size: @b-fs - 2;
+			line-height: @b-lh - 6;
+			color: @black-dim;
+			margin-bottom: 15px;
+			&.is--inner{
+				color: @white;
+			}
+		}	
+	}
+	&bg{
+		&.is--photo{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+			background-color: @green-dim;
+			color: @white;
+			text-align: center;
+			font-size: @b-fs - 6;
+			line-height: @b-lh - 6;
+			opacity: 0;
+			transition: @trs-site;
+			.card-item__card:hover &{
+				opacity: 1;
+			}
+		}
+	}
+	&bg-inner{
+		&.is--photo{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+	&bg-icon{
+		&.is--photo{
+			position: relative;
+			width: 32px;
+			height: 32px;
+			border: 2px solid @white;
+			padding: 5px;
+			border-radius: 50%;
+			margin: 20px auto 25px;
+			svg{display: block;}		
+			.card-item__card:hover &{
+				animation: rotate 1s linear infinite;
+			}
+			&::before{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%) scale(0);
+				content: '';
+				width: 72px;
+				height: 72px;
+				border: 2px dotted fadeout(@white, 50%);
+				border-radius: 50%;
+				transition: @trs-site;				
+				.card-item__card:hover &{
+					transform: translate(-50%, -50%)  scale(1);
+				}
+			}
+		}
+	}
+	@keyframes rotate {
+		from {transform: rotate(0deg);}
+		to {transform: rotate(360deg);}
+	}
+	&btn{
+		&.is--friends{
+			position: absolute;
+			bottom: 10px;
+			right: 15px;
+			width: 22px;
+			height: 22px;
+			color: @green-dim;
+			opacity: 0;
+			transition: @trs-site;
+			transform: translateX(-5px);
+			.card-item__card:hover &,
+			.card-item__card.is--active &{
+				opacity: 1;
+				transform: translateX(0px); 
+			}
+		}
+		&.is--profile{
+			margin-bottom: 20px;
+			@media @media-point-screen {
+				margin-bottom: 2.2vw;
+			}
+		}
+	}
+	&elem-group{	
+		&.is--place-accordion{
+			font-size: @b-fs - 2;
+			line-height: @b-lh - 4;
+			font-weight: 300;
+			padding-left: 30px;
+			padding-bottom: 30px;
+		}	
+		&.is--place-card-modal{
+			padding-top: 25px;
+			padding-bottom: 25px;
+			padding-left: 15px;
+			padding-right: 15px;
+			@media @media-point-screen-lg {						
+				padding-left: 3vw;
+				padding-right: 3vw;
+			}
+			@media @media-point-xxl {						
+				padding-left: 6vw;
+				padding-right: 6vw;
+			}
+		}	
+	}
+	&elem{
+		transition: @trs-site;
+		&.is--place-accordion{
+			&.is--address{
+				color: @black-dim;
+				margin-bottom: 10px;
+			}
+			&.is--map{
+				padding-top: 10px;
+			}
+		}	
+		&.is--place-modal{
+			margin-bottom: 25px;
+			&.is--rating{
+				line-height: @b-lh - 6;
+				margin-bottom: 5px;
+			}
+			&.is--address{
+				color: @black-dim;
+			}
+			&.is--select-people{
+				padding-top: 5px;
+			}
+		}
+		&.is--place-card-modal{
+			margin-bottom: 30px;
+			&.is--lg{
+				margin-bottom: 20px;
+			} 
+			&.is--sm{
+				margin-bottom: 8px;
+			} 
+		}
+		&.is--meetings{
+			font-size: @b-fs - 4;
+			line-height: @b-lh - 4;		
+			&.is--map{
+				margin-bottom: 20px;
+			}
+		}
+		&.is--mb0{margin-bottom: 0;}
+		&.is--tooltip{
+			margin-bottom: 5px;
+			&.is--address{
+				margin-bottom: 20px;
+			}
+			&.is--btn{
+				padding-top: 25px;
+			}
+		}
+	}
+	&elem-item{
+		&.is--tooltip{
+			span{
+				color: @b-color;
+			}
+		}
+	}
+	&elem-icon{
+		transition: @trs-site;	
+		&.is--profile{
+			margin-bottom: 15px;
+			&:last-child{margin-bottom: 0;}	
+		}	
+	}
+	&icon-item{
+		display: inline-block;
+		position: relative;
+		padding-left: 20px;
+		&.is--place-accordion{
+			color: @b-color;
+			&.is--map{
+				font-weight: 700;
+				font-size: @b-fs - 6;
+				line-height: @b-lh - 6;
+				color: @b-color-a-hover; 
+				&:hover{
+					color: @b-color-a;
+				}
+			}
+		}
+		&.is--place-modal{
+			font-size: @b-fs - 2;
+			line-height: @b-lh - 4; 
+		}
+		&.is--place-card-modal{
+			color: @b-color;
+			font-size: @b-fs - 2;
+			line-height: @b-lh - 4;
+			padding-left: 30px;			
+		}
+		&.is--profile{			
+			padding-left: 40px;
+			font-weight: 300;
+			&,&:hover{color: @b-color;}
+		}
+		&.is--meetings{	
+			&.is--inner{
+				font-weight: 700;
+				color: @b-color-a-hover;
+			}	
+		}
+	}
+	&icon{
+		display: block;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		svg{display: block;}
+		&.is--profile{
+			width: 24px;
+			height: 24px;
+			border: 2px solid @green-dim;
+			border-radius: 50%;
+			padding: 5px;
+			color: @green-dim;
+			left: 0;
+		}
+		&.is--place-accordion{
+			width: 12px;
+			height: 12px;
+			color: @black-dim;	
+			left: 0;
+			&.is--map{
+				color: @green-dim;
+			}		
+		}
+		&.is--place-card-modal{
+			color: @green-dim;
+			width: 16px;
+			height: 16px;
+			left: 0;
+		}
+		&.is--place-modal{
+			width: 12px;
+			height: 12px;	
+			left: 0;		
+		}
+		&.is--invite{
+			transition: @trs-site;
+			width: 22px;
+			height: 22px;
+			right: 30px;
+			color:fadeout(@green-dim, 100%);
+			svg{  
+				width: 100%;
+				height: 100%;
+				fill: currentColor;
+				stroke: @green-dim;
+				stroke-width: 2px;
+			}
+			&.is--check{
+				opacity: 0;
+			}
+			.card-item__card:hover &,
+			.card-item__card.is--active &{
+				color: @b-color-a-hover;
+				svg{
+					stroke: @b-color-a-hover;
+				}
+			}
+			.card-item__card.is--active &{
+				&.is--add{
+					opacity: 0;
+				}
+				&.is--check{
+					opacity: 1;
+				}
+			}
+		}
+		&.is--meetings{
+			width: 12px;
+			height: 12px;
+			color: @black-dim;
+			left: 0;			
+			&.is--inner{
+				color: @b-color-a-hover;
+			}	
+		}
+	}
+	&text{
+		&.is--place-modal{
+			color: @black-dim;
+			font-size: @b-fs - 3;
+			line-height: @b-lh - 6;
+			p, div{
+				margin-bottom: 10px;
+			}
+		}
+		&.is--place-card-modal{
+			color: @black-dim;
+			font-size: @b-fs - 3;
+			line-height: @b-lh - 6;
+			p, div{
+				margin-bottom: 10px;
+			}
+		}
+		&.is--profile{
+			color: @black-dim;
+			font-size: @b-fs - 2;
+			line-height: @b-lh - 6;
+			p, div{
+				margin-bottom: 5px;
+			}
+			a{
+				display: inline-block;
+				margin-top: 10px;
+				font-size: @b-fs;
+				line-height: @b-lh - 4;
+			}
+		}
+		&.is--messages{
+			color: @black-dark-dim;
+			font-weight: 300;
+			font-size: @b-fs - 2;
+			line-height: @b-lh - 5;
+		}
+		&.is--chat{
+			position: relative;
+			background-color: @white;
+			border-radius: 5px;
+			font-size: @b-fs - 4;
+			line-height: @b-lh - 8;
+			padding: 15px;
+			@media @media-point-screen {
+				padding: 1.8vw 2.25vw;
+			}
+			.card-item__card.is--chat.is--for &{
+				&::before{
+					content: '';
+					position: absolute;
+					left: -10px;
+					top: 15px;
+					border-right: 10px solid fadeout(@white, 0%);
+					border-top: 9px solid fadeout(@white, 100%);
+					border-bottom: 9px solid fadeout(@white, 100%);
+				}
+			}
+			.card-item__card.is--chat.is--you &{
+				&::before{
+					content: '';
+					position: absolute;
+					right: -10px;
+					top: 15px;
+					border-left: 10px solid fadeout(@white, 0%);
+					border-top: 9px solid fadeout(@white, 100%);
+					border-bottom: 9px solid fadeout(@white, 100%);
+				}
+
+			}
+		}
+		&.is--comments{
+			font-size: @b-fs - 4;
+			line-height: @b-lh - 8;
+			color: @black-dim;
+		}
+	}
+	&date{
+		&.is--messages{
+			color: @b-color;
+			font-size: @b-fs - 2;
+			line-height: @b-lh - 2;
+		}
+		&.is--chat{
+			font-size: @b-fs - 2;
+			line-height: @b-lh - 2;
+			color: @black-dim;
+			font-weight: 300;
+			@media @media-point-smart {
+				font-size: @b-fs - 4;
+				line-height: @b-lh - 6;
+				div{display: inline-block;}
+			}
+		}
+	}
+	&link{
+		position: relative;
+		display: inline-block;
+		&.is--place-card-modal{
+			&::before{
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 1;
+				background-image: linear-gradient(0deg, fadeout(@black, 50%) 0%, fadeout(@black, 100%) 100%);
+			}
+		}
+	}
+	&link-icon{
+		&.is--place-card-modal{
+			color: @white;
+			position: absolute;
+			bottom: 10px;
+			left: 10px;
+			right: 10px;
+			z-index: 2;
+			font-size: @b-fs - 6;
+			line-height: @b-lh - 8;
+			&.is--icon{
+				width: 18px;
+				height: 18px;
+				right: inherit;
+			}
+		}
+	}
+	&rating{
+		position: relative;
+		&.is--place-modal{
+			&.is--star{
+				display: inline-block;
+				&::after{
+					content: attr(data-reviews);
+					color: @black-dim;
+					font-size: @b-fs - 2;
+					line-height: @b-lh - 6;
+					position: absolute;
+					top: 50%;
+					right: 0;
+					transform: translate(120%, -50%);				
+				}				
+			}
+			&.is--people{
+				//max-width: 285px;
+				padding-top: 10px;
+				max-width: 225px;				
+				@media @media-point-screen-lg {
+					max-width: 285px;
+				}
+				&::after{
+					content: attr(data-value);
+					color: @black-dim;
+					font-size: @b-fs - 6;
+					line-height: @b-lh - 6;
+					position: absolute;
+					top: 40%;
+					right: 0;
+					transform: translate(140%, -50%);				
+				}
+			}
+		}
+		&.is--place-card-modal{
+			position: relative;
+			z-index: 2;
+			&.is--star{
+				display: inline-block;
+				&::after{
+					content: attr(data-reviews);
+					color: @white;
+					font-size: @b-fs - 3;
+					line-height: @b-lh - 6;
+					position: absolute;
+					top: 50%;
+					right: 0;
+					transform: translate(110%, -50%);
+					white-space: nowrap;			
+				}
+			}
+			&.is--xl{
+				margin-bottom: 5px;
+			}
+		}
+		&.is--comments{
+			&.is--star{
+				display: inline-block;
+				&::after{
+					content: attr(data-reviews);
+					color: @b-color;
+					font-size: @b-fs - 6;
+					line-height: @b-lh - 6;
+					position: absolute;
+					top: 50%;
+					right: 0;
+					transform: translate(110%, -50%);
+					white-space: nowrap;				
+				}				
+			}
+		}
+		&.is--tooltip{
+			display: inline-block;
+			&::after{
+				content: attr(data-reviews);
+				color: @black-dim;
+				font-size: @b-fs - 2;
+				line-height: @b-lh - 6;
+				position: absolute;
+				top: 50%;
+				right: 0;
+				transform: translate(120%, -50%);				
+			}				
+		}
+	}
+	&close{
+		.btn-clearfix();
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		z-index: 5;
+		width: 30px;
+		height: 30px;
+		padding: 6px;
+		border-radius: 50%;		
+		color: @black-dim;
+		&:hover{
+			background-color: @orange;
+			color: @white;
+		}
+		svg{display: block;}
+	}
+}

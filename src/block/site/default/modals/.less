@@ -1,0 +1,779 @@
+//
+// Modals
+// --------------------------------------------------
+
+// .modal-open      - body class for killing the scroll
+// .modal           - container to scroll within
+// .modal-dialog    - positioning shell for the actual modal
+// .modal-content   - actual modal w/ bg and corners and shit
+
+// Kill the scroll on the body
+.modal-open {
+	overflow: hidden; 
+}
+.modal {
+	display: none;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: @zindex-modal;
+	-webkit-overflow-scrolling: touch;
+	outline: 0;
+	@media @media-point-smart {
+		&.fade .modal-dialog {left: -100%;}
+		&.in .modal-dialog {left: 0;}
+	}
+	@media @media-point-notsmart{
+		&.fade .modal-dialog {top: 0;}
+		&.in .modal-dialog {top: 5%;}
+	}
+	@media @media-point-md2{
+		&.fade .modal-dialog {top: 0;}
+		&.in .modal-dialog {top: 0%;}
+	}
+}
+.modal-open .modal {
+	overflow-x: hidden;
+	overflow-y: auto;
+	@media @media-point-notsmart{overflow-y: hidden;}
+	
+}
+.modal-backdrop {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: @zindex-modal-background;
+	background-color: @modal-backdrop-bg;
+	// Fade for backdrop
+	&.fade { .opacity(0); }
+	&.in { .opacity(0.90); }
+
+}
+/*.modal-dialog {
+	transition: all 0.5s;
+	position: relative;
+	width: auto;	
+	margin: 0px;
+	@media @media-point-tablet 	{width: 620px;	margin: 10px auto;}  
+	@media @media-point-screen 	{width: 600px;	margin: 0px auto;} 
+	 
+}
+.modal-body {
+	position: relative;
+	background: @white;
+	border-radius: 5px;
+	padding: 35px 40px;
+	@media @media-point-tablet{padding: 70px 60px 50px;}
+	@media @media-point-screen{padding: 3vw 3.2vw;}
+}
+.modal-content{}
+// Title text within header
+.modal-title {}
+.modal-close{
+    position: absolute;
+    top: 20px;
+	right: 20px; 
+    z-index: 5; 
+    border: 2px solid @b-color-a; 
+   	color: @b-color-a;
+   	background-color: @white; 
+   	border-radius: 50%;
+   	transition: @trs-site;  	 
+	width: 32px;
+	height: 32px;
+	padding: 7px;
+	top: 8px;
+	right: 8px;
+	svg{display: block;} 	
+		
+	&:hover{
+		background-color: @b-color-a;
+		border-color: @b-color-a;
+		color: @white;
+	}
+}
+.modal-note{
+	margin-bottom: 20px;
+}*/
+// Measure scrollbar width for padding body during modal show/hide
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+//mixin
+.modal-block(){
+	position: fixed;
+	top: @navbar-device;
+	width: 100%;
+	display: block!important;	
+	opacity: 0;
+	outline: 0;
+	-webkit-overflow-scrolling: touch;
+	overflow: hidden;
+	transform-origin: center right;
+	transition: @trs-site;
+	&.in{
+		opacity: 1;
+	}
+}
+.modal-dialog(){
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: @white;
+}
+.modal-close(){
+	.btn-clearfix();
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	z-index: 5;
+	width: 30px;
+	height: 30px;
+	padding: 6px;
+	border-radius: 50%;
+	border-width: 2px;
+	border-style: solid;
+	border-color: @green-dim;		
+	color: @b-color-a;
+	@media @media-point-screen-lg {			
+		top: 15px;
+		right: 15px;
+	}
+	&:hover{
+		border-color: @orange;
+		color: @white;
+		background-color: @orange;
+	}
+	svg{display: block;}
+}
+
+//custom styles
+.modal-right__{
+	&modal {
+		.modal-block();
+		right: 0;
+		bottom: 0;
+		z-index: 30;
+		transform: translate(100%, 0);
+		@media @media-point-xs {
+			width: 300px;
+		}
+		@media @media-point-notsmart {
+			width: @modal_left_width_device;
+		}
+		@media @media-point-screen-lg {
+			top: @navbar-screen;
+			max-width: 585px;
+			width: 31vw;
+		}
+		&.in{
+			transform: translate(0%, 0%);
+		}
+		&.is--friends{
+			@media @media-point-screen-xl {
+				position: relative;
+				transform: none;
+				top: inherit;
+				overflow: visible;
+				width: auto;
+				opacity: 1;
+			}
+		}		
+	}
+	&dialog {
+		.modal-dialog();
+		&.is--friends{
+			@media @media-point-screen-xl {
+				position: relative;
+			}
+		}
+		&.is--btn-bottom{
+			padding-bottom: 100px;
+			@media @media-point-screen-lg{
+				padding-bottom: ~"calc(4vw + 50px)";
+			}			
+		}
+		&.is--back{
+			padding-top: 54px;
+		}
+	}
+	&body{	
+		padding-top: 20px;
+		padding-bottom: 20px;
+		padding-left: 15px;
+		padding-right: 15px;
+		@media @media-point-device {
+			position: relative;
+			height: 100%;
+			overflow: auto;
+		}			
+		@media @media-point-screen {
+			padding-top: 3vw;
+			padding-bottom: 3vw;
+		}
+		@media @media-point-screen-lg {
+			padding-left: 3vw;
+			padding-right: 3vw;
+		}
+		@media @media-point-xxl {
+			padding-left: 6vw;
+			padding-right: 6vw;
+		}
+		&.is--meeting{
+			@media @media-point-xxl {
+				padding-top: 5vw;
+			}
+		}
+		&.is--place{padding: 0;}
+		&.is--friends{
+			@media @media-point-screen-xl {padding: 0}
+		}
+	}
+	&back{
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		background-color: @green-dim; 
+		padding-top: 15px;
+		padding-bottom: 15px;
+		padding-left: 15px;
+		padding-right: 15px;
+		@media @media-point-screen {
+			padding-left: 3vw;
+			padding-right: 3vw;
+		}
+		@media @media-point-xxl {
+			padding-left: 6vw;
+			padding-right: 6vw;
+		}		
+	}
+	&back-btn{
+		.btn-clearfix();
+		position: relative;	
+		color: @white;
+		padding-left: 30px;
+	}
+	&back-btn-icon{
+		width: 18px;
+		height: 18px;
+		position: absolute;
+		top: 60%;
+		left: 0;
+		transform: translateY(-50%);
+		svg{display: block;}
+	}
+	&heading{
+		text-transform: uppercase;
+		font-size: @b-fs - 2;
+		line-height: @b-lh - 4;
+		margin-bottom: 25px;
+		@media @media-point-screen {
+			margin-bottom: 35px;
+		}
+	}
+	&btn{
+		position: absolute;
+		left: 0;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		bottom: 30px;
+		margin-top: -15px;
+		padding: 0px 15px;
+		@media @media-point-screen {
+			bottom: 2.8vw;
+		}
+		@media @media-point-screen-lg {
+			padding: 0 3vw;
+		}
+		@media @media-point-xxl {
+			padding: 0 6vw;
+		}
+	}
+	&btn-item{
+		padding-top: 15px;
+	}
+	&close{
+		.modal-close();
+		@media @media-point-screen-lg {			
+			top: 2.3vw;
+			right: 6vw;
+		}
+		&.is--friends{
+			@media @media-point-screen-xl {
+				display: none;
+			}
+		}
+	}
+}
+.modal-left__{
+	&modal {		
+		.modal-block();
+		left: 0;
+		bottom: 0;
+		z-index: 50;
+		transform: translate(-100%, 0);
+		@media @media-point-notsmart {
+			width: @modal_left_width_device;			
+		}
+		@media @media-point-device-lg {
+			z-index: 110;			
+		}
+		@media @media-point-smart {
+			z-index: 200;				
+		}
+		@media @media-point-screen-lg {
+			top: @navbar-screen;
+			width: @modal_left_width;
+			left: @navbar_width;
+		}
+		@media @media-point-xxl {	
+			left: @navbar_width_xxl;			
+		}
+		&.in{
+			transform: translate(0%, 0%);
+		}	
+	}
+	&dialog {
+		.modal-dialog();
+		padding-bottom: 100px;
+		@media @media-point-screen-lg{
+			padding-bottom: ~"calc(4vw + 50px)";
+		}	
+		&.is--meeting-create{
+			background-color: @green-dark;
+		}
+	}
+	&body{
+		padding: 20px @modal_invite_pad_lr_device;
+		@media @media-point-device {
+			position: relative;
+			height: 100%;
+			overflow: auto;
+		}
+		@media @media-point-screen-lg {
+			padding: 3vw 3vw;
+		}
+		&.is--meeting-create{
+		}
+	}
+	&close{
+		.modal-close();
+		&.is--meeting-create{
+			color: @green-dim;
+			&:hover{
+				color: @white;
+			}
+		}
+	}
+	&heading{
+		.heading1();
+		font-weight: 700;
+		margin-bottom: 35px;
+		padding-right: 30px;
+		@media @media-point-screen {
+			margin-bottom: 1.9vw;
+		}
+		&.is--meeting-create{
+			color: @white;
+		}
+
+	}
+	&btn{
+		position: absolute;
+		left: 0;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		bottom: 30px;
+		margin-top: -15px;
+		padding: 0px 15px;
+		@media @media-point-screen {
+			bottom: 2.8vw;
+			padding: 0 3vw;
+		}
+	}
+	&btn-item{
+		padding-top: 15px;
+	}
+}
+.modal-invite__{
+	&modal {
+		.modal-block();
+		left: 0;
+		bottom: 0;
+		z-index: 40;
+		transform: translate(-100%, 0);
+		@media @media-point-device-lg {
+			z-index: 105;
+		}
+		@media @media-point-smart {
+			z-index: 200;				
+		}
+		@media @media-point-notsmart {
+			width: @modal_left_width_device;			
+		}
+		@media @media-point-screen-lg {
+			top: @navbar-screen;
+			width: @modal_left_width;
+			left: @navbar_width;
+		}
+		@media @media-point-xxl {	
+			left: @navbar_width_xxl;			
+		}
+		&.in{
+			transform: translate(100%, 0);
+			@media @media-point-smart {
+				transform: translate(0%, 0%);
+			}
+		}	
+	}
+	&dialog {
+		.modal-dialog();
+		padding-bottom: ~"calc(30px + 100px)";
+		@media @media-point-screen-lg{
+			padding-bottom: ~"calc(3vw + 103px)";
+		}	
+		&.is--meeting-create{
+			background-color: @green-dark;
+		}
+	}
+	&body{
+		padding: 20px 0;
+		@media @media-point-device {
+			position: relative;
+			height: 100%;
+			overflow: auto;
+		}
+		@media @media-point-screen-lg {
+			padding: 3.3vw 0 0;
+		}
+	}
+	&close{
+		.modal-close();
+	}
+	&heading{
+		.heading1();
+		font-weight: 700;
+		margin-bottom: 35px;
+		padding: 0 @modal_invite_pad_lr_device;
+		@media @media-point-screen-lg {
+			margin-bottom: 1.4vw;
+			padding: 0 @modal_invite_pad_lr;
+		}
+	}
+	&btn{
+		position: absolute;
+		left: 0;
+		width: 100%;
+		bottom: 25px;
+		padding: 0 @modal_invite_pad_lr_device;
+		@media @media-point-screen {
+			padding: 0 @modal_invite_pad_lr;
+		}
+	}
+	&btn-heading{
+		color: @black-dim;
+		font-size: @b-fs - 3;
+		line-height: @b-lh - 5;
+		margin-bottom: 10px;
+	}
+	&btn-flex{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: -15px;
+	}
+	&btn-item{
+		padding-top: 15px;
+	}
+	&btn-item{
+		padding-top: 15px;
+	}
+}
+.modal-search__{
+	&modal {
+		.modal-block();
+		right: 0;
+		z-index: 50;
+		transform: translate(100%, 0);
+		@media @media-point-device-lg {
+			z-index: 2010;
+			height: ~"calc(100% - @{navbar-device})";
+			width: 350px;			
+		}
+		@media @media-point-smart {
+			width: 100%;
+			right: 0;
+		}
+		@media @media-point-screen-lg {
+			transform: translate(0,-100%);
+			top: @navbar-screen;
+			width: ~"calc(100% - @{navbar_width})";
+			left: @navbar_width;
+			right: 0;
+			box-shadow: 0px 10px 21px 0px fadeout(@blue, 80%);
+		}
+		@media @media-point-xxl {	
+			left: @navbar_width_xxl;
+			width: ~"calc(100% - @{navbar_width_xxl})";			
+		}
+		&.in{
+			transform: translate(0%,0%);			
+		}	
+		&.is--meeting-create{
+
+		}	
+	}
+	&dialog {
+		.modal-dialog();
+		position: relative;
+	}
+	&body{
+		padding: 20px 15px;
+		@media @media-point-device-lg {
+			position: relative;
+			height: 100%;
+			overflow: auto;
+		}
+		@media @media-point-screen-lg {
+			padding: 2.8vw 6vw 4.8vw;
+		}
+	}
+	&close{
+		.modal-close();
+		@media @media-point-screen-lg {
+			display: none;
+		}
+	}
+	&heading{
+		.heading1();
+		font-weight: 400;
+		margin-bottom: 35px;
+		padding-right: 30px;
+		@media @media-point-screen {
+			margin-bottom: 1.7vw;
+		}
+	}
+	&row{
+		&.is--select{
+			@media @media-point-device-lg {
+				margin-top: -15px;
+			}
+			@media @media-point-screen-lg {
+				margin-left: -5px;
+				margin-right: -5px;
+			}
+		}
+	}
+	&cols{
+		&.is--radius{
+			.makeCols(12, 12);
+			@media @media-point-device-lg {
+				padding-top: 15px;
+			}
+			@media @media-point-screen-lg {
+				.makeCols(3, 12);
+			}
+		}
+		&.is--gender{
+			.makeCols(12, 12);
+			@media @media-point-device-lg {
+				padding-top: 15px;
+			}
+			@media @media-point-screen-lg {
+				.makeCols(2, 12);
+			}
+		}
+		&.is--age{
+			.makeCols(12, 12);
+			@media @media-point-device-lg {
+				padding-top: 15px;
+			}
+			@media @media-point-screen-lg {
+				.makeCols(3, 12);
+			}
+		}
+		&.is--period{
+			.makeCols(12, 12);
+			@media @media-point-device-lg {
+				padding-top: 15px;
+			}
+			@media @media-point-screen-lg {
+				.makeCols(4, 12);
+			}
+		}
+		&.is--select{
+			@media @media-point-screen-lg {
+				padding-left: 5px;
+				padding-right: 5px;
+			}
+		}
+	}
+	&filter{
+		@media @media-point-xxl {
+			padding-right: 30px;
+		}
+	}
+	&filter-heading{
+		color: @black-dim;
+		font-size: @b-fs + 6;
+		line-height: @b-lh + 4;
+		margin-bottom: 25px;
+	}
+	&filter-elem{
+		margin-bottom: 10px;
+	}
+	&btn{
+		text-align: center;
+		padding-top: 25px;
+	}
+	&btn-item{
+		padding-top: 15px;
+	}
+}
+.modal-center__{
+	&modal {
+		.modal-block();
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 60;
+		transform: translate(0,-100%);
+		height: 100%;
+		visibility: hidden;
+		/*@media @media-point-xs {
+			width: 300px;
+			left: inherit;
+		}*/
+		@media @media-point-smart {
+			transform: translate(100%, 0);
+		}
+		@media @media-point-screen-lg {
+			left: @navbar_width;
+			width: ~"calc(100% - @{navbar_width})";
+		}
+		@media @media-point-xxl {	
+			left: @navbar_width_xxl;
+			width: ~"calc(100% - @{navbar_width_xxl})";			
+		}
+		&.in{
+			visibility: visible;
+			transform: translate(0%, 0);
+		}		
+	}
+	&dialog {
+		.modal-dialog();
+		top: @navbar-device;
+		height: ~"calc(100% - @{navbar-device})";
+		@media @media-point-notsmart {
+			border: 1px solid @b-color-a;
+			border-radius: 5px;
+			top: 20%;
+			height: auto;
+		}
+		@media @media-point-tablet {
+			max-width: 500px;
+			margin-bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		@media @media-point-screen {
+			width: auto;
+			margin: 0 @container_pad;			
+		}			
+		@media @media-point-screen-xl {			
+			max-width: 1020px;
+			width: 53.1vw;
+		}
+	}
+	&body{	
+		@media @media-point-device {
+			position: relative;
+			height: 100%;
+			overflow: auto;
+		}
+		padding: 20px 15px;
+		@media @media-point-screen-lg {
+			padding: 3.1vw 4.4vw 3.1vw 2.4vw;
+		}
+	}
+	&heading{
+	}
+	&close{		
+		.modal-close();
+		@media @media-point-screen-lg {			
+			top: 20px;
+			right: 35px;
+		}
+	}
+}
+.modal-inner__{
+	&modal {
+		width: 100%;
+		display: block!important;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: -30;
+		transform: translate(0,-100%);
+		transition: @trs-site;
+		transform-origin: center right;
+		visibility: hidden;
+		@media @media-point-screen-lg {
+			width: 210px;
+		}
+		&.in{
+			z-index: 30;
+			visibility: visible;
+			transform: translate(0,100%);
+		}		
+	}
+	&dialog {
+		.modal-dialog();
+		position: relative;
+	}
+	&body{	
+		@media @media-point-device {
+			position: relative;
+			height: 100%;
+			overflow: auto;
+		}
+		//@media @media-point-screen-lg {
+			//max-width: 210px;
+		//}
+	}
+	&heading{
+	}
+	&close{
+		text-align: center;
+		padding-top: 5px;
+		padding-bottom: 25px;
+	}
+	&close-btn{
+		.btn-clearfix();
+		color: @b-color-a;
+		font-size: @b-fs - 4;
+		line-height: @b-lh - 4;
+		font-weight: 700;
+		&:hover{
+			color: @b-color-a-hover;
+		}
+	}
+}
