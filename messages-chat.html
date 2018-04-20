@@ -28,7 +28,7 @@
 		<div class="container navbar__container">
 			<div class="navbar__header">
 				<div class="row navbar__row-header ">
-					<div class="cols navbar__cols-header  is--hamburger">
+					<div class="cols navbar__cols-header">
 						<div class="navbar__hamburger">
 							<button class="navbar__hamburger-btn hamburger__item"  data-target="#bs-navbar-collapse" aria-expanded="false" data-toggle-nav=".navbar-left__panel" data-body="html" data-collapse-nav="">
 								<span class="hamburger__line  is--left"></span>
@@ -37,15 +37,28 @@
 							</button>
 						</div>
 					</div>
-					<div class="cols navbar__cols-header  is--brand">
-						<a class="navbar__brand" href="/"><img src="/img/default/logotip.png" alt=""></a> 
+
+					<div class="cols navbar__cols-header">
+						<a href="/" class="navbar__header-link">
+							<svg class="icon-svg icon-navbar-map" role="img">
+	<use xlink:href="/img/svg/sprite.svg#navbar-map"></use>
+</svg> 
+						</a>
 					</div>
-					<div class="cols navbar__cols-header  is--hamburger">
+					<div class="cols navbar__cols-header">
+						<a href="/messages.html" class="navbar__header-link">
+							<svg class="icon-svg icon-navbar-message" role="img">
+	<use xlink:href="/img/svg/sprite.svg#navbar-message"></use>
+</svg> 
+							<div class="navbar__header-link-icon">3</div>
+						</a>
+					</div>
+					<div class="cols navbar__cols-header">
 						<div class="navbar__hamburger-search">
 							<button class="navbar__hamburger-search-btn" data-toggle-nav=".navbar__collapse" data-body="html" data-collapse-nav="">
 								<div class="navbar__hamburger-search-btn-icon is--search">
-									<svg class="icon-svg icon-icon-search" role="img">
-	<use xlink:href="/img/svg/sprite.svg#icon-search"></use>
+									<svg class="icon-svg icon-navbar-search" role="img">
+	<use xlink:href="/img/svg/sprite.svg#navbar-search"></use>
 </svg>
 								</div>
 								<div class="navbar__hamburger-search-btn-icon is--close">
@@ -484,13 +497,6 @@
 	<div class="content-block__message-block  is--chat">
 		<div class="content-block__container container  is--chat  is--nopadding">	
 			<div class="content-block__row row  is--message  is--chat">
-				<div class="content-block__cols cols  is--send  is--chat">		 	
-					<button type="button" class="btn__icon is--send">
-	<span><svg class="icon-svg icon-icon-send" role="img">
-	<use xlink:href="/img/svg/sprite.svg#icon-send"></use>
-</svg></span>
-</button>
-				</div>
 				<div class="content-block__cols cols  is--message  is--chat">
 					<textarea class="content-block__message  is--chat" placeholder="Send a message..."></textarea>
 				</div>
@@ -500,7 +506,14 @@
 	<use xlink:href="/img/svg/sprite.svg#icon-file"></use>
 </svg></span>
 </button>
-				</div>			
+				</div>	
+				<div class="content-block__cols cols  is--send  is--chat">
+					<button type="button" class="btn__icon is--send">
+	<span><svg class="icon-svg icon-icon-send" role="img">
+	<use xlink:href="/img/svg/sprite.svg#icon-send"></use>
+</svg></span>
+</button>
+				</div>		
 			</div>			
 		</div>
 	</div>

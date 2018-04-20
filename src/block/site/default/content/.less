@@ -32,6 +32,33 @@
 		@media @media-point-device-lg {
 			min-height: ~"calc(100vh - @{navbar-device})";
 		}
+		&.is--full-panel{	
+			@media @media-point-device-lg {	
+				min-height: ~"calc(100vh - @{navbar-device} - @{bottom-panel-device-height} - @{bottom-panel-device-padding} - @{bottom-panel-device-padding})";
+			}
+			@media @media-point-screen-lg {			
+				padding-bottom: ~"calc(@{bottom-panel-height} + @{bottom-panel-padding} + @{bottom-panel-padding})";
+				height: ~"calc(100vh - @{navbar-screen})";
+			}			
+		}
+		&.is--chat{	 
+			@media @media-point-device {
+				//padding-bottom: 80px;
+			}
+			@media @media-point-xs {
+				//padding-bottom: 0;
+			}
+			@media @media-point-screen-lg {					
+				//height: ~"calc(100vh - @{navbar-screen} - 85px - 4vw)";
+			}
+			@media @media-point-device-lg {	
+				min-height: ~"calc(100vh - @{navbar-device} - 40px - @{bottom-panel-device-padding} - @{bottom-panel-device-padding})";
+				//overflow: auto;
+				padding-bottom: 70px;
+			}
+		}
+
+
 		&.is--full{		
 			@media @media-point-screen-lg {					
 				height: ~"calc(100vh - @{navbar-screen})";
@@ -55,23 +82,6 @@
 				height: ~"calc(100vh - @{navbar-login-screen})";
 			}	
 		} 
-		&.is--chat{	 
-			@media @media-point-device {
-				padding-bottom: 80px;
-			}
-			@media @media-point-xs {
-				padding-bottom: 0;
-			}
-			@media @media-point-screen-lg {					
-				//height: ~"calc(100vh - @{navbar-screen} - 85px - 4vw)";
-			}
-		}
-		&.is--full-panel{
-			@media @media-point-screen-lg {					
-				height: ~"calc(100vh - @{navbar-screen})";
-				padding-bottom: ~"calc(@{bottom-panel-height} + @{bottom-panel-padding} + @{bottom-panel-padding})";
-			}			
-		}
 	}
 	&container{	
 		position: relative;
@@ -224,20 +234,20 @@
 			}
 		}
 		&.is--chat{
-			&.is--send{
-				//@media @media-point-screen {
-					padding-right: 5px;
-				//}
-			}
 			&.is--message{
 				flex-grow: 1;
 				//@media @media-point-screen {
-					padding-left: 5px;
 					padding-right: 5px;
 				//}
 			}
 			&.is--btn{
 				padding-left: 5px;
+				padding-right: 5px;
+			}
+			&.is--send{
+				//@media @media-point-screen {
+					padding-left: 5px;
+				//}
 			}
 		}
 		&.is--friends{
@@ -406,14 +416,14 @@
 			background-color: @white;		
 			padding-bottom: 15px;
 			padding-top: 15px;
-			@media @media-point-device {
+			@media @media-point-device-lg {
 				position: fixed;
-				bottom: 0;
+				bottom: @navbar-device;
 				z-index: 90;
 				width: 100%;
 			}
 			@media @media-point-xs {
-				position: relative;
+				//position: relative;
 			}
 			@media @media-point-screen-lg {
 				padding-top: @bottom-panel-padding;
@@ -431,8 +441,11 @@
 			font-size: @b-fs - 4;
 			line-height: @b-lh - 6;
 			width: 100%;
-			height: 46px!important;
+			height: 36px!important;
 			padding: 5px 10px;
+			@media @media-point-screen-lg {
+				height: 46px!important;				
+			}
 			&::-moz-placeholder{
 				color: @black-light;
 			}

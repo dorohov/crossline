@@ -10,4 +10,3 @@ $('.modal-search__modal').on('hidden.bs.modal', function (e) {
 $('.card-item__close.is--tooltip').on('click', function (e) {
 	$(this).parent(".card-item__card.is--tooltip").toggleClass('is--open');
 })
-

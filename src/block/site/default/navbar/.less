@@ -1,46 +1,22 @@
 .navbar-site{ 
 	position: fixed;
-	top: 0;
 	left: 0; 
 	width: 100%;
 	z-index: 1000;
-	@media @media-point-smart {
-		position: relative;
-	}
+	color: @navbar-color;
 	@media @media-point-device-lg{
-		color: @navbar-color-device;
-		z-index: 100;		
-		//background: @navbar-bg-device;
-		//padding-top: 10px;
-		//padding-bottom: 10px; 	
-	} 
-	@media @media-point-screen-lg {
-		color: @navbar-color;
+		z-index: 100;
+		bottom: 0;
+		box-shadow: 0px -9px 29px 0px fadeout(@blue, 72%);
+	}		
+	@media @media-point-screen-lg {		
+		top: 0;
+		box-shadow: 0px 9px 29px 0px fadeout(@blue, 72%);
 	}
-	/*@media @media-point-device {		
-		body.admin-bar &{
-			top: @wp_bar_device;				
-		}	
-	}
-	@media @media-point-md {		
-		body.admin-bar &{
-			top: @wp_bar_screen;				
-		}	
-	}
-	@media @media-point-screen {
-		&.opacity{					
-			body.admin-bar &{
-				top: @wp_bar_screen;				
-			}			
-		}	
-	}*/
-	box-shadow: 0px 9px 29px 0px fadeout(@blue, 72%);
 	@media print{display: none;}
 }
 .navbar__{
 	&inner{		
-		padding-top: 10px;
-		padding-bottom: 10px; 
 		background: @navbar-bg-device;
 		@media @media-point-screen-lg {			
 			background-color: @navbar-bg-screen;
@@ -81,6 +57,13 @@
 	//header
 	&header{
 		width: 100%;
+		z-index: 10;
+		position: relative;		
+		padding-top: 5px;
+		padding-bottom: 5px;
+		max-width: 500px;
+		margin-left: auto;
+		margin-right: auto; 
 		@media @media-point-screen-lg {display: none;}		
 	}
 	&row-header{
@@ -107,34 +90,65 @@
 		}
 	}
 	&hamburger-search-btn{
-		width: 42px;
-		height: 42px;
+		width: 40px;
+		height: 40px;
 		padding: 8px;
 		position: relative;	
 		.btn-clearfix();
-		color: @b-color-a;
 	}
 	&hamburger-search-btn-icon{
-		width: 42px;
-		height: 42px;
-		padding: 8px;
+		width: 100%;
+		height: 100%;
+		padding: 6px;
 		position: absolute;
 		top: 0;
 		left: 0;
-		transition: @trs-site;
+		transition: @trs-site;		
+		color: @b-color-a;
+		.navbar__hamburger-search-btn.is--active &{color: @orange;}
 		&.is--search{
 			.navbar__hamburger-search-btn.is--active &{opacity: 0;}
 		}
 		&.is--close{
 			opacity: 0;
-			.navbar__hamburger-search-btn.is--active &{opacity: 1;}
+			.navbar__hamburger-search-btn.is--active &{
+				opacity: 1;
+			}
 		}
+	}
+	&header-link{
+		display: block;
+		position: relative;
+		width: 40px;
+		height: 40px;	
+		padding: 6px;	
+		color: @b-color-a;
+		transition: @trs-site;
+		svg{display: block;}
+		&.is--active{
+			color: @orange;
+		}
+	}
+	&header-link-icon{
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 5;
+		border-radius: 50%;
+		background: red;
+		font-size: @b-fs - 6;
+		line-height: @b-lh - 7;
+    	width: 17px;
+    	text-align: center;
+		color: @white;
+		font-weight: 700;
 	}
 	//collapse
 	&collapse{
 		@media @media-point-device-lg{
 			position: fixed;
-			top: @navbar-device;
+			top: 0;
+			bottom: @navbar-device;
 			right: -(@navbar_collapse_width);
 			width: @navbar_collapse_width;
 			height: ~"calc(100vh - @{navbar-device})";
@@ -150,23 +164,23 @@
 		    	opacity: 1;
 		    	right: 0;
 		    }
-		    body.admin-bar &{
+		    /*body.admin-bar &{
 				top: ~"calc(@{navbar-device} + @{wp_bar_device})";
 				height: ~"calc(100vh - @{navbar-device} @{wp_bar_device})";				
-			}
+			}*/
 		}
-		@media @media-point-md2{
+		/*@media @media-point-md2{
 		    body.admin-bar &{
 				top: ~"calc(@{navbar-device} + @{wp_bar_screen})";
 				height: ~"calc(100vh - @{navbar-device} @{wp_bar_screen})";				
 			}
-		}
+		}*/
 		@media @media-point-xxs {
 			right: -100%;
 			width: 100%;
 		}
 		@media @media-point-md2{
-			top: @navbar-md;
+			//top: @navbar-md;
 	    	//background: @navbar-bg-screen;
 		}
 		@media @media-point-screen-lg{
@@ -890,12 +904,12 @@
 	@pr: 2vw;
 	&panel{
 		background-color: @white;
-		top: @navbar-device;	
+		top: 0;
+		bottom: @navbar-device;	
 		position: fixed;
 		width: 100%;
 		z-index: 110;
 		left: 0;
-		bottom: 0;
 		transition: @trs-site;
 		@media @media-point-device-lg {
 			transform: translateX(-100%);
@@ -912,6 +926,7 @@
 		}
 		@media @media-point-screen-lg{
 			top: @navbar-screen;
+			bottom: 0;
 			padding-bottom: ~"calc(@{bottom-panel-height} + @{bottom-panel-padding} + @{bottom-panel-padding})";
 			box-shadow: 0px 15px 38px 0px fadeout(@blue, 66%);
 		}

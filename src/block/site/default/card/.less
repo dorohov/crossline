@@ -101,12 +101,12 @@
 				margin-top: 0px;
 			} 
 			&.is--for{
-				@media @media-point-smart {
+				@media @media-point-device-lg {
 					margin-right: 25px;
 				}
 			}
 			&.is--you{
-				@media @media-point-smart {
+				@media @media-point-device-lg {
 					margin-left: 25px;
 				}
 			}
@@ -284,23 +284,28 @@
 		&.is--chat{
 			&.is--user{
 				min-width: 85px;
-				@media @media-point-smart {
+				@media @media-point-device-lg {
 					display: none;
 				}
 			}
 			&.is--text{
-				@media @media-point-screen {
+				@media @media-point-screen-lg {
 					.makeCols(8.8, 12);
 				}
 			}
 			&.is--date{
 			    align-self: center;
-			    @media @media-point-smart {
-			    	padding-top: 5px;
+				@media @media-point-device-lg {
+					.makeCols(12, 12);
+			    	padding-top: 0px;
+			    	line-height: @b-lh - 10;
+			    	&.is--you{
+			    		text-align: right;
+			    	}
 			    }
 			}
 			&.is--you{
-				@media @media-point-notsmart {					
+				@media @media-point-screen-lg {					
 					&.is--user{
 						order: 1;
 					}
@@ -914,13 +919,14 @@
 				}
 			}
 			.card-item__card.is--chat.is--you &{
+				background-color: fadeout(@blue, 75%);
 				&::before{
 					content: '';
 					position: absolute;
 					right: -10px;
 					top: 15px;
-					border-left: 10px solid fadeout(@white, 0%);
-					border-top: 9px solid fadeout(@white, 100%);
+					border-left: 10px solid fadeout(@blue, 75%);
+					border-top: 9px solid fadeout(@blue, 100%);
 					border-bottom: 9px solid fadeout(@white, 100%);
 				}
 
@@ -943,11 +949,11 @@
 			line-height: @b-lh - 2;
 			color: @black-dim;
 			font-weight: 300;
-			@media @media-point-smart {
-				font-size: @b-fs - 4;
-				line-height: @b-lh - 6;
+			@media @media-point-device-lg {
+				font-size: @b-fs - 8;
+				line-height: @b-lh - 10;
 				div{display: inline-block;}
-			}
+			}				
 		}
 	}
 	&link{

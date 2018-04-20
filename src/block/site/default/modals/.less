@@ -9,7 +9,10 @@
 
 // Kill the scroll on the body
 .modal-open {
-	overflow: hidden; 
+	@media @media-point-smart {
+		overflow: hidden; 
+		position: fixed;		
+	}
 }
 .modal {
 	display: none;
@@ -191,7 +194,7 @@
 		}
 		&.is--friends{
 			@media @media-point-device-lg {
-				top: @navbar-device;
+				bottom: @navbar-device;
 			}
 			@media @media-point-screen-xl {
 				position: relative;

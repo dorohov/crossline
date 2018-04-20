@@ -1,6 +1,6 @@
-if(screenJS.device()) {
+if(screenJS.deviceLg()) {
 	$('.scroller').mCustomScrollbar("destroy");
 } 
-if(screenJS.isScreen()) {
+if(screenJS.isScreenLg()) {
 	$('.scroller').mCustomScrollbar();	
 } 

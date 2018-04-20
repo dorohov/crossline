@@ -3,7 +3,7 @@
 		<div class="container {{navbar_prefix}}container">
 			<div class="{{navbar_prefix}}header">
 				<div class="row {{navbar_prefix}}row-header ">
-					<div class="cols {{navbar_prefix}}cols-header  is--hamburger">
+					<div class="cols {{navbar_prefix}}cols-header">
 						<div class="{{navbar_prefix}}hamburger">
 							<button class="{{navbar_prefix}}hamburger-btn hamburger__item"  data-target="#bs-navbar-collapse" aria-expanded="false" data-toggle-nav=".navbar-left__panel" data-body="html" data-collapse-nav="">
 								<span class="hamburger__line  is--left"></span>
@@ -12,14 +12,23 @@
 							</button>
 						</div>
 					</div>
-					<div class="cols {{navbar_prefix}}cols-header  is--brand">
-						<a class="{{navbar_prefix}}brand" href="{{page.index}}"><img src="{{url-path-img}}/default/logotip.png" alt=""></a> 
+
+					<div class="cols {{navbar_prefix}}cols-header">
+						<a href="{{page.index}}" class="{{navbar_prefix}}header-link">
+							[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="navbar-map" ]] 
+						</a>
 					</div>
-					<div class="cols {{navbar_prefix}}cols-header  is--hamburger">
+					<div class="cols {{navbar_prefix}}cols-header">
+						<a href="{{page.messages}}" class="{{navbar_prefix}}header-link">
+							[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="navbar-message" ]] 
+							<div class="{{navbar_prefix}}header-link-icon">3</div>
+						</a>
+					</div>
+					<div class="cols {{navbar_prefix}}cols-header">
 						<div class="{{navbar_prefix}}hamburger-search">
 							<button class="{{navbar_prefix}}hamburger-search-btn" data-toggle-nav=".navbar__collapse" data-body="html" data-collapse-nav="">
 								<div class="{{navbar_prefix}}hamburger-search-btn-icon is--search">
-									[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="icon-search" ]]
+									[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="navbar-search" ]]
 								</div>
 								<div class="{{navbar_prefix}}hamburger-search-btn-icon is--close">
 									[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="modal-close" ]]
