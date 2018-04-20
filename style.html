@@ -43,9 +43,16 @@
 					<div class="cols navbar__cols-header  is--hamburger">
 						<div class="navbar__hamburger-search">
 							<button class="navbar__hamburger-search-btn" data-toggle-nav=".navbar__collapse" data-body="html" data-collapse-nav="">
-								<svg class="icon-svg icon-icon-search" role="img">
+								<div class="navbar__hamburger-search-btn-icon is--search">
+									<svg class="icon-svg icon-icon-search" role="img">
 	<use xlink:href="/img/svg/sprite.svg#icon-search"></use>
 </svg>
+								</div>
+								<div class="navbar__hamburger-search-btn-icon is--close">
+									<svg class="icon-svg icon-modal-close" role="img">
+	<use xlink:href="/img/svg/sprite.svg#modal-close"></use>
+</svg>
+								</div>
 							</button>
 						</div>
 					</div>
@@ -67,7 +74,7 @@
 	<use xlink:href="/img/svg/sprite.svg#icon-map"></use>
 </svg>
 										</div>
-										Next meeting: <span class="navbar__meeting-clock"><span>03.30</span> pm</span>
+										Next meeting: <a href="#" class="navbar__meeting-clock" data-toggle="modal" data-target="#modal-meeting"><span>03.30</span> pm</a>
 									</div>
 								</div>
 								<div class="cols navbar__collapse-inner-cols cols  is--timer">

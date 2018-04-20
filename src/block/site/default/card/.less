@@ -140,11 +140,17 @@
 			@media @media-point-notsmart {
 				box-shadow: 0px 11px 24px 0px fadeout(@blue-dim, 55%);
 			}
+			visibility: hidden;
+			opacity: 0;
 			
 			//
 			transform: translate(-50%, -50%);
 			left: 50%;
 			top: 50%;
+			&.is--open{
+				opacity: 1;
+				visibility: visible;
+			}
 		}
 	}
 	&fancybox{
@@ -199,11 +205,20 @@
 	}
 	&cols{
 		&.is--profile{
+			&.is--preview,
+			&.is--desc{
+				@media @media-point-screen {
+					.makeCols(12, 12);
+				}
+			}
 			&.is--preview{
 				.makeCols(12, 12);
 				@media @media-point-tablet {
 					.makeCols(4, 12);
 					max-width: 255px;
+				}
+				@media @media-point-lg1 {
+					.makeCols(4, 12);
 				}
 			}
 			&.is--desc{
@@ -211,11 +226,8 @@
 				@media @media-point-tablet {
 					.makeCols(8, 12);
 				}
-			}
-			&.is--preview,
-			&.is--desc{
-				@media @media-point-screen {
-					.makeCols(12, 12);
+				@media @media-point-lg1 {
+					.makeCols(8, 12);
 				}
 			}
 			&.is--friends-card{
@@ -230,6 +242,9 @@
 					@media @media-point-md {
 						.makeCols(4, 12);
 					}
+					@media @media-point-lg1 {
+						.makeCols(4, 12);
+					}
 				}
 				&.is--desc{
 					.makeCols(12, 12);
@@ -240,6 +255,9 @@
 						.makeCols(8, 12);
 					}
 					@media @media-point-md {
+						.makeCols(8, 12);
+					}
+					@media @media-point-lg1 {
 						.makeCols(8, 12);
 					}
 				}				

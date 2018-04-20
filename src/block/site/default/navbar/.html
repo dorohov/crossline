@@ -18,7 +18,12 @@
 					<div class="cols {{navbar_prefix}}cols-header  is--hamburger">
 						<div class="{{navbar_prefix}}hamburger-search">
 							<button class="{{navbar_prefix}}hamburger-search-btn" data-toggle-nav=".navbar__collapse" data-body="html" data-collapse-nav="">
-								[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="icon-search" ]]
+								<div class="{{navbar_prefix}}hamburger-search-btn-icon is--search">
+									[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="icon-search" ]]
+								</div>
+								<div class="{{navbar_prefix}}hamburger-search-btn-icon is--close">
+									[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="modal-close" ]]
+								</div>
 							</button>
 						</div>
 					</div>
@@ -38,7 +43,7 @@
 										<div class="{{navbar_prefix}}meeting-icon">
 											[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="icon-map" ]]
 										</div>
-										Next meeting: <span class="{{navbar_prefix}}meeting-clock"><span>03.30</span> pm</span>
+										Next meeting: <a href="#" class="{{navbar_prefix}}meeting-clock" data-toggle="modal" data-target="#modal-meeting"><span>03.30</span> pm</a>
 									</div>
 								</div>
 								<div class="cols {{navbar_prefix}}collapse-inner-cols cols  is--timer">

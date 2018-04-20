@@ -137,7 +137,7 @@
 .modal-close(){
 	.btn-clearfix();
 	position: absolute;
-	top: 10px;
+	top: 20px;
 	right: 10px;
 	z-index: 5;
 	width: 30px;
@@ -171,6 +171,10 @@
 		@media @media-point-xs {
 			width: 300px;
 		}
+		@media @media-point-device-lg {
+			top: 0;
+			z-index: 200;
+		}
 		@media @media-point-notsmart {
 			width: @modal_left_width_device;
 		}
@@ -181,8 +185,14 @@
 		}
 		&.in{
 			transform: translate(0%, 0%);
+			@media @media-point-notsmart {
+				box-shadow: -9px 0 29px 0 fadeout(@blue, 72%);	
+			}
 		}
 		&.is--friends{
+			@media @media-point-device-lg {
+				top: @navbar-device;
+			}
 			@media @media-point-screen-xl {
 				position: relative;
 				transform: none;
@@ -201,9 +211,9 @@
 			}
 		}
 		&.is--btn-bottom{
-			padding-bottom: 100px;
+			padding-bottom: ~"calc(@{bottom-panel-device-height} + @{bottom-panel-device-padding} + @{bottom-panel-device-padding})";
 			@media @media-point-screen-lg{
-				padding-bottom: ~"calc(4vw + 50px)";
+				padding-bottom: ~"calc(@{bottom-panel-height} + @{bottom-panel-padding} + @{bottom-panel-padding})";
 			}			
 		}
 		&.is--back{
@@ -292,11 +302,12 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		bottom: 30px;
+		//bottom: 30px;
 		margin-top: -15px;
 		padding: 0px 15px;
+		bottom: @bottom-panel-device-padding;
 		@media @media-point-screen {
-			bottom: 2.8vw;
+			bottom: @bottom-panel-padding;
 		}
 		@media @media-point-screen-lg {
 			padding: 0 3vw;
@@ -306,7 +317,7 @@
 		}
 	}
 	&btn-item{
-		padding-top: 15px;
+		//padding-top: 15px;
 	}
 	&close{
 		.modal-close();
@@ -330,6 +341,10 @@
 		transform: translate(-100%, 0);
 		@media @media-point-notsmart {
 			width: @modal_left_width_device;			
+		}
+		@media @media-point-smart {
+			top: 0;
+			z-index: 200;
 		}
 		@media @media-point-device-lg {
 			z-index: 110;			
@@ -356,12 +371,20 @@
 			padding-bottom: ~"calc(4vw + 50px)";
 		}	
 		&.is--meeting-create{
-			background-color: @green-dark;
+			background-color: @green-dark;		
+			padding-bottom: 0;
+			@media @media-point-device {
+				overflow: auto;
+				padding-bottom: 15px;				
+			}
+			@media @media-point-screen-xl{
+				padding-bottom: ~"calc(@{bottom-panel-height} + @{bottom-panel-padding} + @{bottom-panel-padding})";
+			}
 		}
 	}
 	&body{
 		padding: 20px @modal_invite_pad_lr_device;
-		@media @media-point-device {
+		@media @media-point-device-lg {
 			position: relative;
 			height: 100%;
 			overflow: auto;
@@ -370,6 +393,10 @@
 			padding: 3vw 3vw;
 		}
 		&.is--meeting-create{
+			@media @media-point-device {
+				overflow: visible;
+				height: auto; 
+			}
 		}
 	}
 	&close{
@@ -379,6 +406,9 @@
 			&:hover{
 				color: @white;
 			}
+		}
+		@media @media-point-device {
+			top: 20px;
 		}
 	}
 	&heading{
@@ -395,18 +425,20 @@
 
 	}
 	&btn{
-		position: absolute;
-		left: 0;
-		width: 100%;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		bottom: 30px;
 		margin-top: -15px;
 		padding: 0px 15px;
 		@media @media-point-screen {
-			bottom: 2.8vw;
+			//bottom: 2.8vw;
 			padding: 0 3vw;
+		}
+		@media @media-point-screen-xl {
+			bottom: @bottom-panel-padding;			
+			position: absolute;
+			left: 0;
+			width: 100%;
 		}
 	}
 	&btn-item{
@@ -424,7 +456,8 @@
 			z-index: 105;
 		}
 		@media @media-point-smart {
-			z-index: 200;				
+			top: 0;
+			z-index: 200;
 		}
 		@media @media-point-notsmart {
 			width: @modal_left_width_device;			
@@ -521,6 +554,8 @@
 		@media @media-point-smart {
 			width: 100%;
 			right: 0;
+			top: 0;
+			height: 100%;
 		}
 		@media @media-point-screen-lg {
 			transform: translate(0,-100%);
@@ -654,7 +689,7 @@
 		top: 0;
 		left: 0;
 		right: 0;
-		z-index: 60;
+		z-index: 220;
 		transform: translate(0,-100%);
 		height: 100%;
 		visibility: hidden;
@@ -680,8 +715,10 @@
 	}
 	&dialog {
 		.modal-dialog();
-		top: @navbar-device;
-		height: ~"calc(100% - @{navbar-device})";
+		//top: @navbar-device;
+		top: 0;
+		//height: ~"calc(100% - @{navbar-device})";
+		height: 100%;
 		@media @media-point-notsmart {
 			border: 1px solid @b-color-a;
 			border-radius: 5px;

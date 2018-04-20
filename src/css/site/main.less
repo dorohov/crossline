@@ -47,6 +47,9 @@ body {
 			}			
 		}
 	}	
+	@media @media-point-smart {
+		padding-top: 0;
+	}
 	&.is--index-page{ 		
 		overflow-x: hidden;
 		@media @media-point-screen-lg {
@@ -54,8 +57,7 @@ body {
 		}
 	}
 	&.is--login{ 
-		padding-top: @navbar-login-device;
-		@media @media-point-screen-lg{padding-top: @navbar-login-screen;}
+		padding-top: 0;
 	}
 	&.is--navbar-bottom{
 		@media @media-point-device-lg {

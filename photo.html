@@ -43,9 +43,16 @@
 					<div class="cols navbar__cols-header  is--hamburger">
 						<div class="navbar__hamburger-search">
 							<button class="navbar__hamburger-search-btn" data-toggle-nav=".navbar__collapse" data-body="html" data-collapse-nav="">
-								<svg class="icon-svg icon-icon-search" role="img">
+								<div class="navbar__hamburger-search-btn-icon is--search">
+									<svg class="icon-svg icon-icon-search" role="img">
 	<use xlink:href="/img/svg/sprite.svg#icon-search"></use>
 </svg>
+								</div>
+								<div class="navbar__hamburger-search-btn-icon is--close">
+									<svg class="icon-svg icon-modal-close" role="img">
+	<use xlink:href="/img/svg/sprite.svg#modal-close"></use>
+</svg>
+								</div>
 							</button>
 						</div>
 					</div>
@@ -67,7 +74,7 @@
 	<use xlink:href="/img/svg/sprite.svg#icon-map"></use>
 </svg>
 										</div>
-										Next meeting: <span class="navbar__meeting-clock"><span>03.30</span> pm</span>
+										Next meeting: <a href="#" class="navbar__meeting-clock" data-toggle="modal" data-target="#modal-meeting"><span>03.30</span> pm</a>
 									</div>
 								</div>
 								<div class="cols navbar__collapse-inner-cols cols  is--timer">
@@ -167,7 +174,7 @@
 				</div>
 			</div>
 			<div class="card-item__elem  is--map  is--place-accordion">
-				<a href="#" class="card-item__icon-item  is--map  is--place-accordion">
+				<a href="/" class="card-item__icon-item  is--map  is--place-accordion">
 					<div class="card-item__icon  is--map  is--place-accordion">
 						<svg class="icon-svg icon-icon-map" role="img">
 	<use xlink:href="/img/svg/sprite.svg#icon-map"></use>
@@ -217,7 +224,7 @@
 				</div>
 			</div>
 			<div class="card-item__elem  is--map  is--place-accordion">
-				<a href="#" class="card-item__icon-item  is--map  is--place-accordion">
+				<a href="/" class="card-item__icon-item  is--map  is--place-accordion">
 					<div class="card-item__icon  is--map  is--place-accordion">
 						<svg class="icon-svg icon-icon-map" role="img">
 	<use xlink:href="/img/svg/sprite.svg#icon-map"></use>
@@ -267,7 +274,7 @@
 				</div>
 			</div>
 			<div class="card-item__elem  is--map  is--place-accordion">
-				<a href="#" class="card-item__icon-item  is--map  is--place-accordion">
+				<a href="/" class="card-item__icon-item  is--map  is--place-accordion">
 					<div class="card-item__icon  is--map  is--place-accordion">
 						<svg class="icon-svg icon-icon-map" role="img">
 	<use xlink:href="/img/svg/sprite.svg#icon-map"></use>
@@ -323,7 +330,7 @@
 	</div>
 </div>
 		<div class="content-block__panel  is--photo">
-	<div class="content-block__inner  is--photo  is--full-btn">
+	<div class="content-block__inner  is--photo  is--full-panel">
 		<div class="content-block__scroller mCustomScrollbar scroller  is--photo" data-mcs-theme="green-dim"> 
 			<div class="content-block__container container  is--photo">
 				<div class="page-header__block  is--page-heading">
@@ -389,17 +396,17 @@
 	</div>
 	<div class="content-block__btn-block  is--photo">
 		<div class="content-block__container container  is--photo  is--nopadding">	
-			<div class="content-block__row row  is--wrap  is--gutter  is--aic  is--photo">
+			<div class="content-block__row row  is--wrap  is--gutter10  is--aic  is--photo">
 				<div class="content-block__cols cols  is--photo">
-					<a href="/"    class="btn-link__item  is--back">
-	<span class="btn-link__icon  is--back"><svg class="icon-svg icon-slick-left" role="img">
+					<a href="/"    class="btn-link__item  is--back  is--panel-bottom">
+	<span class="btn-link__icon  is--back  is--panel-bottom"><svg class="icon-svg icon-slick-left" role="img">
 	<use xlink:href="/img/svg/sprite.svg#slick-left"></use>
 </svg></span>
-	<span class="btn-link__name  is--back">Return back</span>
+	<span class="btn-link__name  is--back  is--panel-bottom">Return back</span>
 </a>
 				</div>
 				<div class="content-block__cols cols  is--btn  is--photo">
-					<a href="/profile.html" class="btn__item is--md">
+					<a href="/profile.html" class="btn__item   ">
 <span class="btn__item-name">My profile</span>
 </a>  
 				</div>

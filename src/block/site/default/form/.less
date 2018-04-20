@@ -16,7 +16,7 @@
 			max-width: 1020px;
 			margin-bottom: 35px;
 			@media @media-point-screen {
-				margin-bottom: 4.7vw;
+				margin-bottom: 3vw;
 			}
 		}
 		&.is--login{
@@ -24,7 +24,7 @@
 			max-width: 880px;
 			margin-bottom: 35px;
 			@media @media-point-screen {
-				margin-bottom: 4.7vw;
+				margin-bottom: 3vw;
 			}
 		}		
 	}
@@ -46,7 +46,7 @@
 		}
 
 	}
-	@gutter_create: 2vw;
+	@gutter_create: 1.7vw;
 	&row{
 		margin-top: -25px;
 		&.is--inline{
@@ -188,7 +188,7 @@
 		}
 		&.is--create{
 			&.is--btn{
-				padding-top: 40px;
+				padding-top: 30px;
 			}
 			.makeCols(12, 12);
 			@media @media-point-tablet {
@@ -260,6 +260,11 @@
 		}
 		&.is--time{
 			display: flex;
+			&.is--meeting-create{
+				@media @media-point-device-lg {
+					flex-wrap: wrap;
+				}
+			}
 		}
 	}
 	&item-inner{

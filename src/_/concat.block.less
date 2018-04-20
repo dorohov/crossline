@@ -1,10 +1,10 @@
 .btn-base(){
-	padding: 8px 25px 12px;
+	padding: 8px 25px 13px;
 	font-size: @btn_fs;
 	line-height: @btn_lh;
 	border-radius: @btn_border_radius;
 	@media @media-point-screen {
-		padding: 11px 2.5vw 14px;
+		padding: 11px 2.5vw 15px;
 	}
 }
 .btn-xl(){
@@ -349,6 +349,10 @@
 			line-height: @btn_lh - 2;
 			font-weight: 400;
 		}
+		&.is--panel-bottom{
+			padding-top: 13px;
+			padding-bottom: 13px;
+		}
 	}
 	&icon{
 		transition: @trs-site;
@@ -548,11 +552,17 @@
 			@media @media-point-notsmart {
 				box-shadow: 0px 11px 24px 0px fadeout(@blue-dim, 55%);
 			}
+			visibility: hidden;
+			opacity: 0;
 			
 			//
 			transform: translate(-50%, -50%);
 			left: 50%;
 			top: 50%;
+			&.is--open{
+				opacity: 1;
+				visibility: visible;
+			}
 		}
 	}
 	&fancybox{
@@ -607,11 +617,20 @@
 	}
 	&cols{
 		&.is--profile{
+			&.is--preview,
+			&.is--desc{
+				@media @media-point-screen {
+					.makeCols(12, 12);
+				}
+			}
 			&.is--preview{
 				.makeCols(12, 12);
 				@media @media-point-tablet {
 					.makeCols(4, 12);
 					max-width: 255px;
+				}
+				@media @media-point-lg1 {
+					.makeCols(4, 12);
 				}
 			}
 			&.is--desc{
@@ -619,11 +638,8 @@
 				@media @media-point-tablet {
 					.makeCols(8, 12);
 				}
-			}
-			&.is--preview,
-			&.is--desc{
-				@media @media-point-screen {
-					.makeCols(12, 12);
+				@media @media-point-lg1 {
+					.makeCols(8, 12);
 				}
 			}
 			&.is--friends-card{
@@ -638,6 +654,9 @@
 					@media @media-point-md {
 						.makeCols(4, 12);
 					}
+					@media @media-point-lg1 {
+						.makeCols(4, 12);
+					}
 				}
 				&.is--desc{
 					.makeCols(12, 12);
@@ -648,6 +667,9 @@
 						.makeCols(8, 12);
 					}
 					@media @media-point-md {
+						.makeCols(8, 12);
+					}
+					@media @media-point-lg1 {
 						.makeCols(8, 12);
 					}
 				}				
@@ -1572,14 +1594,20 @@
 		} 
 		&.is--chat{	 
 			@media @media-point-device {
-				padding-bottom: 115px;
+				padding-bottom: 80px;
 			}
 			@media @media-point-xs {
 				padding-bottom: 0;
 			}
 			@media @media-point-screen-lg {					
-				height: ~"calc(100vh - @{navbar-screen} - 85px - 4vw)";
+				//height: ~"calc(100vh - @{navbar-screen} - 85px - 4vw)";
 			}
+		}
+		&.is--full-panel{
+			@media @media-point-screen-lg {					
+				height: ~"calc(100vh - @{navbar-screen})";
+				padding-bottom: ~"calc(@{bottom-panel-height} + @{bottom-panel-padding} + @{bottom-panel-padding})";
+			}			
 		}
 	}
 	&container{	
@@ -1587,8 +1615,8 @@
 		z-index: 5;
 		@media print{padding: 0!important}
 		@media @media-point-device {
-			padding-top: 40px;
-			padding-bottom: 60px;
+			padding-top: 30px;
+			padding-bottom: 0px;
 		}
 		@media @media-point-screen {
 			padding-top: 2.8vw;
@@ -1620,10 +1648,17 @@
 			}
 		}
 		&.is--login{
+			padding-top: 30px;
+			padding-bottom: 30px;
 			@media @media-point-screen {
-				padding-top: 4.4vw;
-				padding-bottom: 4.4vw;
+				padding-top: 3vw;
+				padding-bottom: 3vw;
 			}			
+		}
+		&.is--friends{
+			@media @media-point-device {
+				padding-bottom: 30px;
+			}
 		}
 		&.is--chat{
 			@media @media-point-smart {
@@ -1700,10 +1735,16 @@
 				@media @media-point-screen {
 					.makeCols(3, 12);
 				}
+				@media @media-point-lg1 {
+					.makeCols(12, 12);
+				}
 			}
 			&.is--right{
 				@media @media-point-screen {
 					.makeCols(9, 12);
+				}
+				@media @media-point-lg1 {
+					.makeCols(12, 12);
 				}
 			}
 			&.is--btn{
@@ -1772,11 +1813,17 @@
 				@media @media-point-screen-lg {
 					.makeCols(3.2, 12);
 				}
+				@media @media-point-lg1 {
+					.makeCols(12, 12);
+				}
 			}
 			&.is--right{
 				.makeCols(12, 12);
 				@media @media-point-screen-lg {
 					.makeCols(8.8, 12);
+				}
+				@media @media-point-lg1 {
+					.makeCols(12, 12);
 				}
 			}
 			&.is--meetings-card{ 
@@ -1899,15 +1946,19 @@
 			@media @media-point-device {
 				position: fixed;
 				bottom: 0;
-				z-index: 100;
+				z-index: 90;
 				width: 100%;
 			}
 			@media @media-point-xs {
 				position: relative;
 			}
-			@media @media-point-screen {
-				padding-top: 2vw;
-				padding-bottom: 2vw;
+			@media @media-point-screen-lg {
+				padding-top: @bottom-panel-padding;
+				padding-bottom: @bottom-panel-padding;
+			    position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
 			}
 		}	
 	}
@@ -1917,7 +1968,7 @@
 			font-size: @b-fs - 4;
 			line-height: @b-lh - 6;
 			width: 100%;
-			height: 81px!important;
+			height: 46px!important;
 			padding: 5px 10px;
 			&::-moz-placeholder{
 				color: @black-light;
@@ -1928,20 +1979,25 @@
 		}
 	}
 	&btn-block{
-		padding-bottom: 30px;
-		padding-top: 30px;
-		@media @media-point-screen {
-			padding-top: 2.8vw;
-			padding-bottom: 2.8vw;	
+		padding-top: @bottom-panel-device-padding;
+		padding-bottom: @bottom-panel-device-padding;
+		@media @media-point-screen-lg {
+			//padding-top: @bottom-panel;
+			//padding-bottom: @bottom-panel;
+			padding: 0;
+			position: absolute;
+			bottom: @bottom-panel-padding; 
+			left: 0;
+			width: 100%;
 		}
-		&.is--profile{
+		/*&.is--profile{
 			border-top: 1px solid @white-dim;
 			border-bottom: 1px solid @white-dim;		
 		}	
 		&.is--photo{
 			border-top: 1px solid @white-dim;
 			border-bottom: 1px solid @white-dim;		
-		}	
+		}	*/
 	}
 	&btn{		
 	}
@@ -2049,7 +2105,7 @@
 			max-width: 1020px;
 			margin-bottom: 35px;
 			@media @media-point-screen {
-				margin-bottom: 4.7vw;
+				margin-bottom: 3vw;
 			}
 		}
 		&.is--login{
@@ -2057,7 +2113,7 @@
 			max-width: 880px;
 			margin-bottom: 35px;
 			@media @media-point-screen {
-				margin-bottom: 4.7vw;
+				margin-bottom: 3vw;
 			}
 		}		
 	}
@@ -2079,7 +2135,7 @@
 		}
 
 	}
-	@gutter_create: 2vw;
+	@gutter_create: 1.7vw;
 	&row{
 		margin-top: -25px;
 		&.is--inline{
@@ -2221,7 +2277,7 @@
 		}
 		&.is--create{
 			&.is--btn{
-				padding-top: 40px;
+				padding-top: 30px;
 			}
 			.makeCols(12, 12);
 			@media @media-point-tablet {
@@ -2293,6 +2349,11 @@
 		}
 		&.is--time{
 			display: flex;
+			&.is--meeting-create{
+				@media @media-point-device-lg {
+					flex-wrap: wrap;
+				}
+			}
 		}
 	}
 	&item-inner{
@@ -3501,7 +3562,7 @@ body.rtl .formError .formErrorArrow {
 .modal-close(){
 	.btn-clearfix();
 	position: absolute;
-	top: 10px;
+	top: 20px;
 	right: 10px;
 	z-index: 5;
 	width: 30px;
@@ -3535,6 +3596,10 @@ body.rtl .formError .formErrorArrow {
 		@media @media-point-xs {
 			width: 300px;
 		}
+		@media @media-point-device-lg {
+			top: 0;
+			z-index: 200;
+		}
 		@media @media-point-notsmart {
 			width: @modal_left_width_device;
 		}
@@ -3545,8 +3610,14 @@ body.rtl .formError .formErrorArrow {
 		}
 		&.in{
 			transform: translate(0%, 0%);
+			@media @media-point-notsmart {
+				box-shadow: -9px 0 29px 0 fadeout(@blue, 72%);	
+			}
 		}
 		&.is--friends{
+			@media @media-point-device-lg {
+				top: @navbar-device;
+			}
 			@media @media-point-screen-xl {
 				position: relative;
 				transform: none;
@@ -3565,9 +3636,9 @@ body.rtl .formError .formErrorArrow {
 			}
 		}
 		&.is--btn-bottom{
-			padding-bottom: 100px;
+			padding-bottom: ~"calc(@{bottom-panel-device-height} + @{bottom-panel-device-padding} + @{bottom-panel-device-padding})";
 			@media @media-point-screen-lg{
-				padding-bottom: ~"calc(4vw + 50px)";
+				padding-bottom: ~"calc(@{bottom-panel-height} + @{bottom-panel-padding} + @{bottom-panel-padding})";
 			}			
 		}
 		&.is--back{
@@ -3656,11 +3727,12 @@ body.rtl .formError .formErrorArrow {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		bottom: 30px;
+		//bottom: 30px;
 		margin-top: -15px;
 		padding: 0px 15px;
+		bottom: @bottom-panel-device-padding;
 		@media @media-point-screen {
-			bottom: 2.8vw;
+			bottom: @bottom-panel-padding;
 		}
 		@media @media-point-screen-lg {
 			padding: 0 3vw;
@@ -3670,7 +3742,7 @@ body.rtl .formError .formErrorArrow {
 		}
 	}
 	&btn-item{
-		padding-top: 15px;
+		//padding-top: 15px;
 	}
 	&close{
 		.modal-close();
@@ -3694,6 +3766,10 @@ body.rtl .formError .formErrorArrow {
 		transform: translate(-100%, 0);
 		@media @media-point-notsmart {
 			width: @modal_left_width_device;			
+		}
+		@media @media-point-smart {
+			top: 0;
+			z-index: 200;
 		}
 		@media @media-point-device-lg {
 			z-index: 110;			
@@ -3720,12 +3796,20 @@ body.rtl .formError .formErrorArrow {
 			padding-bottom: ~"calc(4vw + 50px)";
 		}	
 		&.is--meeting-create{
-			background-color: @green-dark;
+			background-color: @green-dark;		
+			padding-bottom: 0;
+			@media @media-point-device {
+				overflow: auto;
+				padding-bottom: 15px;				
+			}
+			@media @media-point-screen-xl{
+				padding-bottom: ~"calc(@{bottom-panel-height} + @{bottom-panel-padding} + @{bottom-panel-padding})";
+			}
 		}
 	}
 	&body{
 		padding: 20px @modal_invite_pad_lr_device;
-		@media @media-point-device {
+		@media @media-point-device-lg {
 			position: relative;
 			height: 100%;
 			overflow: auto;
@@ -3734,6 +3818,10 @@ body.rtl .formError .formErrorArrow {
 			padding: 3vw 3vw;
 		}
 		&.is--meeting-create{
+			@media @media-point-device {
+				overflow: visible;
+				height: auto; 
+			}
 		}
 	}
 	&close{
@@ -3743,6 +3831,9 @@ body.rtl .formError .formErrorArrow {
 			&:hover{
 				color: @white;
 			}
+		}
+		@media @media-point-device {
+			top: 20px;
 		}
 	}
 	&heading{
@@ -3759,18 +3850,20 @@ body.rtl .formError .formErrorArrow {
 
 	}
 	&btn{
-		position: absolute;
-		left: 0;
-		width: 100%;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		bottom: 30px;
 		margin-top: -15px;
 		padding: 0px 15px;
 		@media @media-point-screen {
-			bottom: 2.8vw;
+			//bottom: 2.8vw;
 			padding: 0 3vw;
+		}
+		@media @media-point-screen-xl {
+			bottom: @bottom-panel-padding;			
+			position: absolute;
+			left: 0;
+			width: 100%;
 		}
 	}
 	&btn-item{
@@ -3788,7 +3881,8 @@ body.rtl .formError .formErrorArrow {
 			z-index: 105;
 		}
 		@media @media-point-smart {
-			z-index: 200;				
+			top: 0;
+			z-index: 200;
 		}
 		@media @media-point-notsmart {
 			width: @modal_left_width_device;			
@@ -3885,6 +3979,8 @@ body.rtl .formError .formErrorArrow {
 		@media @media-point-smart {
 			width: 100%;
 			right: 0;
+			top: 0;
+			height: 100%;
 		}
 		@media @media-point-screen-lg {
 			transform: translate(0,-100%);
@@ -4018,7 +4114,7 @@ body.rtl .formError .formErrorArrow {
 		top: 0;
 		left: 0;
 		right: 0;
-		z-index: 60;
+		z-index: 220;
 		transform: translate(0,-100%);
 		height: 100%;
 		visibility: hidden;
@@ -4044,8 +4140,10 @@ body.rtl .formError .formErrorArrow {
 	}
 	&dialog {
 		.modal-dialog();
-		top: @navbar-device;
-		height: ~"calc(100% - @{navbar-device})";
+		//top: @navbar-device;
+		top: 0;
+		//height: ~"calc(100% - @{navbar-device})";
+		height: 100%;
 		@media @media-point-notsmart {
 			border: 1px solid @b-color-a;
 			border-radius: 5px;
@@ -4147,8 +4245,12 @@ body.rtl .formError .formErrorArrow {
 	left: 0; 
 	width: 100%;
 	z-index: 1000;
+	@media @media-point-smart {
+		position: relative;
+	}
 	@media @media-point-device-lg{
-		color: @navbar-color-device;		
+		color: @navbar-color-device;
+		z-index: 100;		
 		//background: @navbar-bg-device;
 		//padding-top: 10px;
 		//padding-bottom: 10px; 	
@@ -4241,13 +4343,33 @@ body.rtl .formError .formErrorArrow {
 		max-width: 165px;
 		height: 40px;
 		img{width: 100%;}
+		@media @media-point-smart {
+			max-width: 145px;
+		}
 	}
 	&hamburger-search-btn{
 		width: 42px;
 		height: 42px;
 		padding: 8px;
+		position: relative;	
 		.btn-clearfix();
 		color: @b-color-a;
+	}
+	&hamburger-search-btn-icon{
+		width: 42px;
+		height: 42px;
+		padding: 8px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		transition: @trs-site;
+		&.is--search{
+			.navbar__hamburger-search-btn.is--active &{opacity: 0;}
+		}
+		&.is--close{
+			opacity: 0;
+			.navbar__hamburger-search-btn.is--active &{opacity: 1;}
+		}
 	}
 	//collapse
 	&collapse{
@@ -4987,22 +5109,18 @@ body.rtl .formError .formErrorArrow {
 }
 .navbar-login__{
 	&panel{
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
 		background-color: @white;
 		border-bottom: 1px solid @b-color-a
 	}
 	&inner{
 		padding: 15px 0;
 		@media @media-point-screen-lg {
-			padding: 30px 0;
+			padding: 1.65vw 0;
 		}
 	}
 	&brand{
 		display: block;
-		max-width: 215px;
+		max-width: 165px;
 		margin: 0 auto;
 	}
 }
@@ -5015,18 +5133,18 @@ body.rtl .formError .formErrorArrow {
 		background-color: @white;
 		top: @navbar-device;	
 		position: fixed;
+		width: 100%;
 		z-index: 110;
 		left: 0;
 		bottom: 0;
 		transition: @trs-site;
 		@media @media-point-device-lg {
 			transform: translateX(-100%);
-			padding-bottom: 100px;
+			padding-bottom: ~"calc(@{bottom-panel-device-height} + @{bottom-panel-device-padding} + @{bottom-panel-device-padding})";
 			&.is--open{
 				transform: translateX(0);
 			}
 		}
-		width: 100%;
 		@media @media-point-xs {
 			width: @navbar_width;
 		}
@@ -5035,7 +5153,7 @@ body.rtl .formError .formErrorArrow {
 		}
 		@media @media-point-screen-lg{
 			top: @navbar-screen;
-			padding-bottom: ~"calc(4vw + 50px)";
+			padding-bottom: ~"calc(@{bottom-panel-height} + @{bottom-panel-padding} + @{bottom-panel-padding})";
 			box-shadow: 0px 15px 38px 0px fadeout(@blue, 66%);
 		}
 		@media @media-point-xxl {	
@@ -5062,9 +5180,10 @@ body.rtl .formError .formErrorArrow {
 	//meeting
 	&meeting{
 		position: relative;
-		margin-bottom: 30px;
+		margin-bottom: 10px;
 		@media @media-point-screen {
-			margin-bottom: 2.8vw;
+			//margin-bottom: 2.8vw;
+			margin-bottom: 1.4vw;
 		}
 	}
 	&meeting-inner{
@@ -5188,9 +5307,9 @@ body.rtl .formError .formErrorArrow {
 		left: 0;
 		width: 100%;
 		text-align: center;
-		bottom: 30px;
+		bottom: @bottom-panel-device-padding;
 		@media @media-point-screen {
-			bottom: 2.8vw;
+			bottom: @bottom-panel-padding;
 		}
 	}
 }
@@ -5367,7 +5486,7 @@ body.rtl .formError .formErrorArrow {
 		position: relative;
 		height: 100%;
 		overflow: auto;
-		padding: 15px 0;
+		//padding: 15px 0;
 		@media @media-point-screen-lg {
 			overflow: visible;
 			padding: 0;
@@ -6139,7 +6258,12 @@ CONTENTS:
 */
 
 
-.scroller{height: 100%; width: 100%;}
+.scroller{
+	height: 100%; width: 100%;
+	.modal-left__dialog.is--meeting-create &.mCS_destroyed{
+		height: auto;
+	}
+}
 /* 
 ------------------------------------------------------------------------------------------------------------------------
 1. BASIC STYLE  

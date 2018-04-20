@@ -43,9 +43,16 @@
 					<div class="cols navbar__cols-header  is--hamburger">
 						<div class="navbar__hamburger-search">
 							<button class="navbar__hamburger-search-btn" data-toggle-nav=".navbar__collapse" data-body="html" data-collapse-nav="">
-								<svg class="icon-svg icon-icon-search" role="img">
+								<div class="navbar__hamburger-search-btn-icon is--search">
+									<svg class="icon-svg icon-icon-search" role="img">
 	<use xlink:href="/img/svg/sprite.svg#icon-search"></use>
 </svg>
+								</div>
+								<div class="navbar__hamburger-search-btn-icon is--close">
+									<svg class="icon-svg icon-modal-close" role="img">
+	<use xlink:href="/img/svg/sprite.svg#modal-close"></use>
+</svg>
+								</div>
 							</button>
 						</div>
 					</div>
@@ -67,7 +74,7 @@
 	<use xlink:href="/img/svg/sprite.svg#icon-map"></use>
 </svg>
 										</div>
-										Next meeting: <span class="navbar__meeting-clock"><span>03.30</span> pm</span>
+										Next meeting: <a href="#" class="navbar__meeting-clock" data-toggle="modal" data-target="#modal-meeting"><span>03.30</span> pm</a>
 									</div>
 								</div>
 								<div class="cols navbar__collapse-inner-cols cols  is--timer">
@@ -167,7 +174,7 @@
 				</div>
 			</div>
 			<div class="card-item__elem  is--map  is--place-accordion">
-				<a href="#" class="card-item__icon-item  is--map  is--place-accordion">
+				<a href="/" class="card-item__icon-item  is--map  is--place-accordion">
 					<div class="card-item__icon  is--map  is--place-accordion">
 						<svg class="icon-svg icon-icon-map" role="img">
 	<use xlink:href="/img/svg/sprite.svg#icon-map"></use>
@@ -217,7 +224,7 @@
 				</div>
 			</div>
 			<div class="card-item__elem  is--map  is--place-accordion">
-				<a href="#" class="card-item__icon-item  is--map  is--place-accordion">
+				<a href="/" class="card-item__icon-item  is--map  is--place-accordion">
 					<div class="card-item__icon  is--map  is--place-accordion">
 						<svg class="icon-svg icon-icon-map" role="img">
 	<use xlink:href="/img/svg/sprite.svg#icon-map"></use>
@@ -267,7 +274,7 @@
 				</div>
 			</div>
 			<div class="card-item__elem  is--map  is--place-accordion">
-				<a href="#" class="card-item__icon-item  is--map  is--place-accordion">
+				<a href="/" class="card-item__icon-item  is--map  is--place-accordion">
 					<div class="card-item__icon  is--map  is--place-accordion">
 						<svg class="icon-svg icon-icon-map" role="img">
 	<use xlink:href="/img/svg/sprite.svg#icon-map"></use>
@@ -684,10 +691,10 @@
 			<div class="navbar-category__filter-elem  is--friends">
 				<div class="navbar-category__item  is--switch  is--friends    ">
 	<div class="form__switch  is--friends    ">
-		<input class="form__switch-input validate[  ]  is--friends        " id="fg[fg-switch2]" name="f[Famale]" type="checkbox"    />
+		<input class="form__switch-input validate[  ]  is--friends        " id="fg[fg-switch2]" name="f[Female]" type="checkbox"    />
 		<label for="fg[fg-switch2]" class="form__switch-label    is--friends        "></label> 
 		<label for="fg[fg-switch2]" class="form__switch-text    is--friends        "> 
-			Famale
+			Female
 		</label>
 	</div>	
 </div>

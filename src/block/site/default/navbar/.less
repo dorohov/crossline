@@ -4,8 +4,12 @@
 	left: 0; 
 	width: 100%;
 	z-index: 1000;
+	@media @media-point-smart {
+		position: relative;
+	}
 	@media @media-point-device-lg{
-		color: @navbar-color-device;		
+		color: @navbar-color-device;
+		z-index: 100;		
 		//background: @navbar-bg-device;
 		//padding-top: 10px;
 		//padding-bottom: 10px; 	
@@ -98,13 +102,33 @@
 		max-width: 165px;
 		height: 40px;
 		img{width: 100%;}
+		@media @media-point-smart {
+			max-width: 145px;
+		}
 	}
 	&hamburger-search-btn{
 		width: 42px;
 		height: 42px;
 		padding: 8px;
+		position: relative;	
 		.btn-clearfix();
 		color: @b-color-a;
+	}
+	&hamburger-search-btn-icon{
+		width: 42px;
+		height: 42px;
+		padding: 8px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		transition: @trs-site;
+		&.is--search{
+			.navbar__hamburger-search-btn.is--active &{opacity: 0;}
+		}
+		&.is--close{
+			opacity: 0;
+			.navbar__hamburger-search-btn.is--active &{opacity: 1;}
+		}
 	}
 	//collapse
 	&collapse{
@@ -844,22 +868,18 @@
 }
 .navbar-login__{
 	&panel{
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
 		background-color: @white;
 		border-bottom: 1px solid @b-color-a
 	}
 	&inner{
 		padding: 15px 0;
 		@media @media-point-screen-lg {
-			padding: 30px 0;
+			padding: 1.65vw 0;
 		}
 	}
 	&brand{
 		display: block;
-		max-width: 215px;
+		max-width: 165px;
 		margin: 0 auto;
 	}
 }
@@ -872,18 +892,18 @@
 		background-color: @white;
 		top: @navbar-device;	
 		position: fixed;
+		width: 100%;
 		z-index: 110;
 		left: 0;
 		bottom: 0;
 		transition: @trs-site;
 		@media @media-point-device-lg {
 			transform: translateX(-100%);
-			padding-bottom: 100px;
+			padding-bottom: ~"calc(@{bottom-panel-device-height} + @{bottom-panel-device-padding} + @{bottom-panel-device-padding})";
 			&.is--open{
 				transform: translateX(0);
 			}
 		}
-		width: 100%;
 		@media @media-point-xs {
 			width: @navbar_width;
 		}
@@ -892,7 +912,7 @@
 		}
 		@media @media-point-screen-lg{
 			top: @navbar-screen;
-			padding-bottom: ~"calc(4vw + 50px)";
+			padding-bottom: ~"calc(@{bottom-panel-height} + @{bottom-panel-padding} + @{bottom-panel-padding})";
 			box-shadow: 0px 15px 38px 0px fadeout(@blue, 66%);
 		}
 		@media @media-point-xxl {	
@@ -919,9 +939,10 @@
 	//meeting
 	&meeting{
 		position: relative;
-		margin-bottom: 30px;
+		margin-bottom: 10px;
 		@media @media-point-screen {
-			margin-bottom: 2.8vw;
+			//margin-bottom: 2.8vw;
+			margin-bottom: 1.4vw;
 		}
 	}
 	&meeting-inner{
@@ -1045,9 +1066,9 @@
 		left: 0;
 		width: 100%;
 		text-align: center;
-		bottom: 30px;
+		bottom: @bottom-panel-device-padding;
 		@media @media-point-screen {
-			bottom: 2.8vw;
+			bottom: @bottom-panel-padding;
 		}
 	}
 }
@@ -1224,7 +1245,7 @@
 		position: relative;
 		height: 100%;
 		overflow: auto;
-		padding: 15px 0;
+		//padding: 15px 0;
 		@media @media-point-screen-lg {
 			overflow: visible;
 			padding: 0;
