@@ -1783,14 +1783,14 @@
 					padding-right: 5px;
 				//}
 			}
-			&.is--btn{
-				padding-left: 5px;
-				padding-right: 5px;
-			}
 			&.is--send{
 				//@media @media-point-screen {
+					padding-right: 5px;
 					padding-left: 5px;
 				//}
+			}
+			&.is--btn{
+				padding-left: 5px;
 			}
 		}
 		&.is--friends{
@@ -4272,7 +4272,7 @@ body.rtl .formError .formErrorArrow {
 	@media @media-point-device-lg{
 		z-index: 100;
 		bottom: 0;
-		box-shadow: 0px -9px 29px 0px fadeout(@blue, 72%);
+		//box-shadow: 0px -9px 20px 0px fadeout(@blue, 72%);
 	}		
 	@media @media-point-screen-lg {		
 		top: 0;
@@ -4283,7 +4283,9 @@ body.rtl .formError .formErrorArrow {
 .navbar__{
 	&inner{		
 		background: @navbar-bg-device;
-		@media @media-point-screen-lg {			
+		border-top: 1px solid @blue-dim;
+		@media @media-point-screen-lg {	
+			border-top: 0;		
 			background-color: @navbar-bg-screen;
 			padding-top: 17px;
 			padding-bottom: 18px;
@@ -4298,7 +4300,7 @@ body.rtl .formError .formErrorArrow {
 		}
 		@media @media-point-xxl {
 			padding-right: 6vw;
-		}
+		} 
 	}
 	&row{
 		align-items: center;
@@ -4324,8 +4326,8 @@ body.rtl .formError .formErrorArrow {
 		width: 100%;
 		z-index: 10;
 		position: relative;		
-		padding-top: 5px;
-		padding-bottom: 5px;
+		padding-top: 4px;
+		padding-bottom: 5px; 
 		max-width: 500px;
 		margin-left: auto;
 		margin-right: auto; 
