@@ -1,0 +1,26 @@
+<div class="{{modals_prefix}}modal {{modals_mod}}" id="{{modals_id}}" tabindex="-1"  aria-hidden="true">
+	<div class="{{modals_prefix}}dialog  {{modals_mod}}  is--btn-bottom">
+		<div class="{{modals_prefix}}body  {{modals_mod}}">
+			<button type="button" class="{{modals_prefix}}close  {{modals_mod}}" data-dismiss="modal" aria-hidden="true">
+				[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="modal-close"]]
+			</button> 
+			[[azbntple 
+				tpl="/src/block/site/default/page-header/heading.html"
+				header_prefix="page-header__" 
+				header_mod="{{block_heading_mod}}"
+				header_level="h3"
+				header="{{block_heading}}"
+				header_small_level="div"
+				header_small="{{block_heading_small}}"
+			]]
+			[[azbntple 
+				tpl="/src/block/site/default/form/panel-create-post.html" 
+				form_prefix="form__"
+				form_mod="{{modals_mod}}"	
+				form_id="fcp"	
+				form_color="  "
+				form_heading="{{block_heading}}"
+			]]
+		</div>
+	</div>
+</div> 

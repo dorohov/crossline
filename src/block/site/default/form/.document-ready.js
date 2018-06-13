@@ -61,3 +61,11 @@ $radius.ionRangeSlider({
     //onStart: updateInputs,
     //onChange: updateInputs
 });
+
+
+$('[data-plugin="datepicker-inline"]').datepicker({
+    //language : 'ru-RU',
+    inline: true,
+    container: '.navbar-category__datepicker'
+});
+ 

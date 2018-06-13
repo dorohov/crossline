@@ -1,0 +1,120 @@
+<div class="{{navbar_prefix}}panel  {{navbar_mod}}">
+	<div class="{{navbar_prefix}}scroller mCustomScrollbar scroller" data-mcs-theme="green-dim">
+		<div class="{{navbar_prefix}}user  {{navbar_mod}}">
+			[[azbntple 
+				tpl="/src/block/site/default/card/card-user-panel.html" 
+				block_prefix="card-item__"
+				block_mod="is--user"
+				block_link="##"
+				block_heading="Sergey Kolichev" 
+				block_age="25 years"
+				block_preview="{{url-path-img}}/temp/profile-preview-55x55.jpg"
+				block_preview="http://via.placeholder.com/55x55"
+				block_status="is--notstatus"
+			]]
+		</div>
+		<div class="{{navbar_prefix}}meeting  {{navbar_mod}}">
+			<div class="{{navbar_prefix}}meeting-inner  {{navbar_mod}}">
+				<button type="button" data-azbn-toggle="dropdown" class="{{navbar_prefix}}meeting-btn  {{navbar_mod}}">
+					Meetings have been scheduled: <span class="color--green">2</span>
+				</button>
+			</div>
+			<div class="{{navbar_prefix}}meeting-dropdown  azbn-dropdown  {{navbar_mod}}">				
+				<div class="{{navbar_prefix}}meeting-dropdown-inner  {{navbar_mod}}">				
+					<div class="{{navbar_prefix}}accordion panel-group" id="place-accordion">	
+						[[azbntple 
+							tpl="/src/block/site/default/card/card-place-accordion.html" 
+							block_prefix="card-item__"
+							block_mod="is--place-accordion"
+							block_parent="place-accordion"
+							block_id="item-1"
+							block_heading="01. Cafe «Steel»" 
+							block_address="3 Leskov str."
+							block_date="December 17th"
+							block_date_iso="2017-12-17"
+							block_time="03:15 pm – 04:15 pm"
+							block_people=" 1"
+						]]
+						[[azbntple 
+							tpl="/src/block/site/default/card/card-place-accordion.html" 
+							block_prefix="card-item__"
+							block_mod="is--place-accordion"
+							block_parent="place-accordion"
+							block_id="item-2"
+							block_heading="02. Sushi_Bar" 
+							block_address="3 Leskov str."
+							block_date="December 17th"
+							block_date_iso="2017-12-17"
+							block_time="03:15 pm – 04:15 pm"
+							block_people=" 1"
+						]]
+						[[azbntple 
+							tpl="/src/block/site/default/card/card-place-accordion.html" 
+							block_prefix="card-item__"
+							block_mod="is--place-accordion"
+							block_parent="place-accordion"
+							block_id="item-3"
+							block_heading="03. Restaurant «Kuello»" 
+							block_address="3 Leskov str."
+							block_date="December 17th"
+							block_date_iso="2017-12-17"
+							block_time="03:15 pm – 04:15 pm"
+							block_people=" 1"
+						]]
+					</div>
+				</div>
+			</div>
+		</div>
+		<ul class="{{navbar_prefix}}nav">
+			[[azbntple 
+				tpl="/src/block/site/default/navbar/item.html" 
+				navbar_prefix="navbar-left__" 
+				navbar_mod="  " 
+				navbar_name="My profile" 
+				navbar_link="{{page.profile}}"
+				navbar_icon="icon-profile"
+			]]
+			[[azbntple 
+				tpl="/src/block/site/default/navbar/item.html" 
+				navbar_prefix="navbar-left__" 
+				navbar_mod="  " 
+				navbar_name="Messages <sup>(3)</sup>" 
+				navbar_link="{{page.messages}}"
+				navbar_icon="icon-message"
+			]]
+			[[azbntple 
+				tpl="/src/block/site/default/navbar/item.html" 
+				navbar_prefix="navbar-left__" 
+				navbar_mod="  " 
+				navbar_name="Friends <sup>(16)</sup>" 
+				navbar_link="{{page.friends}}"
+				navbar_icon="icon-friend"
+			]]
+			[[azbntple 
+				tpl="/src/block/site/default/navbar/item.html" 
+				navbar_prefix="navbar-left__" 
+				navbar_mod="  " 
+				navbar_name="Photos" 
+				navbar_link="{{page.photo}}"
+				navbar_icon="icon-photo"
+			]]
+			[[azbntple 
+				tpl="/src/block/site/default/navbar/item.html" 
+				navbar_prefix="navbar-left__" 
+				navbar_mod="  " 
+				navbar_name="Groups" 
+				navbar_link="{{page.group}}"
+				navbar_icon="icon-group"
+			]]
+		</ul>
+	</div>
+	<div class="{{navbar_prefix}}btn">			 	
+		[[azbntple 
+			tpl="/src/block/site/default/button/button-modal.html"
+			button_prefix="btn__" 
+			button_mod="  "
+			button_target="modal-meeting-create"
+			button_name="Create a meeting" 
+		]]
+	</div>
+</div>

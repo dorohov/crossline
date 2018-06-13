@@ -1,0 +1,89 @@
+<div class="{{content_prefix}}panel">
+	<div class="{{content_prefix}}inner  is--full-panel">
+		<div class="{{content_prefix}}scroller mCustomScrollbar scroller" data-mcs-theme="green-dim">
+			<div class="{{content_prefix}}container container  is--padding-bottom">
+				[[azbntple 
+					tpl="/src/block/site/default/breadcrumb/level1.html" 
+					bread_prefix="breadcrumb__"
+					bread_mod="  "
+					level_parent="{{parent_heading}}"
+					level_parent_link="{{parent_link}}"
+					level_1="{{block_heading}}"
+				]]
+				<div class="{{content_prefix}}elem  {{content_mod}}">
+					<div class="{{content_prefix}}heading  is--block  is--flex  {{content_mod}}">
+						<h1 class="is--heading">{{block_heading}}</h1>
+					</div>
+				</div>
+				<div class="{{content_prefix}}row row  is--gutter  is--wrap  {{content_mod}}">
+					<div class="{{content_prefix}}cols cols  is--left-aside  {{content_mod}}">
+						<div class="form__block">
+							<div class="form__inner">
+								[[azbntple 
+									tpl="/src/block/site/default/card/card-group-create-1.html" 
+									block_prefix="card-item__"
+									block_mod="is--create"
+									block_icon="icon-step1"
+									block_heading="In what city will be located your new group?"
+									block_heading_small="1 of 3"
+								]]						
+								[[azbntple 
+									tpl="/src/block/site/default/card/card-group-create-2.html" 
+									block_prefix="card-item__"
+									block_mod="is--create"
+									block_icon="icon-step2"
+									block_heading="The topic of the group"
+									block_heading_small="2 of 3"
+								]]							
+								[[azbntple 
+									tpl="/src/block/site/default/card/card-group-create-3.html" 
+									block_prefix="card-item__"
+									block_mod="is--create"
+									block_icon="icon-step3"
+									block_heading="Name of group"
+									block_heading_small="3 of 3"
+								]]		
+							</div>
+							<div class="form__btn">
+								[[azbntple 
+									tpl="/src/block/site/default/button/button.html"
+									button_prefix="btn__" 
+									button_mod="  "
+									button_type="submit"
+									button_name="Create a group" 
+								]]
+								[[azbntple 
+									tpl="/src/block/site/default/button/button-modal.html"
+									button_prefix="btn__" 
+									button_mod="is--white"
+									button_target="{{modals_id}}"
+									button_name="Cancel" 
+								]]
+							</div>
+						</div>
+					</div>
+					<div class="{{content_prefix}}cols cols  is--right-aside  {{content_mod}}">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="{{content_prefix}}btn-block">
+		<div class="{{content_prefix}}container container  is--nopadding">	
+			<div class="{{content_prefix}}row row  is--wrap  is--gutter10  is--aic  is--jcsb">
+				<div class="{{content_prefix}}cols cols">
+					[[azbntple 
+						tpl="/src/block/site/default/button/link-icon-name.html"
+						button_prefix="btn-link__" 
+						button_mod="is--back  is--panel-bottom"
+						button_link="{{page.group_meetup}}"
+						button_name="Return back"
+						button_icon="slick-left" 
+						button_attr="  " 
+					]]
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

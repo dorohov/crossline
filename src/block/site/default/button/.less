@@ -40,7 +40,8 @@
 	font-size: @btn_fs - 2;
 	line-height: @btn_lh;
 	@media @media-point-screen {
-		padding: 5px 2.7vw 8px;
+		//padding: 5px 2.7vw 8px;
+		padding: 5px 1.75vw 8px;
 	}
 }
 .btn-lg-small(){
@@ -60,11 +61,11 @@
 	}
 }
 .btn-xs(){
-	padding: 2px 15px 4px;
+	padding: 2px 15px 6px;
 	font-size: @btn_fs - 2;
 	line-height: @btn_lh;
 	@media @media-point-screen {
-		 padding: 2px 2vw 4px;
+		 padding: 2px 2vw 6px;
 	}
 }
 .btn__{
@@ -148,6 +149,16 @@
 					display: none;
 				}
 			}
+			&.is--calendar{
+				padding-left: 25px;
+				font-size: @b-fs - 6;
+				line-height: @b-lh - 6;
+				color: @b-color-a-hover;
+				font-weight: 700;
+				&:hover{
+					color: @b-color-a;
+				}
+			}
 		}
 		&.is--line{
 			text-transform: uppercase;
@@ -156,10 +167,14 @@
 			border-style: solid;
 			border-color: fadeout(@green-dim, 100%);
 			box-shadow: none;
-			padding: 3px 20px 6px;			
+			padding: 3px 15px 6px;			
 			color: @black-dim;
+			font-size: @btn_fs - 2;
+			line-height: @btn_lh - 2;
 			@media @media-point-notsmart {
 				padding: 3px 30px 5px;
+				font-size: @btn_fs;
+				line-height: @btn_lh;
 			}
 			sup{
 				color: @b-color-a-hover;
@@ -178,6 +193,11 @@
 		&.is--search{
 			padding-top: 15px;
 			padding-bottom: 15px;
+		}
+		&.is--join{
+			font-size: @btn_fs - 2;
+			line-height: @btn_lh - 2;
+			padding: 6px 35px 10px;
 		}
 		&.is--xl{
 			.btn-xl();
@@ -292,6 +312,16 @@
 			height: 36px;
 			padding: 5px;
 		}
+		&.is--calendar{
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			width: 18px;
+			height: 18px;
+			padding: 0;
+			color: @b-color-a-hover;
+		}
 		&, &:focus{}
 		&:hover{
 
@@ -328,6 +358,9 @@
 			font-size: @btn_fs;
 			line-height: @btn_lh;
 			padding-left: 35px;
+		}
+		&.is--add{
+			padding-left: 20px;
 		}
 		&.is--plus{
 			color: @orange; 
@@ -369,6 +402,10 @@
 			width: 24px;
 			height: 24px;
 			padding: 4px;
+		}
+		&.is--add{
+			width: 14px;
+			height: 14px;
 		}
 		&.is--plus{
 			color: @orange; 

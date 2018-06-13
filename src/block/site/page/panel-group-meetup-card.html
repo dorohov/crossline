@@ -1,0 +1,189 @@
+<div class="{{content_prefix}}panel  colorbg--white-deep-dim">
+	<div class="{{content_prefix}}inner  is--full-panel">
+		<div class="{{content_prefix}}scroller mCustomScrollbar scroller" data-mcs-theme="green-dim">
+
+			<div class="colorbg--white">
+				<div class="{{content_prefix}}container container  is--padding-bottom">
+					[[azbntple 
+						tpl="/src/block/site/default/breadcrumb/level2.html" 
+						bread_prefix="breadcrumb__"
+						bread_mod="  "
+						level_parent="{{parent_heading}}"
+						level_parent_link="{{parent_link}}"
+						level_1="{{block_group_heading}}"
+						level_1_link="{{block_group_link}}"
+						level_2="{{block_heading}}"
+					]]
+
+					[[azbntple 
+						tpl="/src/block/site/default/tabs/panel-group.html"
+						block_prefix="tabs__" 
+						block_mod="is--group"
+					]]
+
+					<div class="{{content_prefix}}row row  is--gutter  is--wrap  {{content_mod}}">
+						<div class="{{content_prefix}}cols cols  is--showall-left  {{content_mod}}">
+							<div class="{{content_prefix}}elem  {{content_mod}}">
+								[[azbntple 
+									tpl="/src/block/site/default/card/card-group-meetup.html" 
+									block_prefix="card-item__"
+									block_mod="is--group  is--card  is--meetup"
+									block_status="is--online"
+									block_active="  "
+									block_date="May 18th, 03:15 pm – 04:15 pm"
+									block_date_iso="2018-01-01"
+									block_link="{{page.group_card}}"
+									block_heading="{{block_heading}}" 
+								]]
+							</div>
+							<div class="{{content_prefix}}elem  {{content_mod}}">
+								<div class="{{content_prefix}}heading  is--block  is--sm  {{content_mod}}">
+									<h2>Details</h2>
+								</div>
+								<div class="{{content_prefix}}text  text__block  {{content_mod}}">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua. Ut&nbsp;enim ad&nbsp;minim veniam, quis nostrud exercitation ullamco laboris nisi ut&nbsp;aliquip ex&nbsp;ea&nbsp;commodo consequat. Duis aute irure dolor in&nbsp;reprehenderit in&nbsp;voluptate velit esse cillum dolore eu&nbsp;fugiat nulla pariatur. </p>
+									<p>Excepteur sint occaecat cupidatat non proident, sunt in&nbsp;culpa qui officia deserunt mollit anim id&nbsp;est laborum. Sed ut&nbsp;perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab&nbsp;illo inventore veritatis et&nbsp;quasi architecto beatae vitae dicta sunt explicabo. </p>
+									<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.<span>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut</span>&nbsp;<span>labore et</span>&nbsp;<span>dolore magnam aliquam quaerat voluptatem.</span></p>
+								</div>
+							</div>
+						</div>
+						<div class="{{content_prefix}}cols cols  is--showall-right  {{content_mod}}">
+							[[azbntple 
+								tpl="/src/block/site/default/card/card-visit.html" 
+								block_prefix="card-item__"
+								block_mod="is--visit"
+								block_link="{{page.group_participants}}"
+								block_heading="Want to go?" 
+								block_heading_small="10 seat left"
+							]]
+							
+						</div>
+					</div>
+				</div>
+			</div> 
+			<div class="{{content_prefix}}container container">	
+				<div class="{{content_prefix}}heading  is--block  is--flex  {{content_mod}}">
+					<h2>Other meetup's</h2>
+				</div>
+				<div class="{{content_prefix}}row row  is--gutter  is--wrap  {{content_mod}}">
+					<div class="{{content_prefix}}cols cols  is--showall-left  {{content_mod}}">
+						<div class="{{content_prefix}}row row  is--gutter  is--wrap  {{content_mod}}">
+							<div class="{{content_prefix}}cols cols  is--list-4  {{content_mod}}">
+								[[azbntple 
+									tpl="/src/block/site/default/card/card-meetup.html" 
+									block_prefix="card-item__"
+									block_link="{{page.group_meetup_card}}"
+									block_mod="is--meetings  is--white"
+									block_heading="Beer bar, «Steel»" 
+									block_address="3 Leskov str."
+									block_date="December 17th"
+									block_date_iso="2017-12-17"
+									block_time="03:15 pm – 04:15 pm"
+									block_people=" 1"
+								]]
+							</div>
+							<div class="{{content_prefix}}cols cols  is--list-4  {{content_mod}}">
+								[[azbntple 
+									tpl="/src/block/site/default/card/card-meetup.html" 
+									block_prefix="card-item__"
+									block_link="{{page.group_meetup_card}}"
+									block_mod="is--meetings  is--white"
+									block_heading="Beer bar, «Steel»" 
+									block_address="3 Leskov str."
+									block_date="December 17th"
+									block_date_iso="2017-12-17"
+									block_time="03:15 pm – 04:15 pm"
+									block_people=" 1"
+								]]
+							</div>
+							<div class="{{content_prefix}}cols cols  is--list-4  {{content_mod}}">
+								[[azbntple 
+									tpl="/src/block/site/default/card/card-meetup.html" 
+									block_prefix="card-item__"
+									block_link="{{page.group_meetup_card}}"
+									block_mod="is--meetings  is--white"
+									block_heading="Beer bar, «Steel»" 
+									block_address="3 Leskov str."
+									block_date="December 17th"
+									block_date_iso="2017-12-17"
+									block_time="03:15 pm – 04:15 pm"
+									block_people=" 1"
+								]]
+							</div>
+							<div class="{{content_prefix}}cols cols  is--list-4  {{content_mod}}">
+								[[azbntple 
+									tpl="/src/block/site/default/card/card-meetup.html" 
+									block_prefix="card-item__"
+									block_link="{{page.group_meetup_card}}"
+									block_mod="is--meetings  is--white"
+									block_heading="Beer bar, «Steel»" 
+									block_address="3 Leskov str."
+									block_date="December 17th"
+									block_date_iso="2017-12-17"
+									block_time="03:15 pm – 04:15 pm"
+									block_people=" 1"
+								]]
+							</div>
+							<div class="{{content_prefix}}cols cols  is--list-4  {{content_mod}}">
+								[[azbntple 
+									tpl="/src/block/site/default/card/card-meetup.html" 
+									block_prefix="card-item__"
+									block_link="{{page.group_meetup_card}}"
+									block_mod="is--meetings  is--white"
+									block_heading="Beer bar, «Steel»" 
+									block_address="3 Leskov str."
+									block_date="December 17th"
+									block_date_iso="2017-12-17"
+									block_time="03:15 pm – 04:15 pm"
+									block_people=" 1"
+								]]
+							</div>
+							<div class="{{content_prefix}}cols cols  is--list-4  {{content_mod}}">
+								[[azbntple 
+									tpl="/src/block/site/default/card/card-meetup.html" 
+									block_prefix="card-item__"
+									block_link="{{page.group_meetup_card}}"
+									block_mod="is--meetings  is--white"
+									block_heading="Beer bar, «Steel»" 
+									block_address="3 Leskov str."
+									block_date="December 17th"
+									block_date_iso="2017-12-17"
+									block_time="03:15 pm – 04:15 pm"
+									block_people=" 1"
+								]]
+							</div>
+						</div>
+					</div>
+					<div class="{{content_prefix}}cols cols  is--showall-right  {{content_mod}}">	
+						[[azbntple 
+							tpl="/src/block/site/default/card/card-showall.html" 
+							block_prefix="card-item__"
+							block_mod="is--showall  is--white"
+							block_link="{{page.group_meetup}}"
+							block_heading="Meetup's" 
+							block_heading_small="35"
+						]]						
+					</div>
+				</div> 
+			</div>
+		
+		</div>
+	</div>
+	<div class="{{content_prefix}}btn-block">
+		<div class="{{content_prefix}}container container  is--nopadding">	
+			<div class="{{content_prefix}}row row  is--wrap  is--gutter10  is--aic  is--jcsb">
+				<div class="{{content_prefix}}cols cols">
+					[[azbntple 
+						tpl="/src/block/site/default/button/link-icon-name.html"
+						button_prefix="btn-link__" 
+						button_mod="is--back  is--panel-bottom"
+						button_link="{{page.group_meetup}}"
+						button_name="Return back"
+						button_icon="slick-left" 
+						button_attr="  " 
+					]]
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

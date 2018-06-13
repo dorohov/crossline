@@ -1,0 +1,44 @@
+<div class="{{block_prefix}}card  {{block_mod}}">
+	<div class="{{block_prefix}}row row  is--gutter  is--wrap  {{block_mod}}"> 
+		<div class="{{block_prefix}}cols cols  is--icon  {{block_mod}}">
+			<div class="{{block_prefix}}preview  {{block_mod}}">
+				[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="{{block_icon}}" ]]
+			</div>
+		</div>
+		<div class="{{block_prefix}}cols cols  is--desc  {{block_mod}}">
+			<div class="{{block_prefix}}heading-small  {{block_mod}}">Step {{block_heading_small}}</div>
+			<h3 class="{{block_prefix}}heading  {{block_mod}}">{{block_heading}}</h3>
+			<div class="{{block_prefix}}elem  {{block_mod}}">
+				<div class="{{block_prefix}}row row  is--gutter  is--wrap  {{block_mod}}"> 
+					<div class="{{block_prefix}}cols cols  {{block_mod}}">
+						<div class="{{block_prefix}}icon-item  is--group">
+							<div class="{{block_prefix}}icon  is--group">
+								[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="icon-map" ]]
+							</div>
+							London, EN
+						</div>
+					</div>
+					<div class="{{block_prefix}}cols cols  {{block_mod}}">
+						<a href="#" class="btn-link__item">To change the location</a>
+					</div>
+				</div>
+			</div>
+			<div class="{{block_prefix}}elem  {{block_mod}}">
+				[[azbntple 
+					tpl="/src/block/site/default/form/elem-input.html"
+					form_id="fgc"
+					block_id="location"
+					block_prefix="form__"
+					block_mod="{{block_mod}}  is--location"
+					block_mod_elem="is--location"
+					block_color="{{form_color}}"
+					block_type="text"
+					block_attr="  "
+					block_required="required"
+					block_label="Location"
+					block_placeholder="Location"
+				]]
+			</div>
+		</div>
+	</div>
+</div>

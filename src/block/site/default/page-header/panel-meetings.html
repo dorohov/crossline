@@ -1,0 +1,39 @@
+<div class="{{block_prefix}}panel  {{block_mod}}">						
+	<div class="{{block_prefix}}row  row  is--gutter  is--wrap  {{block_mod}}">		
+		<div class="{{block_prefix}}cols cols  is--heading  {{block_mod}}">		
+			[[azbntple 
+				tpl="/src/block/site/default/page-header/heading-sup.html" 
+				header_prefix="page-header__" 
+				header_mod="{{block_mod}}"
+				header_level="{{block_heading_level}}"
+				header="{{block_heading}}"
+				header_count="{{block_heading_count}}"
+			]]
+		</div>		
+		<div class="{{block_prefix}}cols cols  is--btn  {{block_mod}}">
+			<div class="{{block_prefix}}btn  {{block_mod}}">
+				[[azbntple 
+					tpl="/src/block/site/default/button/link.html"
+					button_prefix="btn__" 
+					button_mod="is--line"
+					button_link="{{page.meetings}}"
+					button_name="Unfinished" 
+				]]
+				[[azbntple 
+					tpl="/src/block/site/default/button/link.html"
+					button_prefix="btn__" 
+					button_mod="is--line"
+					button_link="{{page.meetings_completed}}"
+					button_name="Completed" 
+				]]
+				[[azbntple 
+					tpl="/src/block/site/default/button/button-modal-icon.html"
+					button_prefix="btn__" 
+					button_mod="is--icon  is--friends"
+					button_target="modal-meetings"
+					button_icon="icon-filter" 
+				]]
+			</div>
+		</div>
+	</div>
+</div>

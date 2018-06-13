@@ -192,6 +192,7 @@
 				box-shadow: -9px 0 29px 0 fadeout(@blue, 72%);	
 			}
 		}
+		&.is--group,
 		&.is--friends{
 			@media @media-point-device-lg {
 				bottom: @navbar-device;
@@ -208,6 +209,7 @@
 	}
 	&dialog {
 		.modal-dialog();
+		&.is--group,
 		&.is--friends{
 			@media @media-point-screen-xl {
 				position: relative;
@@ -221,6 +223,11 @@
 		}
 		&.is--back{
 			padding-top: 54px;
+		}
+		&.is--group{
+			@media @media-point-screen-xl {
+				background: none;
+			}
 		}
 	}
 	&body{	
@@ -251,6 +258,7 @@
 			}
 		}
 		&.is--place{padding: 0;}
+		&.is--group,
 		&.is--friends{
 			@media @media-point-screen-xl {padding: 0}
 		}
@@ -328,6 +336,7 @@
 			top: 2.3vw;
 			right: 6vw;
 		}
+		&.is--group,
 		&.is--friends{
 			@media @media-point-screen-xl {
 				display: none;
@@ -714,6 +723,10 @@
 		&.in{
 			visibility: visible;
 			transform: translate(0%, 0);
+			/*&.is--meeting-ready{
+				opacity: 1;
+				background-color: @black;
+			}*/
 		}		
 	}
 	&dialog {
@@ -736,11 +749,28 @@
 		}
 		@media @media-point-screen {
 			width: auto;
-			margin: 0 @container_pad;			
+			margin: 0 @container_pad;		
 		}			
 		@media @media-point-screen-xl {			
 			max-width: 1020px;
 			width: 53.1vw;
+		}
+		&.is--create-polls{
+			@media @media-point-screen {
+				top: 14%;
+				height: 72%;
+				overflow: hidden;
+				max-height: 700px;			
+			}
+
+		}
+		&.is--meeting-ready{
+			@media @media-point-screen {				
+				max-width: 550px;
+				left: 50%;
+				transform: translateX(-74%);
+				margin: 0;
+			}
 		}
 	}
 	&body{	
@@ -762,6 +792,9 @@
 			top: 20px;
 			right: 35px;
 		}
+	}
+	&btn-group{
+		margin-top: 35px;		
 	}
 }
 .modal-inner__{

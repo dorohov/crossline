@@ -1,0 +1,121 @@
+<div class="{{block_prefix}}dropdown-inner  {{block_mod}}">
+	<div class="{{block_prefix}}elem  is--btn  {{block_mod}}">
+		[[azbntple 
+			tpl="/src/block/site/default/button/button-modal.html"
+			button_prefix="btn__" 
+			button_mod="is--lg"
+			button_target="modal-meeting-invite"
+			button_name="Invited friend" 
+		]]
+	</div>	 
+	<div class="{{block_prefix}}elem  is--search  {{block_mod}}">
+		<label class="{{block_prefix}}search  {{block_mod}}">
+			<input type="text" class="{{block_prefix}}search-input" placeholder="Search on a friend...">
+			<span class="{{block_prefix}}search-icon">
+				[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="icon-search" ]]
+			</span>				
+		</label>
+	</div>
+	<div class="{{block_prefix}}elem  is--filter  {{block_mod}}">
+		<div class="{{block_prefix}}filter  {{block_mod}}">
+			<div class="{{block_prefix}}filter-heading  {{block_mod}}">
+				Gender
+			</div>
+			<div class="{{block_prefix}}filter-elem  {{block_mod}}">
+				[[azbntple 
+					tpl="/src/block/site/default/form/elem-switch.html"
+					form_id="fg"
+					block_id="fg-switch1"
+					form_prefix="form__"
+					form_mod="{{block_mod}}"
+					block_mod_elem="  "
+					block_color="  "
+					block_attr="  "
+					block_required="  "
+					block_label="Male"
+					block_text="Male"
+				]]
+			</div>
+			<div class="{{block_prefix}}filter-elem  {{block_mod}}">
+				[[azbntple 
+					tpl="/src/block/site/default/form/elem-switch.html"
+					form_id="fg"
+					block_id="fg-switch2"
+					form_prefix="form__"
+					form_mod="{{block_mod}}"
+					block_mod_elem="  "
+					block_color="  "
+					block_attr="  "
+					block_required="  "
+					block_label="Female"
+					block_text="Female"
+				]]
+			</div>
+		</div>
+		<div class="{{block_prefix}}filter  {{block_mod}}">
+			<div class="{{block_prefix}}filter-heading  {{block_mod}}">
+				Age
+			</div>
+			<div class="{{block_prefix}}filter-elem  {{block_mod}}">
+				[[azbntple 
+					tpl="/src/block/site/default/form/elem-switch.html"
+					form_id="fg"
+					block_id="fg-switch3"
+					form_prefix="form__"
+					form_mod="{{block_mod}}"
+					block_mod_elem="  "
+					block_color="  "
+					block_attr="  "
+					block_required="  "
+					block_label="less than 18"
+					block_text="less than 18"
+				]]
+			</div>
+			<div class="{{block_prefix}}filter-elem  {{block_mod}}">
+				[[azbntple 
+					tpl="/src/block/site/default/form/elem-switch.html"
+					form_id="fg"
+					block_id="fg-switch4"
+					form_prefix="form__"
+					form_mod="{{block_mod}}"
+					block_mod_elem="  "
+					block_color="  "
+					block_attr="  "
+					block_required="  "
+					block_label="18-30 years"
+					block_text="18-30 years"
+				]]
+			</div>
+			<div class="{{block_prefix}}filter-elem  {{block_mod}}">
+				[[azbntple 
+					tpl="/src/block/site/default/form/elem-switch.html"
+					form_id="fg"
+					block_id="fg-switch5"
+					form_prefix="form__"
+					form_mod="{{block_mod}}"
+					block_mod_elem="  "
+					block_color="  "
+					block_attr="  "
+					block_required="  "
+					block_label="30-40 years"
+					block_text="30-40 years"
+				]]
+			</div>
+			<div class="{{block_prefix}}filter-elem  {{block_mod}}">
+				[[azbntple 
+					tpl="/src/block/site/default/form/elem-switch.html"
+					form_id="fg"
+					block_id="fg-switch6"
+					form_prefix="form__"
+					form_mod="{{block_mod}}"
+					block_mod_elem="  "
+					block_color="  "
+					block_attr="  "
+					block_required="  "
+					block_label="more than 40"
+					block_text="more than 40"
+				]]
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,51 @@
+<div class="{{block_prefix}}card  {{block_mod}}">
+	<div class="{{block_prefix}}elem-group  {{block_mod}}">
+		<h4 class="{{block_prefix}}heading  {{block_mod}}">{{block_heading}}</h4>
+		<div class="{{block_prefix}}heading-small  {{block_mod}}">{{block_address}}</div>		
+		<div class="{{block_prefix}}elem  {{block_mod}}">
+			<time class="{{block_prefix}}icon-item  is--date  {{block_mod}}" datetime="{{block_date_iso}}">
+				<div class="{{block_prefix}}icon  {{block_mod}}">
+					[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="icon-date" ]]
+				</div>
+				{{block_date}}
+			</time>
+		</div>
+		<div class="{{block_prefix}}elem  {{block_mod}}">
+			<div class="{{block_prefix}}icon-item  is--time  {{block_mod}}">
+				<div class="{{block_prefix}}icon  {{block_mod}}">
+					[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="icon-time" ]]
+				</div>
+				{{block_time}}
+			</div>
+		</div>
+		<div class="{{block_prefix}}elem  {{block_mod}}">
+			<div class="{{block_prefix}}icon-item  is--people  {{block_mod}}">
+				<div class="{{block_prefix}}icon  {{block_mod}}">
+					[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="icon-people" ]]
+				</div>
+				{{block_people}}
+			</div>
+		</div>
+		<div class="{{block_prefix}}inner  {{block_mod}}">
+			<h4 class="{{block_prefix}}heading  is--inner  {{block_mod}}">{{block_heading}}</h4>
+			<div class="{{block_prefix}}heading-small  is--inner  {{block_mod}}">{{block_address}}</div>
+			<div class="{{block_prefix}}elem  is--map  {{block_mod}}">
+				<a href="#" class="{{block_prefix}}icon-item  is--map  is--inner  {{block_mod}}">
+					<div class="{{block_prefix}}icon  is--map  is--inner  {{block_mod}}">
+						[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="icon-map" ]]
+					</div>
+					on map
+				</a>
+			</div>
+			<div class="{{block_prefix}}btn  {{block_mod}}">
+				[[azbntple 
+					tpl="/src/block/site/default/button/link.html"
+					button_prefix="btn__" 
+					button_mod="is--white  is--xs"
+					button_link="{{block_link}}"
+					button_name="Visit" 
+				]]
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,5 +1,6 @@
 .page-header__{	
 	&panel{	
+		&.is--group,
 		&.is--friends-card,
 		&.is--friends{
 			padding-bottom: 25px;
@@ -25,6 +26,7 @@
 			margin-bottom: 0;
 		}
 		//block
+		&.is--group,
 		&.is--friends-card,
 		&.is--friends{
 			margin-bottom: 0;
@@ -41,6 +43,7 @@
 		align-items: center;
 	}
 	&cols{
+		&.is--group,
 		&.is--friends{
 			@media @media-point-xxs {
 				.makeCols(12, 12);
@@ -63,6 +66,7 @@
 				text-align: right;
 			}
 		}
+		&.is--group,
 		&.is--friends{
 			display: flex;
 			flex-wrap: wrap;

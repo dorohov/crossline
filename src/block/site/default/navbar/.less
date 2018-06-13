@@ -954,7 +954,7 @@
 		}
 	}
 	//meeting
-	&meeting{
+	/*&meeting{
 		position: relative;
 		margin-bottom: 10px;
 		@media @media-point-screen {
@@ -1013,7 +1013,7 @@
 		border: 5px solid @white-dim;
 	}
 	//accordion
-	&accordion{}
+	&accordion{}*/
 	//navbar
 	&nav{
 		list-style: none;
@@ -1270,6 +1270,7 @@
 		}
 	}
 	&elem{
+		&.is--group,
 		&.is--friends{
 			margin-bottom: 10px;
 			&.is--btn{
@@ -1278,6 +1279,13 @@
 				padding-bottom: 40px;
 				@media @media-point-screen {
 					padding-bottom: 2.8vw;
+				}
+			}
+		}
+		&.is--group{
+			&.is--btn{
+				@media @media-point-screen {
+					padding-bottom: 2.4vw;
 				}
 			}
 		}
@@ -1293,7 +1301,7 @@
 		padding-right: 50px;	
 		@media @media-point-screen-lg {				
 			padding-right: 40px;
-			max-width: 200px;
+			max-width: 220px;
 		}	
 		margin-bottom: 20px;
 	}
@@ -1322,7 +1330,7 @@
 		background: none;
 		font-size: @b-fs - 2;
 		color: @b-color;
-		padding: 0 0 0 15px;
+		//padding: 0 0 0 15px;
 		&::-moz-placeholder{
 			color: #a8a8a8;
 			font-size: @b-fs - 4;
@@ -1335,7 +1343,7 @@
 	&filter{
 		margin-bottom: 25px;
 		@media @media-point-screen {
-			padding: 0 30px;
+			//padding: 0 30px;
 		}
 	}
 	&filter-heading{
@@ -1346,6 +1354,36 @@
 	}
 	&filter-elem{
 		margin-bottom: 10px;
+	}
+	&datepicker-value{
+		overflow: hidden;
+		height: 0;
+	}
+	&datepicker{
+		margin-bottom: 20px;
+	}
+	&datepicker-legend{}
+	&datepicker-legend-item{
+		font-size: @b-fs - 4;
+		line-height: @b-lh - 6;
+		font-weight: 300;
+		position: relative;
+		padding-left: 20px;
+		&::before{
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			border-radius: 50%;
+			width: 12px;
+			height: 12px;
+		}
+		&.is--meetup{
+			&::before{
+				background-color: @orange;
+			}
+		}
 	}
 	/*
 	&nav{

@@ -1,0 +1,377 @@
+<div class="{{content_prefix}}panel">
+	<div class="{{content_prefix}}inner  is--full-panel">
+		<div class="{{content_prefix}}scroller mCustomScrollbar scroller" data-mcs-theme="green-dim"> 
+			<div class="{{content_prefix}}container container">
+				[[azbntple 
+					tpl="/src/block/site/default/breadcrumb/level1.html" 
+					bread_prefix="breadcrumb__"
+					bread_mod="  "
+					level_parent="{{parent_heading}}"
+					level_parent_link="{{parent_link}}"
+					level_1="{{block_group_heading}}"
+				]]
+
+				[[azbntple 
+					tpl="/src/block/site/default/tabs/panel-group.html"
+					block_prefix="tabs__" 
+					block_mod="is--group"
+				]]
+
+				<div class="{{content_prefix}}elem  {{content_mod}}">
+					[[azbntple 
+						tpl="/src/block/site/default/card/card-group-info.html" 
+						block_prefix="card-item__"
+						block_mod="is--group  is--card"
+						block_status="is--online"
+						block_active="  "
+						block_link="{{page.group_card}}"
+						block_heading="{{block_group_heading}}" 
+						block_preview="http://via.placeholder.com/290x290"
+					]]
+				</div>
+				<div class="{{content_prefix}}elem  {{content_mod}}">
+					<div class="{{content_prefix}}row row  is--gutter  is--wrap  {{content_mod}}">
+						<div class="{{content_prefix}}cols cols  is--content-left  {{content_mod}}">
+							<div class="{{content_prefix}}heading  {{content_mod}}">
+								<h2>Who we&nbsp;are</h2>
+							</div>								
+							<div class="{{content_prefix}}text  text__block  {{content_mod}}">
+								<p>Welcome to&nbsp;ESV&nbsp;Social, now the #1 most active group in&nbsp;Canada! Do&nbsp;you want more excitement in&nbsp;your life? Are you looking to&nbsp;make new friends and do&nbsp;fun stuff? Join&nbsp;us! Check out this promo video we&nbsp;made for our group a&nbsp;few years back:</p>
+								<p>The great thing about this group, and the reason for our success, is&nbsp;we&nbsp;encourage our members to&nbsp;actively plan events! Members who have attended at&nbsp;least 1&nbsp;event are welcome to&nbsp;post an&nbsp;event of&nbsp;their own as&nbsp;long as&nbsp;it&nbsp;doesn’t conflict with any of&nbsp;our group policies which can be&nbsp;found here: policy page </p>
+								<p>Just contact Ian or&nbsp;another group organizer to&nbsp;get set up&nbsp;with event hosting access. Businesses who would like to&nbsp;share their events with our members are also welcome to&nbsp;contact&nbsp;us for sponsorship opportunities.</p>
+								<p>What about our group name? The first thing that comes to&nbsp;many people’s minds when they see “Extremely Shy- Looking for Friends” is: Do&nbsp;I&nbsp;have to&nbsp;be&nbsp;extremely shy to&nbsp;join this group? NO: People of&nbsp;all levels of&nbsp;extroversion and introversion can be&nbsp;found in&nbsp;our group. Many of&nbsp;our members are not shy, and many more have largely overcome their shyness since joining our group. That being said, I&nbsp;know what it’s like to&nbsp;be&nbsp;very shy and i&nbsp;know that signing up&nbsp;for your first meetup event can be&nbsp;scary and intimidating. Part of&nbsp;what this group is&nbsp;about is&nbsp;making that first step as&nbsp;easy for you as&nbsp;possible. Shyness is&nbsp;not something that anyone here will judge you poorly for. And if&nbsp;there’s anything we&nbsp;can do&nbsp;to&nbsp;make it&nbsp;easier for you to&nbsp;attend your first event then please let me&nbsp;know by&nbsp;sending Ian a&nbsp;message.</p>
+								<p>Thanks for joining. See you soon!</p>
+							</div>
+						</div>
+						<div class="{{content_prefix}}cols cols  is--content-right  {{content_mod}}">
+							<div class="{{content_prefix}}heading  is--flex  {{content_mod}}">
+								<h2>Next meetup</h2>
+								<a href="{{page.group_meetup}}" class="btn-link__item">Show all</a>
+							</div>
+							<div class="{{content_prefix}}row row  is--gutter  is--wrap  {{content_mod}}">
+								<div class="{{content_prefix}}cols cols  is--meetup-index  {{content_mod}}">
+									[[azbntple 
+										tpl="/src/block/site/default/card/card-meetings.html" 
+										block_prefix="card-item__"
+										block_modal="modal-place"
+										block_mod="is--meetings"
+										block_heading="Beer bar, «Steel»" 
+										block_address="3 Leskov str."
+										block_date="December 17th"
+										block_date_iso="2017-12-17"
+										block_time="03:15 pm – 04:15 pm"
+										block_people=" 1"
+									]] 
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="{{content_prefix}}elem  {{content_mod}}">				
+					<div class="{{content_prefix}}heading {{content_mod}}">
+						<h2>Participants</h2>
+					</div>
+					<div class="{{content_prefix}}row row  is--gutter  is--wrap  {{content_mod}}">
+						<div class="{{content_prefix}}cols cols  is--showall-left  {{content_mod}}">	
+							<div class="{{content_prefix}}row row  is--gutter  is--wrap  {{content_mod}}">
+								<div class="{{content_prefix}}cols cols  is--list-4  {{content_mod}}">
+									[[azbntple 
+										tpl="/src/block/site/default/card/card-friends.html" 
+										block_prefix="card-item__"
+										block_mod="is--friends"
+										block_status="is--online"
+										block_active="  "
+										block_link="{{page.friends_card}}"
+										block_heading="Toby William" 
+										block_age="29 years"
+										block_preview="http://via.placeholder.com/55x55"
+									]]
+								</div>
+								<div class="{{content_prefix}}cols cols  is--list-4  {{content_mod}}">
+									[[azbntple 
+										tpl="/src/block/site/default/card/card-friends.html" 
+										block_prefix="card-item__"
+										block_mod="is--friends"
+										block_status="is--online"
+										block_active="  "
+										block_link="{{page.friends_card}}"
+										block_heading="Toby William" 
+										block_age="29 years"
+										block_preview="http://via.placeholder.com/55x55"
+									]]
+								</div>
+								<div class="{{content_prefix}}cols cols  is--list-4  {{content_mod}}">
+									[[azbntple 
+										tpl="/src/block/site/default/card/card-friends.html" 
+										block_prefix="card-item__"
+										block_mod="is--friends"
+										block_status="is--online"
+										block_active="  "
+										block_link="{{page.friends_card}}"
+										block_heading="Toby William" 
+										block_age="29 years"
+										block_preview="http://via.placeholder.com/55x55"
+									]]
+								</div>
+								<div class="{{content_prefix}}cols cols  is--list-4  {{content_mod}}">
+									[[azbntple 
+										tpl="/src/block/site/default/card/card-friends.html" 
+										block_prefix="card-item__"
+										block_mod="is--friends"
+										block_status="is--online"
+										block_active="  "
+										block_link="{{page.friends_card}}"
+										block_heading="Toby William" 
+										block_age="29 years"
+										block_preview="http://via.placeholder.com/55x55"
+									]]
+								</div>
+								<div class="{{content_prefix}}cols cols  is--list-4  {{content_mod}}">
+									[[azbntple 
+										tpl="/src/block/site/default/card/card-friends.html" 
+										block_prefix="card-item__"
+										block_mod="is--friends"
+										block_status="is--online"
+										block_active="  "
+										block_link="{{page.friends_card}}"
+										block_heading="Toby William" 
+										block_age="29 years"
+										block_preview="http://via.placeholder.com/55x55"
+									]]
+								</div>
+								<div class="{{content_prefix}}cols cols  is--list-4  {{content_mod}}">
+									[[azbntple 
+										tpl="/src/block/site/default/card/card-friends.html" 
+										block_prefix="card-item__"
+										block_mod="is--friends"
+										block_status="is--online"
+										block_active="  "
+										block_link="{{page.friends_card}}"
+										block_heading="Toby William" 
+										block_age="29 years"
+										block_preview="http://via.placeholder.com/55x55"
+									]]
+								</div>
+							</div>
+						</div>
+						<div class="{{content_prefix}}cols cols  is--showall-right  {{content_mod}}">
+							[[azbntple 
+								tpl="/src/block/site/default/card/card-showall.html" 
+								block_prefix="card-item__"
+								block_mod="is--showall"
+								block_link="{{page.group_participants}}"
+								block_heading="Participants" 
+								block_heading_small="20 364"
+							]]
+						</div>
+					</div>
+				</div>
+				<div class="{{content_prefix}}elem  {{content_mod}}">				
+					<div class="{{content_prefix}}heading {{content_mod}}">
+						<h2>Photos</h2>
+					</div>
+					<div class="{{content_prefix}}row row  is--gutter  is--wrap  {{content_mod}}">
+						<div class="{{content_prefix}}cols cols  is--showall-left  {{content_mod}}">	
+							<div class="{{content_prefix}}row row  is--gutter  is--wrap  {{content_mod}}">
+								<div class="{{content_prefix}}cols cols  is--list-4  {{content_mod}}">
+									[[azbntple 
+										tpl="/src/block/site/default/card/card-group-photo.html" 
+										block_prefix="card-item__"
+										block_mod="is--group-photo"
+										block_link="#"
+										block_preview="http://via.placeholder.com/320x215"
+									]]
+								</div>
+								<div class="{{content_prefix}}cols cols  is--list-4  {{content_mod}}">
+									[[azbntple 
+										tpl="/src/block/site/default/card/card-group-photo.html" 
+										block_prefix="card-item__"
+										block_mod="is--group-photo"
+										block_link="#"
+										block_preview="http://via.placeholder.com/320x215"
+									]]
+								</div>
+								<div class="{{content_prefix}}cols cols  is--list-4  {{content_mod}}">
+									[[azbntple 
+										tpl="/src/block/site/default/card/card-group-photo.html" 
+										block_prefix="card-item__"
+										block_mod="is--group-photo"
+										block_link="#"
+										block_preview="http://via.placeholder.com/320x215"
+									]]
+								</div>
+							</div>
+						</div>
+						<div class="{{content_prefix}}cols cols  is--showall-right  {{content_mod}}">
+							[[azbntple 
+								tpl="/src/block/site/default/card/card-showall.html" 
+								block_prefix="card-item__"
+								block_mod="is--showall"
+								block_link="{{page.group_photos}}"
+								block_heading="Photos" 
+								block_heading_small="20 364"
+							]]
+						</div>
+					</div>
+				</div>
+				<div class="{{content_prefix}}elem  {{content_mod}}">				
+					<div class="{{content_prefix}}heading {{content_mod}}">
+						<h2>Discussions</h2>
+					</div>
+					<div class="{{content_prefix}}row row  is--gutter  is--wrap  {{content_mod}}">
+						<div class="{{content_prefix}}cols cols  is--list-12  {{content_mod}}">								
+							[[azbntple 
+								tpl="/src/block/site/default/card/card-discussions.html" 
+								block_prefix="card-item__"
+								block_mod="is--messages"
+								block_status="is--online"
+								block_mess="is--new"
+								block_link="{{page.group_discussions_card}}"
+								block_heading="Nadya Nadya" 
+								block_age="25 years"
+								block_preview="{{url-path-img}}/temp/profile-preview1-55x55.jpg"
+								block_preview="http://via.placeholder.com/55x55"
+								block_text="  "
+								block_date="15 Feb"
+								block_date_iso="2018-02-15"
+							]]	
+						</div>
+						<div class="{{content_prefix}}cols cols  is--list-12  {{content_mod}}">								
+							[[azbntple 
+								tpl="/src/block/site/default/card/card-discussions.html" 
+								block_prefix="card-item__"
+								block_mod="is--messages"
+								block_status="is--online"
+								block_mess="is--new"
+								block_link="{{page.group_discussions_card}}"
+								block_heading="Nadya Nadya" 
+								block_age="25 years"
+								block_preview="{{url-path-img}}/temp/profile-preview1-55x55.jpg"
+								block_preview="http://via.placeholder.com/55x55"
+								block_text="  "
+								block_date="15 Feb"
+								block_date_iso="2018-02-15"
+							]]	
+						</div>
+						<div class="{{content_prefix}}cols cols  is--list-12  {{content_mod}}">								
+							[[azbntple 
+								tpl="/src/block/site/default/card/card-discussions.html" 
+								block_prefix="card-item__"
+								block_mod="is--messages"
+								block_status="is--online"
+								block_mess="is--new"
+								block_link="{{page.group_discussions_card}}"
+								block_heading="Nadya Nadya" 
+								block_age="25 years"
+								block_preview="{{url-path-img}}/temp/profile-preview1-55x55.jpg"
+								block_preview="http://via.placeholder.com/55x55"
+								block_text="  "
+								block_date="15 Feb"
+								block_date_iso="2018-02-15"
+							]]	
+						</div>
+						<div class="{{content_prefix}}cols cols  is--list-12  {{content_mod}}">	
+							[[azbntple 
+								tpl="/src/block/site/default/card/card-showall.html" 
+								block_prefix="card-item__"
+								block_mod="is--showall  is--inline"
+								block_link="{{page.group_discussions}}"
+								block_heading="Discussions" 
+								block_heading_small="24"
+							]]
+						</div>		
+					</div>
+				</div>
+				<div class="{{content_prefix}}elem  {{content_mod}}">				
+					<div class="{{content_prefix}}heading {{content_mod}}">
+						<h2>The topic of the group</h2>
+					</div>
+					<div class="{{content_prefix}}row row  is--topic  is--gutter10  is--wrap  {{content_mod}}">
+						<div class="{{content_prefix}}cols cols  is--topic  {{content_mod}}">								
+							<div class="{{content_prefix}}topic  {{content_mod}}">
+								Tourism
+							</div>
+						</div>
+						<div class="{{content_prefix}}cols cols  is--topic  {{content_mod}}">								
+							<div class="{{content_prefix}}topic  {{content_mod}}">
+								Sport
+							</div>
+						</div>
+						<div class="{{content_prefix}}cols cols  is--topic  {{content_mod}}">								
+							<div class="{{content_prefix}}topic  {{content_mod}}">
+								Tennis
+							</div>
+						</div>
+						<div class="{{content_prefix}}cols cols  is--topic  {{content_mod}}">								
+							<div class="{{content_prefix}}topic  {{content_mod}}">
+								Conversation
+							</div>
+						</div>
+						<div class="{{content_prefix}}cols cols  is--topic  {{content_mod}}">								
+							<div class="{{content_prefix}}topic  {{content_mod}}">
+								Hiking
+							</div>
+						</div>
+						<div class="{{content_prefix}}cols cols  is--topic  {{content_mod}}">								
+							<div class="{{content_prefix}}topic  {{content_mod}}">
+								Tourism
+							</div>
+						</div>
+						<div class="{{content_prefix}}cols cols  is--topic  {{content_mod}}">								
+							<div class="{{content_prefix}}topic  {{content_mod}}">
+								Sport
+							</div>
+						</div>
+						<div class="{{content_prefix}}cols cols  is--topic  {{content_mod}}">								
+							<div class="{{content_prefix}}topic  {{content_mod}}">
+								Conversation
+							</div>
+						</div>
+						<div class="{{content_prefix}}cols cols  is--topic  {{content_mod}}">								
+							<div class="{{content_prefix}}topic  {{content_mod}}">
+								Tourism
+							</div>
+						</div>
+						<div class="{{content_prefix}}cols cols  is--topic  {{content_mod}}">								
+							<div class="{{content_prefix}}topic  {{content_mod}}">
+								Sport
+							</div>
+						</div>
+						<div class="{{content_prefix}}cols cols  is--topic  {{content_mod}}">								
+							<div class="{{content_prefix}}topic  {{content_mod}}">
+								Tennis
+							</div>
+						</div>
+						<div class="{{content_prefix}}cols cols  is--topic  {{content_mod}}">								
+							<div class="{{content_prefix}}topic  {{content_mod}}">
+								Conversation
+							</div>
+						</div>
+						<div class="{{content_prefix}}cols cols  is--topic  {{content_mod}}">								
+							<div class="{{content_prefix}}topic  {{content_mod}}">
+								Hiking
+							</div>
+						</div>
+					</div>
+				</div>
+			</div> 
+		</div>
+	</div>
+	<div class="{{content_prefix}}btn-block">
+		<div class="{{content_prefix}}container container  is--nopadding">	
+			<div class="{{content_prefix}}row row  is--wrap  is--gutter10  is--aic  is--jcsb">
+				<div class="{{content_prefix}}cols cols">
+					[[azbntple 
+						tpl="/src/block/site/default/button/link-icon-name.html"
+						button_prefix="btn-link__" 
+						button_mod="is--back  is--panel-bottom"
+						button_link="{{page.group}}"
+						button_name="Return back"
+						button_icon="slick-left" 
+						button_attr="  " 
+					]]
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

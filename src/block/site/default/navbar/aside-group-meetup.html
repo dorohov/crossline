@@ -1,0 +1,61 @@
+<div class="{{block_prefix}}dropdown-inner  {{block_mod}}">
+	<!--<div class="{{block_prefix}}elem  is--btn  {{block_mod}}">
+		[[azbntple 
+			tpl="/src/block/site/default/button/button-modal-icon-name.html"
+			button_prefix="btn__" 
+			button_mod="is--icon  is--calendar"
+			button_target="modal-invite-friends"
+			button_name="Calendar of meetup's" 
+			button_icon="icon-calendar"
+		]]		
+	</div>-->
+	<div class="{{block_prefix}}elem  is--filter  {{block_mod}}">
+		<div class="{{block_prefix}}filter  {{block_mod}}">
+			<div class="{{block_prefix}}filter-heading  {{block_mod}}">
+				Filter
+			</div>
+			<div class="{{block_prefix}}filter-elem  {{block_mod}}">
+				[[azbntple 
+					tpl="/src/block/site/default/form/elem-switch-radio.html"
+					form_id="fg"
+					block_id="fg-switch1"
+					form_prefix="form__"
+					form_mod="{{block_mod}}"
+					block_mod_elem="  "
+					block_color="  "
+					block_attr="  "
+					block_required="  "
+					block_label="Filter"
+					block_text="Soon"
+				]]
+			</div>
+			<div class="{{block_prefix}}filter-elem  {{block_mod}}">
+				[[azbntple 
+					tpl="/src/block/site/default/form/elem-switch-radio.html"
+					form_id="fg"
+					block_id="fg-switch2"
+					form_prefix="form__"
+					form_mod="{{block_mod}}"
+					block_mod_elem="  "
+					block_color="  "
+					block_attr="  "
+					block_required="  "
+					block_label="Filter"
+					block_text="Past"
+				]]
+			</div>
+		</div>
+	</div>
+	<div class="{{block_prefix}}elem  is--filter  {{block_mod}}">
+		<div class="{{block_prefix}}filter-heading  {{block_mod}}">
+			Calendar
+		</div>
+		<div class="{{block_prefix}}datepicker-value  {{block_mod}}" data-plugin="datepicker-inline"></div>
+		<div class="{{block_prefix}}datepicker  {{block_mod}}"></div>
+		<div class="{{block_prefix}}datepicker-legend  {{block_mod}}">
+			<div class="{{block_prefix}}datepicker-legend-item  is--meetup  {{block_mod}}">
+				Meetup's
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+	<head>
+		[[azbntple 
+			tpl="/src/block/site/default/head/.html" 
+			title=" "
+			description=" "
+		]] 		
+	</head>
+	<body> 
+		[[azbntple 
+			tpl="/src/block/site/default/navbar/.html"
+			class="navbar-site scroll"
+			navbar_prefix="navbar__"   
+			navbar_mod="  "     
+		]] 	
+		[[azbntple 
+			tpl="/src/block/site/default/navbar/panel-left.html"
+			navbar_prefix="navbar-left__"   
+			navbar_mod="  "     
+		]]
+		[[azbntple  
+			tpl="/src/block/site/page/panel-meetings-completed.html"
+			content_prefix="content-block__"
+			content_mod="is--group"
+			block_heading="Completed meetings"
+			block_heading_count="(58)"
+			block_heading_mod="is--page-heading"
+		]]		
+		[[azbntple 
+			tpl="/src/block/site/default/modals/include.html"
+		]] 
+		[[azbntple tpl="/src/block/site/default/script/script.html" ]]
+	</body>
+</html>
