@@ -50,10 +50,10 @@
 		"group_polls":"/group-polls.html",
 		"group_polls_card":"/group-polls-card.html"
 	},	                           
-	"url-path":"/",
-	"url-path-css":"/css",
-	"url-path-img":"/img",
-	"url-path-js":"/js",
-	"url-path-plugins":"/plugins",
-	"url-path-favicon":"/favicon"
+	"url-path":"/var/static/cl",
+	"url-path-css":"/var/static/cl/css",
+	"url-path-img":"/var/static/cl/img",
+	"url-path-js":"/var/static/cl/js",
+	"url-path-plugins":"/var/static/cl/plugins",
+	"url-path-favicon":"/var/static/cl/favicon"
 }
