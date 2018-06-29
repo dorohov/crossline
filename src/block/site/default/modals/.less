@@ -740,6 +740,10 @@
 			border-radius: 5px;
 			top: 20%;
 			height: auto;
+			&.is--location{
+				top: 15%;
+				//bottom: 20%;
+			}
 		}
 		@media @media-point-tablet {
 			max-width: 500px;
@@ -748,7 +752,7 @@
 			transform: translateX(-50%);
 		}
 		@media @media-point-screen {
-			width: auto;
+			width: ~"calc(100% - @{container_pad} * 2)";
 			margin: 0 @container_pad;		
 		}			
 		@media @media-point-screen-xl {			
@@ -795,6 +799,15 @@
 	}
 	&btn-group{
 		margin-top: 35px;		
+	}
+	&map{
+		height: 400px;
+		@media @media-point-xs {
+			height: 250px;
+		}
+		@media @media-point-notsmart {
+			height: 450px;
+		}
 	}
 }
 .modal-inner__{
