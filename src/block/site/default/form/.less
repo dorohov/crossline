@@ -33,6 +33,13 @@
 			padding-top: 40px; 
 		}		
 	}
+	&error{
+		margin-bottom: 20px;
+		color: red;
+		text-transform: uppercase;
+		text-align: center;
+		transition: @trs-site;
+	}
 	&inner{
 		&.is--profile{
 			//padding-top: 5px;
@@ -327,6 +334,9 @@
 	&item-inner{
 		position: relative;
 	}
+	&btn-bottom{
+		padding-top: 20px;
+	}
 	&desc{
 		&.is--meeting-create{
 			color: @green-dim;
@@ -437,6 +447,11 @@
 			&:focus{ 
 				border-color: @form_control_focus_border_color;
 			}	
+			&.is--profile{
+				font-size: @form_control_t_fs - 2;
+				line-height: @form_control_t_lh - 2;
+				height: @form_control_height_textarea + 40;
+			}
 		}
 		&.is--search{
 			padding-right: 50px;

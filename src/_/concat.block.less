@@ -223,6 +223,7 @@
 	&cols{
 		&.is--profile{
 			&.is--left{
+				.makeCols(12, 12);
 				@media @media-point-screen {
 					.makeCols(3, 12);
 				}
@@ -231,6 +232,7 @@
 				}
 			}
 			&.is--right{
+				.makeCols(12, 12);
 				@media @media-point-screen {
 					.makeCols(9, 12);
 				}
@@ -1326,6 +1328,11 @@
 			color: @blue-dim;
 			background-color: @white-dim;
 			cursor: not-allowed;
+			box-shadow: none;
+		}
+		&.is--unsubscribe{
+			color: @green-dark;
+			background-color: @white-dim;
 			box-shadow: none;
 		}
 		&.is--green-dark{
@@ -3064,7 +3071,8 @@
 			}
 		}
 		&.is--messages{
-			color: @black-dark-dim;
+			//color: @black-dark-dim;
+			color: @b-color;
 			font-weight: 300;
 			font-size: @b-fs - 2;
 			line-height: @b-lh - 5;
@@ -3423,6 +3431,13 @@
 			padding-top: 40px; 
 		}		
 	}
+	&error{
+		margin-bottom: 20px;
+		color: red;
+		text-transform: uppercase;
+		text-align: center;
+		transition: @trs-site;
+	}
 	&inner{
 		&.is--profile{
 			//padding-top: 5px;
@@ -3717,6 +3732,9 @@
 	&item-inner{
 		position: relative;
 	}
+	&btn-bottom{
+		padding-top: 20px;
+	}
 	&desc{
 		&.is--meeting-create{
 			color: @green-dim;
@@ -3827,6 +3845,11 @@
 			&:focus{ 
 				border-color: @form_control_focus_border_color;
 			}	
+			&.is--profile{
+				font-size: @form_control_t_fs - 2;
+				line-height: @form_control_t_lh - 2;
+				height: @form_control_height_textarea + 40;
+			}
 		}
 		&.is--search{
 			padding-right: 50px;
@@ -5866,6 +5889,9 @@ body.rtl .formError .formErrorArrow {
 				top: 15%;
 				//bottom: 20%;
 			}
+			&.is--create-album{
+				bottom: 20%;
+			}
 		}
 		@media @media-point-tablet {
 			max-width: 500px;
@@ -7009,6 +7035,9 @@ body.rtl .formError .formErrorArrow {
 	}
 	&nav-item{
 		//margin-bottom: 5px;
+		&.is--logout{
+			padding-top: 25px;
+		} 
 	}
 	&nav-link{
 		display: block;

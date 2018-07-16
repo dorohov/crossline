@@ -13,7 +13,7 @@
 					tpl="/src/block/site/default/button/button-icon-noname.html"
 					button_prefix="btn__" 
 					button_mod="{{block_mod}} is--return"
-					button_icon="icon-return" 
+					button_icon="icon-plus" 
 				]]
 			</div>
 		</div>
@@ -25,10 +25,22 @@
 				header_level="h4"
 				header="life position"
 			]]
+			[[azbntple 
+				tpl="/src/block/site/default/form/elem-textarea.html"
+				form_id="{{form_id}}"
+				block_id="name"
+				block_prefix="form__"
+				block_mod="is--textarea"
+				block_mod_elem="is--profile"
+				block_color="  "
+				block_type="text"
+				block_attr="  "
+				block_required="required"
+				block_label="life position"
+				block_placeholder="life position"
+				block_value="Max 200 symbols' Lorem ipsum dolor sit amet, consectetuer ad ipiscing elit. Aenean commodo ligula eget dolor dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+			]]
 			<div class="{{block_prefix}}text  {{block_mod}}">
-				<p>Max 200 symbols' Lorem ipsum dolor sit amet, consectetuer ad ipiscing elit. Aenean commodo ligula eget dolor dolor.</p>
-				<p>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-				<p><a href="#">Edit position</a></p>
 			</div>
 		</div>
 	</div>			
