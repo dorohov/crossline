@@ -5,18 +5,39 @@ $(".form__block").validationEngine(
 		//scrollOffset: 200,		
 		scroll: false
 	}
-); 
+);
 
+$(document.body).on('click', '.form__btn-pass', null, function(event){
+	event.preventDefault();
+	
+	var btn = $(this);
+	
+	if(btn.hasClass('is--view')) {
+		$(".form__btn-pass.is--view").removeClass("is--active");
+		$(".form__btn-pass.is--hide").addClass("is--active");
+		$(".form__control.is--pass").attr("type","text");
+	}
+	
+	if(btn.hasClass('is--hide')) {
+		$(".form__btn-pass.is--hide").removeClass("is--active");
+		$(".form__btn-pass.is--view").addClass("is--active");
+		$(".form__control.is--pass").attr("type","password");
+	}
+	
+});
+
+/*
 $(".form__btn-pass.is--view").on('click', function(){
-	$(this).removeClass("is--active");
+	//$(this).removeClass("is--active");
 	$(".form__btn-pass.is--hide").addClass("is--active");
 	$(".form__control.is--pass").attr("type","text");
 });
 $(".form__btn-pass.is--hide").on('click', function(){
-	$(this).removeClass("is--active");
+	//$(this).removeClass("is--active");
 	$(".form__btn-pass.is--view").addClass("is--active");
 	$(".form__control.is--pass").attr("type","password");
 });
+*/
 
 var time_before = $(".js-time-before"),
 	time_after = $(".js-time-after");
