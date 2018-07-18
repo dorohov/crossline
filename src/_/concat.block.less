@@ -125,7 +125,8 @@
 			padding-bottom: 30px;
 			@media @media-point-screen {
 				padding-top: 3vw;
-				padding-bottom: 3vw;
+				padding-bottom: 3vw;    
+				max-width: 1200px;
 			}			
 		}
 		&.is--friends{
@@ -201,6 +202,9 @@
 		}
 	}
 	&row{	
+		&.is--login{
+			//align-items: center;
+		}
 		&.is--chat{	
 			&.is--message{
 				flex-wrap: nowrap;
@@ -221,6 +225,15 @@
 		}		  
 	}		  
 	&cols{
+		&.is--login{
+			.makeCols(12, 12);
+			@media @media-point-screen {
+				.makeCols(6, 12);
+			}
+			&.is--left{
+			}
+			&.is--right{}
+		}
 		&.is--profile{
 			&.is--left{
 				.makeCols(12, 12);
@@ -584,6 +597,16 @@
 		}
 		&.is--group{
 
+		}
+	}
+	&card{
+		&.is--login{
+			border: 1px solid @white-dim;
+			padding: 30px;
+			height: 100%;
+			@media @media-point-screen {
+				padding: 2vw;
+			}
 		}
 	}
 	&heading{
@@ -3419,10 +3442,11 @@
 		}
 		&.is--login{
 			margin: 0 auto;
-			max-width: 880px;
+			max-width: 600px;
 			margin-bottom: 35px;
 			@media @media-point-screen {
-				margin-bottom: 3vw;
+				//margin-bottom: 3vw;
+				margin-bottom: 0;
 			}
 		}
 		&.is--vote{
@@ -3637,10 +3661,10 @@
 		}
 		&.is--login{
 			@media @media-point-screen {
-				.makeCols(4.5, 12);
+				//.makeCols(4, 12);
 				&.is--btn{
-					.makeCols(3, 12);
-					align-self: flex-end;
+					padding-top: 30px; 
+					//.makeCols(12, 12);
 				}
 			}
 		}
@@ -3682,9 +3706,16 @@
 			margin-top: -10px;
 			margin-bottom: 15px;
 		}
+		&.is--login{
+			margin-top: -10px;
+			margin-bottom: 15px;
+		}
 	}
 	&cols-inner{
 		&.is--profile{
+			padding-top: 10px;
+		}
+		&.is--login{
 			padding-top: 10px;
 		}
 	}
@@ -3764,6 +3795,9 @@
 		}
 	}
 	&link{
+		&.is--login{
+			font-size: @b-fs - 4;
+		}
 		&.is--meeting-create{
 			margin-bottom: 20px;
 		}
@@ -3940,6 +3974,42 @@
 					//background-color: fadeout(@form_control_w_bg_color, 0%);
 				}
 			}			
+		}
+	}
+	&control-list{
+		position: absolute;
+		border-width: @form_control_border_width;   
+		border-style: solid;   
+		border-color: @form_control_border_color;
+		border-radius: @form_control_border_radius;
+		background: @form_control_bg_color;
+		font-size: @form_control_plh_fs;
+		z-index: 5;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		height: 220px;
+		overflow-y: scroll;
+		list-style: none;
+		margin: 5px 0 0 0;
+		border-radius: 5px;		
+		padding: 10px 0;
+		transform-origin: 0 0;
+		transform: scale(0, 0);
+		&.is--open{
+			transform: scale(1, 1);
+		}
+	}
+	&control-item{
+		a{
+			display: block;
+			padding: 5px 15px;
+			color: @form_control_t_color;
+			&:hover{
+				background-color: @form_control_focus_border_color;
+				color: @form_control_bg_color;
+
+			}
 		}
 	}
 	&search-icon{

@@ -125,7 +125,8 @@
 			padding-bottom: 30px;
 			@media @media-point-screen {
 				padding-top: 3vw;
-				padding-bottom: 3vw;
+				padding-bottom: 3vw;    
+				max-width: 1200px;
 			}			
 		}
 		&.is--friends{
@@ -201,6 +202,9 @@
 		}
 	}
 	&row{	
+		&.is--login{
+			//align-items: center;
+		}
 		&.is--chat{	
 			&.is--message{
 				flex-wrap: nowrap;
@@ -221,6 +225,15 @@
 		}		  
 	}		  
 	&cols{
+		&.is--login{
+			.makeCols(12, 12);
+			@media @media-point-screen {
+				.makeCols(6, 12);
+			}
+			&.is--left{
+			}
+			&.is--right{}
+		}
 		&.is--profile{
 			&.is--left{
 				.makeCols(12, 12);
@@ -584,6 +597,16 @@
 		}
 		&.is--group{
 
+		}
+	}
+	&card{
+		&.is--login{
+			border: 1px solid @white-dim;
+			padding: 30px;
+			height: 100%;
+			@media @media-point-screen {
+				padding: 2vw;
+			}
 		}
 	}
 	&heading{
