@@ -41,15 +41,46 @@
 	&inner{}
 	&row{
 		align-items: center;
+		&.is--group,
+		&.is--friends{
+			@media @media-point-smart {
+				justify-content: space-between;
+			}
+		}
 	}
 	&cols{
 		&.is--group,
 		&.is--friends{
 			@media @media-point-xxs {
-				.makeCols(12, 12);
+				//.makeCols(12, 12);
 			}
-			&.is--btn{
-				margin-left: auto;				
+			&.is--heading{
+				@media @media-point-smart {
+					order: 1;
+				}
+			}
+			&.is--btn{	
+				@media @media-point-smart {
+					order: 3;
+				}
+				@media @media-point-xxs {
+					.makeCols(12, 12);
+				}
+				@media @media-point-notsmart {
+					margin-left: auto;
+				}			
+			}
+			&.is--add{
+				position: relative;		
+				@media @media-point-smart {
+					order: 2;
+				}		
+				@media @media-point-xl {
+					.makeCols(2.5, 12);
+				}
+				@media @media-point-xxl {
+					.makeCols(2, 12);
+				}
 			}
 		}
 		&.is--friends-card{

@@ -79,12 +79,12 @@
 		background-color: @btn_bg_color; 
 		text-align: center;	
 		color: @btn_color;
-		box-shadow: 5px 10px 10px 0px fadeout(@btn_bg_color, 80%);
+		//box-shadow: 5px 10px 10px 0px fadeout(@btn_bg_color, 80%);
 		//border-width: 3px;
 		//border-style: solid;
 		//border-color: @btn_border_color;
 		@media @media-point-screen-lg {
-			box-shadow: 0px 15px 38px 0px fadeout(@btn_bg_color, 43%);
+			//box-shadow: 0px 15px 38px 0px fadeout(@btn_bg_color, 43%);
 		}
 		.btn-base();
 		span{}
@@ -203,6 +203,16 @@
 			font-size: @btn_fs - 2;
 			line-height: @btn_lh - 2;
 			padding: 6px 35px 10px;
+		}
+		&.is--heading{
+			padding: 3px 25px 6px;
+			font-size: @btn_fs - 4;
+			line-height: @btn_lh;
+			@media @media-point-screen {
+				width: 100%;
+				font-size: @btn_fs - 2;
+				padding: 5px 1.7vw 8px;
+			}
 		}
 		&.is--xl{
 			.btn-xl();
@@ -328,8 +338,12 @@
 			color: @b-color-a-hover;
 		}
 		&, &:focus{}
-		&:hover{
-
+		&:hover{}
+		&.is--friends{
+			background-color: @white-dim;
+			color: @black-dim;
+			border-radius: 50%;
+			padding: 8px;
 		}
 	}
 	&slider{

@@ -5,22 +5,30 @@
 				[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="modal-close"]]
 			</button> 
 			[[azbntple 
-				tpl="/src/block/site/default/page-header/group.html"
-				header_prefix="page-header__" 
-				header_mod="{{block_heading_mod}}"
-				header_level="h3"
-				header="{{block_heading}}"
-				header_small_level="div"
-				header_small="{{block_heading_small}}"
+				tpl="/src/block/site/default/social/panel-friends-tabs.html" 
+				block_prefix="social-friends__"
+				block_mod="is--tabs"
 			]]
-			[[azbntple 
-				tpl="/src/block/site/default/form/panel-invite-tel.html" 
-				form_prefix="form__"
-				form_mod="is--invite-tel"	
-				form_id="fit"	
-				form_color="  "
-				form_heading="{{block_heading}}"
-			]]
+			<div class="tabs__pane" id="tabs-invite-tel">
+				[[azbntple 
+					tpl="/src/block/site/default/page-header/group.html"
+					header_prefix="page-header__" 
+					header_mod="{{block_heading_mod}}"
+					header_level="h3"
+					header="{{block_heading}}"
+					header_small_level="div"
+					header_small="{{block_heading_small}}"
+				]]
+				[[azbntple 
+					tpl="/src/block/site/default/form/panel-invite-tel.html" 
+					form_prefix="form__"
+					form_mod="is--invite-tel"	
+					form_id="fit"	
+					form_color="  "
+					form_heading="{{block_heading}}"
+				]]
+			</div>
+			<div class="tabs__pane" id="tabs-invite-google"></div>
 		</div>
 	</div>
 </div> 

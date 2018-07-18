@@ -190,7 +190,7 @@
 	</a>  
 </li>
 			<li class="navbar-left__nav-item  is--logout">
-	<a href="/group.html" class="navbar-left__nav-link">
+	<a href="/login.html" class="navbar-left__nav-link">
 		<div class="navbar-left__nav-icon"><svg class="icon-svg icon-icon-logout" role="img">
 	<use xlink:href="/var/static/cl/img/svg/sprite.svg#icon-logout"></use>
 </svg></div>
@@ -206,11 +206,9 @@
 		<div class="content-block__panel">
 	<div class="content-block__inner  is--full-panel">
 		<div class="content-block__scroller mCustomScrollbar scroller  is--friends" data-mcs-theme="green-dim"> 
-			<div class="content-block__container container  is--friends">
-				<div class="content-block__row row  is--gutter  is--wrap  is--friends">
-					<div class="content-block__cols cols  is--left  is--friends">
-						<div class="page-header__panel  is--page-heading  is--friends">						
-	<div class="page-header__row  row  is--gutter  is--wrap  is--page-heading  is--friends">		
+			<div class="content-block__container container  is--friends">				
+				<div class="page-header__panel  is--page-heading  is--friends">						
+	<div class="page-header__row  row  is--gutter  is--wrap  is--page-heading  is--friends">
 		<div class="page-header__cols cols  is--heading  is--page-heading  is--friends">		
 			<div class="page-header__block  is--page-heading  is--friends">
 	<h1  class="page-header__heading  is--page-heading  is--friends">Friends<sup>(115)</sup></h1>		
@@ -227,11 +225,28 @@
 </button>
 			</div>
 		</div>
+		<div class="page-header__cols cols  is--add  is--page-heading  is--friends">
+			<button type="button" class="btn__item is--heading" data-toggle="modal" data-target="#modal-invite-tel"  data-heading="Invited friend"><span>Invited friend</span></button>
+			
+		</div>
 	</div>
 </div>
-						<div class="content-block__row row  is--gutter  is--wrap  is--friends">
-							<div class="content-block__cols cols  is--card  is--friends">
-								<a href="/friends-card.html" class="card-item__card  is--friends    ">
+				<div class="content-block__row row  is--gutter  is--wrap  is--friends">
+					<div class="content-block__cols cols  is--left  is--friends">
+						<div class="content-block__elem  is--inner  is--friends">
+							<form action="#" class="search__panel  is--friends">
+	<input type="text" class="search__input" placeholder="Search on a friend...">
+	<button type="submit" class="search__icon">
+		<svg class="icon-svg icon-icon-search" role="img">
+	<use xlink:href="/var/static/cl/img/svg/sprite.svg#icon-search"></use>
+</svg>
+	</button>				
+</form>
+						</div>
+						<div class="content-block__elem  is--inner  is--friends">
+							<div class="content-block__row row  is--gutter  is--wrap  is--friends">
+								<div class="content-block__cols cols  is--card  is--friends">
+									<a href="/friends-card.html" class="card-item__card  is--friends    ">
 	<div class="card-item__user  is--friends">
 	<div class="card-item__user-preview  is--friends  is--online">
 		<img src="http://via.placeholder.com/55x55" alt="Toby William">
@@ -245,9 +260,9 @@
 </svg>
 	</div>
 </a>
-							</div>
-							<div class="content-block__cols cols  is--card  is--friends">
-								<a href="/friends-card.html" class="card-item__card  is--friends    ">
+								</div>
+								<div class="content-block__cols cols  is--card  is--friends">
+									<a href="/friends-card.html" class="card-item__card  is--friends    ">
 	<div class="card-item__user  is--friends">
 	<div class="card-item__user-preview  is--friends    ">
 		<img src="http://via.placeholder.com/55x55" alt="Toby William">
@@ -261,9 +276,9 @@
 </svg>
 	</div>
 </a>
-							</div>
-							<div class="content-block__cols cols  is--card  is--friends">
-								<a href="/friends-card.html" class="card-item__card  is--friends    ">
+								</div>
+								<div class="content-block__cols cols  is--card  is--friends">
+									<a href="/friends-card.html" class="card-item__card  is--friends    ">
 	<div class="card-item__user  is--friends">
 	<div class="card-item__user-preview  is--friends  is--online">
 		<img src="http://via.placeholder.com/55x55" alt="Toby William">
@@ -277,9 +292,9 @@
 </svg>
 	</div>
 </a>
-							</div>
-							<div class="content-block__cols cols  is--card  is--friends">
-								<a href="/friends-card.html" class="card-item__card  is--friends    ">
+								</div>
+								<div class="content-block__cols cols  is--card  is--friends">
+									<a href="/friends-card.html" class="card-item__card  is--friends    ">
 	<div class="card-item__user  is--friends">
 	<div class="card-item__user-preview  is--friends  is--online">
 		<img src="http://via.placeholder.com/55x55" alt="Toby William">
@@ -293,9 +308,9 @@
 </svg>
 	</div>
 </a>
-							</div>
-							<div class="content-block__cols cols  is--card  is--friends">
-								<a href="/friends-card.html" class="card-item__card  is--friends    ">
+								</div>
+								<div class="content-block__cols cols  is--card  is--friends">
+									<a href="/friends-card.html" class="card-item__card  is--friends    ">
 	<div class="card-item__user  is--friends">
 	<div class="card-item__user-preview  is--friends  is--online">
 		<img src="http://via.placeholder.com/55x55" alt="Toby William">
@@ -309,9 +324,9 @@
 </svg>
 	</div>
 </a>
-							</div>
-							<div class="content-block__cols cols  is--card  is--friends">
-								<a href="/friends-card.html" class="card-item__card  is--friends    ">
+								</div>
+								<div class="content-block__cols cols  is--card  is--friends">
+									<a href="/friends-card.html" class="card-item__card  is--friends    ">
 	<div class="card-item__user  is--friends">
 	<div class="card-item__user-preview  is--friends  is--online">
 		<img src="http://via.placeholder.com/55x55" alt="Toby William">
@@ -325,9 +340,9 @@
 </svg>
 	</div>
 </a>
-							</div>
-							<div class="content-block__cols cols  is--card  is--friends">
-								<a href="/friends-card.html" class="card-item__card  is--friends    ">
+								</div>
+								<div class="content-block__cols cols  is--card  is--friends">
+									<a href="/friends-card.html" class="card-item__card  is--friends    ">
 	<div class="card-item__user  is--friends">
 	<div class="card-item__user-preview  is--friends  is--online">
 		<img src="http://via.placeholder.com/55x55" alt="Toby William">
@@ -341,9 +356,9 @@
 </svg>
 	</div>
 </a>
-							</div>
-							<div class="content-block__cols cols  is--card  is--friends">
-								<a href="/friends-card.html" class="card-item__card  is--friends    ">
+								</div>
+								<div class="content-block__cols cols  is--card  is--friends">
+									<a href="/friends-card.html" class="card-item__card  is--friends    ">
 	<div class="card-item__user  is--friends">
 	<div class="card-item__user-preview  is--friends  is--online">
 		<img src="http://via.placeholder.com/55x55" alt="Toby William">
@@ -357,9 +372,9 @@
 </svg>
 	</div>
 </a>
-							</div>
-							<div class="content-block__cols cols  is--card  is--friends">
-								<a href="/friends-card.html" class="card-item__card  is--friends    ">
+								</div>
+								<div class="content-block__cols cols  is--card  is--friends">
+									<a href="/friends-card.html" class="card-item__card  is--friends    ">
 	<div class="card-item__user  is--friends">
 	<div class="card-item__user-preview  is--friends  is--online">
 		<img src="http://via.placeholder.com/55x55" alt="Toby William">
@@ -373,9 +388,9 @@
 </svg>
 	</div>
 </a>
-							</div>
-							<div class="content-block__cols cols  is--card  is--friends">
-								<a href="/friends-card.html" class="card-item__card  is--friends    ">
+								</div>
+								<div class="content-block__cols cols  is--card  is--friends">
+									<a href="/friends-card.html" class="card-item__card  is--friends    ">
 	<div class="card-item__user  is--friends">
 	<div class="card-item__user-preview  is--friends  is--online">
 		<img src="http://via.placeholder.com/55x55" alt="Toby William">
@@ -389,9 +404,9 @@
 </svg>
 	</div>
 </a>
-							</div>
-							<div class="content-block__cols cols  is--card  is--friends">
-								<a href="/friends-card.html" class="card-item__card  is--friends    ">
+								</div>
+								<div class="content-block__cols cols  is--card  is--friends">
+									<a href="/friends-card.html" class="card-item__card  is--friends    ">
 	<div class="card-item__user  is--friends">
 	<div class="card-item__user-preview  is--friends  is--online">
 		<img src="http://via.placeholder.com/55x55" alt="Toby William">
@@ -405,9 +420,9 @@
 </svg>
 	</div>
 </a>
-							</div>
-							<div class="content-block__cols cols  is--card  is--friends">
-								<a href="/friends-card.html" class="card-item__card  is--friends    ">
+								</div>
+								<div class="content-block__cols cols  is--card  is--friends">
+									<a href="/friends-card.html" class="card-item__card  is--friends    ">
 	<div class="card-item__user  is--friends">
 	<div class="card-item__user-preview  is--friends  is--online">
 		<img src="http://via.placeholder.com/55x55" alt="Toby William">
@@ -421,9 +436,9 @@
 </svg>
 	</div>
 </a>
-							</div>
-							<div class="content-block__cols cols  is--card  is--friends">
-								<a href="/friends-card.html" class="card-item__card  is--friends    ">
+								</div>
+								<div class="content-block__cols cols  is--card  is--friends">
+									<a href="/friends-card.html" class="card-item__card  is--friends    ">
 	<div class="card-item__user  is--friends">
 	<div class="card-item__user-preview  is--friends  is--online">
 		<img src="http://via.placeholder.com/55x55" alt="Toby William">
@@ -437,9 +452,9 @@
 </svg>
 	</div>
 </a>
-							</div>
-							<div class="content-block__cols cols  is--card  is--friends">
-								<a href="/friends-card.html" class="card-item__card  is--friends    ">
+								</div>
+								<div class="content-block__cols cols  is--card  is--friends">
+									<a href="/friends-card.html" class="card-item__card  is--friends    ">
 	<div class="card-item__user  is--friends">
 	<div class="card-item__user-preview  is--friends  is--online">
 		<img src="http://via.placeholder.com/55x55" alt="Toby William">
@@ -453,9 +468,9 @@
 </svg>
 	</div>
 </a>
-							</div>
-							<div class="content-block__cols cols  is--card  is--friends">
-								<a href="/friends-card.html" class="card-item__card  is--friends    ">
+								</div>
+								<div class="content-block__cols cols  is--card  is--friends">
+									<a href="/friends-card.html" class="card-item__card  is--friends    ">
 	<div class="card-item__user  is--friends">
 	<div class="card-item__user-preview  is--friends  is--online">
 		<img src="http://via.placeholder.com/55x55" alt="Toby William">
@@ -469,8 +484,9 @@
 </svg>
 	</div>
 </a>
+								</div>
 							</div>
-						</div>
+						</div> 
 					</div> 
 					<div class="content-block__cols cols  is--right  is--friends">							
 						<div class="modal-right__modal is--friends" id="modal-friends" tabindex="-1"  aria-hidden="true">
@@ -482,70 +498,6 @@
 </svg>
 			</button>
 			<div class="navbar-category__dropdown-inner  is--friends">
-	<div class="navbar-category__elem  is--btn  is--friends">
-		<button type="button" class="btn__item is--lg" data-toggle="modal" data-target="#modal-invite-friends"  data-heading="Invited friend"><span>Invited friend</span></button>	
-		<div class="modal-inner__modal is--friends" id="modal-invite-friends" tabindex="-1"  aria-hidden="true">
-	<div class="modal-inner__dialog  is--friends  is--btn-bottom">
-		<div class="modal-inner__body  is--friends">
-			<div class="social-friends__block    ">	
-	<div class="social-friends__item    ">
-		<a href="#" data-toggle="modal" data-target="#modal-invite-tel" class="social-friends__btn  is--tel    ">
-			<div class="social-friends__btn-icon  is--tel    ">
-				<svg class="icon-svg icon-soc-tel" role="img">
-	<use xlink:href="/var/static/cl/img/svg/sprite.svg#soc-tel"></use>
-</svg>
-			</div>	
-			Number phone		
-		</a>
-	</div>
-	<div class="social-friends__item    ">
-		<a href="#" class="social-friends__btn  is--fb    ">
-			<div class="social-friends__btn-icon  is--fb    ">
-				<svg class="icon-svg icon-soc-fb" role="img">
-	<use xlink:href="/var/static/cl/img/svg/sprite.svg#soc-fb"></use>
-</svg>
-			</div>
-			Facebook
-		</a>
-	</div>
-	<div class="social-friends__item    ">
-		<a href="#" class="social-friends__btn  is--in    ">
-			<div class="social-friends__btn-icon  is--in    ">
-				<svg class="icon-svg icon-soc-in" role="img">
-	<use xlink:href="/var/static/cl/img/svg/sprite.svg#soc-in"></use>
-</svg>
-			</div>
-			Linked id
-		</a>
-	</div>
-	<div class="social-friends__item    ">
-		<a href="#" class="social-friends__btn  is--google    ">
-			<div class="social-friends__btn-icon  is--google    ">
-				<svg class="icon-svg icon-soc-google" role="img">
-	<use xlink:href="/var/static/cl/img/svg/sprite.svg#soc-google"></use>
-</svg>
-			</div>
-			Google
-		</a>
-	</div>
-</div>
-			<div class="modal-inner__close  is--friends">
-				<button type="button" class="modal-inner__close-btn  is--friends" data-toggle="modal" aria-hidden="true" data-target="#modal-invite-friends">Cancel</button>
-			</div>
-		</div>
-	</div>
-</div> 	
-	</div>	 
-	<div class="navbar-category__elem  is--search  is--friends">
-		<label class="navbar-category__search  is--friends">
-			<input type="text" class="navbar-category__search-input" placeholder="Search on a friend...">
-			<span class="navbar-category__search-icon">
-				<svg class="icon-svg icon-icon-search" role="img">
-	<use xlink:href="/var/static/cl/img/svg/sprite.svg#icon-search"></use>
-</svg>
-			</span>				
-		</label>
-	</div>
 	<div class="navbar-category__elem  is--filter  is--friends">
 		<div class="navbar-category__filter  is--friends">
 			<div class="navbar-category__filter-heading  is--friends">
@@ -1140,9 +1092,9 @@
 				<div class="form__desc  is--meeting-create  is--time">Period of time</div>
 <div class="form__item  is--meeting-create  is--time">
 	<label class="form__label  is--meeting-create  is--white">from: 
-		<input type="text"     class="form__control form-control validate[required]  is--meeting-create  is--white  is--time  js-time-before" id="fmc[month]from" name="f[Period of time from]" value="00:00"></label>
+		<input type="text"     class="form__control form-control validate[required]  is--meeting-create  is--white  is--time  is--time-input" id="fmc[time]from" name="f[Period of time from]" value="00:00"></label>
 	<label class="form__label  is--meeting-create  is--white">to: 
-		<input type="text"     class="form__control form-control validate[required]  is--meeting-create  is--white  is--time  js-time-after" id="fmc[month]to" name="f[Period of time to]" value="00:00"></label>
+		<input type="text"     class="form__control form-control validate[required]  is--meeting-create  is--white  is--time  is--time-input" id="fmc[time]to" name="f[Period of time to]" value="00:00"></label>
 </div>
 			</div>
 			<div class="cols form__cols  is--invite  is--meeting-create">
@@ -1347,11 +1299,34 @@
 	<use xlink:href="/var/static/cl/img/svg/sprite.svg#modal-close"></use>
 </svg>
 			</button> 
-			<div class="page-header__block  is--modals">
+			<ul class="social-friends__block  is--tabs">	
+	<li class="social-friends__item  is--tabs">
+		<a href="#tabs-invite-tel" data-toggle="tab"  class="social-friends__btn  is--tel  is--tabs"> 
+			<div class="social-friends__btn-icon  is--tel  is--tabs">
+				<svg class="icon-svg icon-soc-tel" role="img">
+	<use xlink:href="/var/static/cl/img/svg/sprite.svg#soc-tel"></use>
+</svg>
+			</div>	
+			Number phone		
+		</a>
+	</li>
+	<li class="social-friends__item  is--tabs">
+		<a href="#tabs-invite-google" data-toggle="tab" class="social-friends__btn  is--google  is--tabs">
+			<div class="social-friends__btn-icon  is--google  is--tabs">
+				<svg class="icon-svg icon-soc-google" role="img">
+	<use xlink:href="/var/static/cl/img/svg/sprite.svg#soc-google"></use>
+</svg>
+			</div>
+			Google
+		</a>
+	</li>
+</ul>
+			<div class="tabs__pane" id="tabs-invite-tel">
+				<div class="page-header__block  is--modals">
 	<h3 class="page-header__heading  is--modals"><span>Invite a friend via phone number</span></h3>	
 	<div class="page-header__heading-small  is--modals">The invitation will be sent to the phone or email you specify. Your friends and relatives will be able to immediately start using the service without making additional actions.</div>	
 </div>
-			<form action="#" class="form__block  is--invite-tel"  >
+				<form action="#" class="form__block  is--invite-tel"  >
 	<input type="hidden" name="key" value="londonisthecapitalofgreatbritain">
 	<input type="hidden" name="f[Форма: Invite a friend via phone number]">
 	<div class="form__inner  is--invite-tel"  >
@@ -1379,6 +1354,8 @@
 		</div>
 	</div> 
 </form> 
+			</div>
+			<div class="tabs__pane" id="tabs-invite-google"></div>
 		</div>
 	</div>
 </div>  
@@ -1480,12 +1457,12 @@
 </div>
 								</div>
 							</div>
-							<div class="form__item  is--search-modal  is--time">
+							<div class="form__item  is--search-modal  is--time is--time-input">
 	<label class="form__label  is--search-modal    ">from: 
-		<input type="input" max='12'  class="form__control form-control validate[required]  is--search-modal      is--time  js-time-before" id="{{form_id}}[month]from" name="f[Period of time from]" value="00:00">
+		<input type="input" max='12'  class="form__control form-control validate[required]  is--search-modal      is--time is--time-input  js-time-before" id="{{form_id}}[month]from" name="f[Period of time from]" value="00:00">
 	</label>
 	<label class="form__label  is--search-modal    ">to: 
-		<input type="input" max='12'  class="form__control form-control validate[required]  is--search-modal      is--time js-time-after" id="{{form_id}}[month]to" name="f[Period of time to]" value="00:00">
+		<input type="input" max='12'  class="form__control form-control validate[required]  is--search-modal      is--time is--time-input js-time-after" id="{{form_id}}[month]to" name="f[Period of time to]" value="00:00">
 	</label>	
 </div>
 						</div>

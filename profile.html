@@ -190,7 +190,7 @@
 	</a>  
 </li>
 			<li class="navbar-left__nav-item  is--logout">
-	<a href="/group.html" class="navbar-left__nav-link">
+	<a href="/login.html" class="navbar-left__nav-link">
 		<div class="navbar-left__nav-icon"><svg class="icon-svg icon-icon-logout" role="img">
 	<use xlink:href="/var/static/cl/img/svg/sprite.svg#icon-logout"></use>
 </svg></div>
@@ -931,9 +931,9 @@
 				<div class="form__desc  is--meeting-create  is--time">Period of time</div>
 <div class="form__item  is--meeting-create  is--time">
 	<label class="form__label  is--meeting-create  is--white">from: 
-		<input type="text"     class="form__control form-control validate[required]  is--meeting-create  is--white  is--time  js-time-before" id="fmc[month]from" name="f[Period of time from]" value="00:00"></label>
+		<input type="text"     class="form__control form-control validate[required]  is--meeting-create  is--white  is--time  is--time-input" id="fmc[time]from" name="f[Period of time from]" value="00:00"></label>
 	<label class="form__label  is--meeting-create  is--white">to: 
-		<input type="text"     class="form__control form-control validate[required]  is--meeting-create  is--white  is--time  js-time-after" id="fmc[month]to" name="f[Period of time to]" value="00:00"></label>
+		<input type="text"     class="form__control form-control validate[required]  is--meeting-create  is--white  is--time  is--time-input" id="fmc[time]to" name="f[Period of time to]" value="00:00"></label>
 </div>
 			</div>
 			<div class="cols form__cols  is--invite  is--meeting-create">
@@ -1138,11 +1138,34 @@
 	<use xlink:href="/var/static/cl/img/svg/sprite.svg#modal-close"></use>
 </svg>
 			</button> 
-			<div class="page-header__block  is--modals">
+			<ul class="social-friends__block  is--tabs">	
+	<li class="social-friends__item  is--tabs">
+		<a href="#tabs-invite-tel" data-toggle="tab"  class="social-friends__btn  is--tel  is--tabs"> 
+			<div class="social-friends__btn-icon  is--tel  is--tabs">
+				<svg class="icon-svg icon-soc-tel" role="img">
+	<use xlink:href="/var/static/cl/img/svg/sprite.svg#soc-tel"></use>
+</svg>
+			</div>	
+			Number phone		
+		</a>
+	</li>
+	<li class="social-friends__item  is--tabs">
+		<a href="#tabs-invite-google" data-toggle="tab" class="social-friends__btn  is--google  is--tabs">
+			<div class="social-friends__btn-icon  is--google  is--tabs">
+				<svg class="icon-svg icon-soc-google" role="img">
+	<use xlink:href="/var/static/cl/img/svg/sprite.svg#soc-google"></use>
+</svg>
+			</div>
+			Google
+		</a>
+	</li>
+</ul>
+			<div class="tabs__pane" id="tabs-invite-tel">
+				<div class="page-header__block  is--modals">
 	<h3 class="page-header__heading  is--modals"><span>Invite a friend via phone number</span></h3>	
 	<div class="page-header__heading-small  is--modals">The invitation will be sent to the phone or email you specify. Your friends and relatives will be able to immediately start using the service without making additional actions.</div>	
 </div>
-			<form action="#" class="form__block  is--invite-tel"  >
+				<form action="#" class="form__block  is--invite-tel"  >
 	<input type="hidden" name="key" value="londonisthecapitalofgreatbritain">
 	<input type="hidden" name="f[Форма: Invite a friend via phone number]">
 	<div class="form__inner  is--invite-tel"  >
@@ -1170,6 +1193,8 @@
 		</div>
 	</div> 
 </form> 
+			</div>
+			<div class="tabs__pane" id="tabs-invite-google"></div>
 		</div>
 	</div>
 </div>  
@@ -1271,12 +1296,12 @@
 </div>
 								</div>
 							</div>
-							<div class="form__item  is--search-modal  is--time">
+							<div class="form__item  is--search-modal  is--time is--time-input">
 	<label class="form__label  is--search-modal    ">from: 
-		<input type="input" max='12'  class="form__control form-control validate[required]  is--search-modal      is--time  js-time-before" id="{{form_id}}[month]from" name="f[Period of time from]" value="00:00">
+		<input type="input" max='12'  class="form__control form-control validate[required]  is--search-modal      is--time is--time-input  js-time-before" id="{{form_id}}[month]from" name="f[Period of time from]" value="00:00">
 	</label>
 	<label class="form__label  is--search-modal    ">to: 
-		<input type="input" max='12'  class="form__control form-control validate[required]  is--search-modal      is--time js-time-after" id="{{form_id}}[month]to" name="f[Period of time to]" value="00:00">
+		<input type="input" max='12'  class="form__control form-control validate[required]  is--search-modal      is--time is--time-input js-time-after" id="{{form_id}}[month]to" name="f[Period of time to]" value="00:00">
 	</label>	
 </div>
 						</div>

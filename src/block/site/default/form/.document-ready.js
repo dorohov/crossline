@@ -1,4 +1,8 @@
 //$(".form__control[type='tel']").mask("+7 (999) 999-99-99",{placeholder:"+7 (___) ___-__-__"});
+$.mask.definitions['H'] = "[0-2]";
+$.mask.definitions['h'] = "[0-9]";
+$.mask.definitions['M'] = "[0-5]";
+$(".form__control.is--time-input").mask("Hh:Mh",{placeholder:"HH:MM"});
 $(".form__block").validationEngine(
 	'attach', {
 		promptPosition : "bottomLeft",
@@ -39,12 +43,12 @@ $(".form__btn-pass.is--hide").on('click', function(){
 });
 */
 
-var time_before = $(".js-time-before"),
+/*var time_before = $(".js-time-before"),
 	time_after = $(".js-time-after");
 
 time_before.mdtimepicker({});
 time_after.mdtimepicker({});
-
+*/
 var $range = $(".js-range-slider"),
     //$inputFrom = $(".js-input-from"),
     //$inputTo = $(".js-input-to"),

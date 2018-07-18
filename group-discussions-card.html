@@ -190,7 +190,7 @@
 	</a>  
 </li>
 			<li class="navbar-left__nav-item  is--logout">
-	<a href="/group.html" class="navbar-left__nav-link">
+	<a href="/login.html" class="navbar-left__nav-link">
 		<div class="navbar-left__nav-icon"><svg class="icon-svg icon-icon-logout" role="img">
 	<use xlink:href="/var/static/cl/img/svg/sprite.svg#icon-logout"></use>
 </svg></div>
@@ -204,11 +204,16 @@
 	</div>
 </div>
 		<div class="content-block__panel  colorbg--white-deep-dim">
-	<div class="content-block__inner  is--chat  is--full-panel">
-		<div class="content-block__scroller mCustomScrollbar scroller" data-mcs-theme="green-dim">
-			<div class="colorbg--white">
-				<div class="content-block__container container  is--padding-bottom">
-					<div class="breadcrumb__block    ">
+	<div class="chat__block">
+	<div class="chat__inner">
+		<div class="chat__body">
+			<div class="chat__history">
+				<div class="chat__history-body">
+					<div class="chat__history-content">
+						<div class="content-block__scroller chat__history-scroller  mCustomScrollbar scroller  is--group" data-mcs-theme="green-dim">
+							<div class="colorbg--white">
+								<div class="content-block__container container  is--padding-bottom">
+									<div class="breadcrumb__block    ">
 	<ul class="breadcrumb__list    ">
 		<li class="breadcrumb__list-item">
 			<a href="/group.html" class="breadcrumb__list-link">Groups</a>
@@ -222,7 +227,7 @@
 	</ul>
 </div>
 
-					<div class="tabs__panel  is--group">
+									<div class="tabs__panel  is--group">
 	<div class="tabs__row row  is--gutter10  is--jcsb  is--group">
 		<div class="tabs__cols cols  is--tabs  is--group">
 			<ul class="tabs__nav  is--group">
@@ -265,11 +270,11 @@
 		</div>
 	</div>
 </div>
-					<div class="content-block__elem  is--group">
-						<div class="content-block__heading  is--block  is--flex  is--group">
-							<h1 class="is--heading">Topic discussion</h1>
-						</div>	
-						<div class="card-item__card  is--messages  is--white  is--green  is--like  is--new">
+									<div class="content-block__elem  is--group">
+										<div class="content-block__heading  is--block  is--flex  is--group">
+											<h1 class="is--heading">Topic discussion</h1>
+										</div>	
+										<div class="card-item__card  is--messages  is--white  is--green  is--like  is--new">
 
 	<div class="card-item__row  row  is--gutter  is--wrap  is--messages  is--white  is--green  is--like">
 		<div class="card-item__cols cols  is--user  is--messages  is--white  is--green  is--like">
@@ -303,126 +308,126 @@
 		</div>
 	</div>
 </div>
+									</div>
+								</div>
+							</div> 
+							<div class="content-block__container container  is--group  is--padding-bottom">
+								<div class="content-block__heading  is--block  is--flex  is--group">
+									<h2>Answers</h2>
+								</div>	
+								<div class="card-item__card  is--chat  is--for  is--like    ">
+	<div class="card-item__row  row  is--gutter  is--wrap  is--chat  is--for  is--like">
+		<div class="card-item__cols cols  is--user  is--chat  is--for  is--like">
+			<div class="card-item__user  is--chat  is--for  is--like">
+	<div class="card-item__user-preview  is--chat  is--for  is--like  is--online">
+		<img src="/var/static/cl/img/temp/profile-preview1-55x55.jpg" alt="Nadya Nadya">
+	</div>
+</div> 
+		</div>
+		<div class="card-item__cols cols  is--text  is--chat  is--for  is--like">
+			<div class="card-item__text  is--chat  is--for  is--like">
+				<div class="card-item__heading  is--chat  is--for  is--like">Nadya Nadya</div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et fugit accusantium hic, quo veritatis, facilis sint aliquid eligendi laboriosam placeat sequi dolorem repellat modi rerum quaerat ipsum. Sint, alias, architecto. Laborum culpa quidem nam animi voluptatem </p>
+				<button type="button" class="card-item__like  is--chat  is--for  is--like">
+					<div class="card-item__like-svg  is--chat  is--for  is--like">
+						<svg width="500" height="440" viewBox="0 0 500 440" xmlns="http://www.w3.org/2000/svg"><path d="M236.851 84.5451L250 108.498L263.149 84.5454C270.82 70.5726 283.61 51.8487 302.413 37.353L293.329 25.5691L302.413 37.3529C321.772 22.4286 343.441 15 367.188 15C433.537 15 485 68.8934 485 143.598C485 183.189 469.263 217.145 439.371 253.1C409.099 289.511 365.489 326.621 311.229 372.713L311.229 372.713L311.22 372.721C292.906 388.279 272.084 405.967 250.428 424.845L250.423 424.85C250.323 424.937 250.178 425 250 425C249.823 425 249.678 424.937 249.579 424.851L249.571 424.844C227.929 405.979 207.116 388.297 188.819 372.754L188.783 372.723L188.782 372.723C134.517 326.626 90.9042 289.514 60.6308 253.101C30.7374 217.145 15 183.189 15 143.598C15 68.8934 66.4631 15 132.812 15C156.559 15 178.228 22.4286 197.587 37.3529L206.527 25.7561L197.587 37.353C216.39 51.8488 229.18 70.5718 236.851 84.5451Z" stroke-width="30"/></svg>
+					</div>
+					5
+				</button>			
+			</div>
+		</div>
+		<div class="card-item__cols cols  is--date  is--chat  is--for  is--like">
+			<time datetime="2018-02-15 20:25" class="card-item__date  is--chat  is--for  is--like">
+				<div>8:25 pm</div>
+				<div>15 Feb</div>
+			</time>
+		</div>
+	</div>
+</div>	
+								<div class="card-item__card  is--chat  is--for  is--like    ">
+	<div class="card-item__row  row  is--gutter  is--wrap  is--chat  is--for  is--like">
+		<div class="card-item__cols cols  is--user  is--chat  is--for  is--like">
+			<div class="card-item__user  is--chat  is--for  is--like">
+	<div class="card-item__user-preview  is--chat  is--for  is--like  is--online">
+		<img src="/var/static/cl/img/temp/profile-preview1-55x55.jpg" alt="Nadya Nadya">
+	</div>
+</div> 
+		</div>
+		<div class="card-item__cols cols  is--text  is--chat  is--for  is--like">
+			<div class="card-item__text  is--chat  is--for  is--like">
+				<div class="card-item__heading  is--chat  is--for  is--like">Nadya Nadya</div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et fugit accusantium hic, quo veritatis, facilis sint aliquid eligendi laboriosam placeat sequi dolorem repellat modi rerum quaerat ipsum. Sint, alias, architecto. Laborum culpa quidem nam animi voluptatem </p>
+				<button type="button" class="card-item__like  is--chat  is--for  is--like">
+					<div class="card-item__like-svg  is--chat  is--for  is--like">
+						<svg width="500" height="440" viewBox="0 0 500 440" xmlns="http://www.w3.org/2000/svg"><path d="M236.851 84.5451L250 108.498L263.149 84.5454C270.82 70.5726 283.61 51.8487 302.413 37.353L293.329 25.5691L302.413 37.3529C321.772 22.4286 343.441 15 367.188 15C433.537 15 485 68.8934 485 143.598C485 183.189 469.263 217.145 439.371 253.1C409.099 289.511 365.489 326.621 311.229 372.713L311.229 372.713L311.22 372.721C292.906 388.279 272.084 405.967 250.428 424.845L250.423 424.85C250.323 424.937 250.178 425 250 425C249.823 425 249.678 424.937 249.579 424.851L249.571 424.844C227.929 405.979 207.116 388.297 188.819 372.754L188.783 372.723L188.782 372.723C134.517 326.626 90.9042 289.514 60.6308 253.101C30.7374 217.145 15 183.189 15 143.598C15 68.8934 66.4631 15 132.812 15C156.559 15 178.228 22.4286 197.587 37.3529L206.527 25.7561L197.587 37.353C216.39 51.8488 229.18 70.5718 236.851 84.5451Z" stroke-width="30"/></svg>
+					</div>
+					5
+				</button>			
+			</div>
+		</div>
+		<div class="card-item__cols cols  is--date  is--chat  is--for  is--like">
+			<time datetime="2018-02-15 20:25" class="card-item__date  is--chat  is--for  is--like">
+				<div>8:25 pm</div>
+				<div>15 Feb</div>
+			</time>
+		</div>
+	</div>
+</div>	
+								<div class="card-item__card  is--chat  is--for  is--like    ">
+	<div class="card-item__row  row  is--gutter  is--wrap  is--chat  is--for  is--like">
+		<div class="card-item__cols cols  is--user  is--chat  is--for  is--like">
+			<div class="card-item__user  is--chat  is--for  is--like">
+	<div class="card-item__user-preview  is--chat  is--for  is--like  is--online">
+		<img src="/var/static/cl/img/temp/profile-preview1-55x55.jpg" alt="Nadya Nadya">
+	</div>
+</div> 
+		</div>
+		<div class="card-item__cols cols  is--text  is--chat  is--for  is--like">
+			<div class="card-item__text  is--chat  is--for  is--like">
+				<div class="card-item__heading  is--chat  is--for  is--like">Nadya Nadya</div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et fugit accusantium hic, quo veritatis, facilis sint aliquid eligendi laboriosam placeat sequi dolorem repellat modi rerum quaerat ipsum. Sint, alias, architecto. Laborum culpa quidem nam animi voluptatem </p>
+				<button type="button" class="card-item__like  is--chat  is--for  is--like">
+					<div class="card-item__like-svg  is--chat  is--for  is--like">
+						<svg width="500" height="440" viewBox="0 0 500 440" xmlns="http://www.w3.org/2000/svg"><path d="M236.851 84.5451L250 108.498L263.149 84.5454C270.82 70.5726 283.61 51.8487 302.413 37.353L293.329 25.5691L302.413 37.3529C321.772 22.4286 343.441 15 367.188 15C433.537 15 485 68.8934 485 143.598C485 183.189 469.263 217.145 439.371 253.1C409.099 289.511 365.489 326.621 311.229 372.713L311.229 372.713L311.22 372.721C292.906 388.279 272.084 405.967 250.428 424.845L250.423 424.85C250.323 424.937 250.178 425 250 425C249.823 425 249.678 424.937 249.579 424.851L249.571 424.844C227.929 405.979 207.116 388.297 188.819 372.754L188.783 372.723L188.782 372.723C134.517 326.626 90.9042 289.514 60.6308 253.101C30.7374 217.145 15 183.189 15 143.598C15 68.8934 66.4631 15 132.812 15C156.559 15 178.228 22.4286 197.587 37.3529L206.527 25.7561L197.587 37.353C216.39 51.8488 229.18 70.5718 236.851 84.5451Z" stroke-width="30"/></svg>
+					</div>
+					5
+				</button>			
+			</div>
+		</div>
+		<div class="card-item__cols cols  is--date  is--chat  is--for  is--like">
+			<time datetime="2018-02-15 20:25" class="card-item__date  is--chat  is--for  is--like">
+				<div>8:25 pm</div>
+				<div>15 Feb</div>
+			</time>
+		</div>
+	</div>
+</div>	
+							</div>
+						</div>
 					</div>
 				</div>
-			</div> 
-			<div class="content-block__container container  is--group  is--padding-bottom">
-				<div class="content-block__heading  is--block  is--flex  is--group">
-					<h2>Answers</h2>
-				</div>	
-				<div class="card-item__card  is--chat  is--for  is--like    ">
-	<div class="card-item__row  row  is--gutter  is--wrap  is--chat  is--for  is--like">
-		<div class="card-item__cols cols  is--user  is--chat  is--for  is--like">
-			<div class="card-item__user  is--chat  is--for  is--like">
-	<div class="card-item__user-preview  is--chat  is--for  is--like  is--online">
-		<img src="/var/static/cl/img/temp/profile-preview1-55x55.jpg" alt="Nadya Nadya">
-	</div>
-</div> 
-		</div>
-		<div class="card-item__cols cols  is--text  is--chat  is--for  is--like">
-			<div class="card-item__text  is--chat  is--for  is--like">
-				<div class="card-item__heading  is--chat  is--for  is--like">Nadya Nadya</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et fugit accusantium hic, quo veritatis, facilis sint aliquid eligendi laboriosam placeat sequi dolorem repellat modi rerum quaerat ipsum. Sint, alias, architecto. Laborum culpa quidem nam animi voluptatem </p>
-				<button type="button" class="card-item__like  is--chat  is--for  is--like">
-					<div class="card-item__like-svg  is--chat  is--for  is--like">
-						<svg width="500" height="440" viewBox="0 0 500 440" xmlns="http://www.w3.org/2000/svg"><path d="M236.851 84.5451L250 108.498L263.149 84.5454C270.82 70.5726 283.61 51.8487 302.413 37.353L293.329 25.5691L302.413 37.3529C321.772 22.4286 343.441 15 367.188 15C433.537 15 485 68.8934 485 143.598C485 183.189 469.263 217.145 439.371 253.1C409.099 289.511 365.489 326.621 311.229 372.713L311.229 372.713L311.22 372.721C292.906 388.279 272.084 405.967 250.428 424.845L250.423 424.85C250.323 424.937 250.178 425 250 425C249.823 425 249.678 424.937 249.579 424.851L249.571 424.844C227.929 405.979 207.116 388.297 188.819 372.754L188.783 372.723L188.782 372.723C134.517 326.626 90.9042 289.514 60.6308 253.101C30.7374 217.145 15 183.189 15 143.598C15 68.8934 66.4631 15 132.812 15C156.559 15 178.228 22.4286 197.587 37.3529L206.527 25.7561L197.587 37.353C216.39 51.8488 229.18 70.5718 236.851 84.5451Z" stroke-width="30"/></svg>
-					</div>
-					5
-				</button>			
 			</div>
-		</div>
-		<div class="card-item__cols cols  is--date  is--chat  is--for  is--like">
-			<time datetime="2018-02-15 20:25" class="card-item__date  is--chat  is--for  is--like">
-				<div>8:25 pm</div>
-				<div>15 Feb</div>
-			</time>
-		</div>
-	</div>
-</div>	
-				<div class="card-item__card  is--chat  is--for  is--like    ">
-	<div class="card-item__row  row  is--gutter  is--wrap  is--chat  is--for  is--like">
-		<div class="card-item__cols cols  is--user  is--chat  is--for  is--like">
-			<div class="card-item__user  is--chat  is--for  is--like">
-	<div class="card-item__user-preview  is--chat  is--for  is--like  is--online">
-		<img src="/var/static/cl/img/temp/profile-preview1-55x55.jpg" alt="Nadya Nadya">
-	</div>
-</div> 
-		</div>
-		<div class="card-item__cols cols  is--text  is--chat  is--for  is--like">
-			<div class="card-item__text  is--chat  is--for  is--like">
-				<div class="card-item__heading  is--chat  is--for  is--like">Nadya Nadya</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et fugit accusantium hic, quo veritatis, facilis sint aliquid eligendi laboriosam placeat sequi dolorem repellat modi rerum quaerat ipsum. Sint, alias, architecto. Laborum culpa quidem nam animi voluptatem </p>
-				<button type="button" class="card-item__like  is--chat  is--for  is--like">
-					<div class="card-item__like-svg  is--chat  is--for  is--like">
-						<svg width="500" height="440" viewBox="0 0 500 440" xmlns="http://www.w3.org/2000/svg"><path d="M236.851 84.5451L250 108.498L263.149 84.5454C270.82 70.5726 283.61 51.8487 302.413 37.353L293.329 25.5691L302.413 37.3529C321.772 22.4286 343.441 15 367.188 15C433.537 15 485 68.8934 485 143.598C485 183.189 469.263 217.145 439.371 253.1C409.099 289.511 365.489 326.621 311.229 372.713L311.229 372.713L311.22 372.721C292.906 388.279 272.084 405.967 250.428 424.845L250.423 424.85C250.323 424.937 250.178 425 250 425C249.823 425 249.678 424.937 249.579 424.851L249.571 424.844C227.929 405.979 207.116 388.297 188.819 372.754L188.783 372.723L188.782 372.723C134.517 326.626 90.9042 289.514 60.6308 253.101C30.7374 217.145 15 183.189 15 143.598C15 68.8934 66.4631 15 132.812 15C156.559 15 178.228 22.4286 197.587 37.3529L206.527 25.7561L197.587 37.353C216.39 51.8488 229.18 70.5718 236.851 84.5451Z" stroke-width="30"/></svg>
-					</div>
-					5
-				</button>			
-			</div>
-		</div>
-		<div class="card-item__cols cols  is--date  is--chat  is--for  is--like">
-			<time datetime="2018-02-15 20:25" class="card-item__date  is--chat  is--for  is--like">
-				<div>8:25 pm</div>
-				<div>15 Feb</div>
-			</time>
-		</div>
-	</div>
-</div>	
-				<div class="card-item__card  is--chat  is--for  is--like    ">
-	<div class="card-item__row  row  is--gutter  is--wrap  is--chat  is--for  is--like">
-		<div class="card-item__cols cols  is--user  is--chat  is--for  is--like">
-			<div class="card-item__user  is--chat  is--for  is--like">
-	<div class="card-item__user-preview  is--chat  is--for  is--like  is--online">
-		<img src="/var/static/cl/img/temp/profile-preview1-55x55.jpg" alt="Nadya Nadya">
-	</div>
-</div> 
-		</div>
-		<div class="card-item__cols cols  is--text  is--chat  is--for  is--like">
-			<div class="card-item__text  is--chat  is--for  is--like">
-				<div class="card-item__heading  is--chat  is--for  is--like">Nadya Nadya</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et fugit accusantium hic, quo veritatis, facilis sint aliquid eligendi laboriosam placeat sequi dolorem repellat modi rerum quaerat ipsum. Sint, alias, architecto. Laborum culpa quidem nam animi voluptatem </p>
-				<button type="button" class="card-item__like  is--chat  is--for  is--like">
-					<div class="card-item__like-svg  is--chat  is--for  is--like">
-						<svg width="500" height="440" viewBox="0 0 500 440" xmlns="http://www.w3.org/2000/svg"><path d="M236.851 84.5451L250 108.498L263.149 84.5454C270.82 70.5726 283.61 51.8487 302.413 37.353L293.329 25.5691L302.413 37.3529C321.772 22.4286 343.441 15 367.188 15C433.537 15 485 68.8934 485 143.598C485 183.189 469.263 217.145 439.371 253.1C409.099 289.511 365.489 326.621 311.229 372.713L311.229 372.713L311.22 372.721C292.906 388.279 272.084 405.967 250.428 424.845L250.423 424.85C250.323 424.937 250.178 425 250 425C249.823 425 249.678 424.937 249.579 424.851L249.571 424.844C227.929 405.979 207.116 388.297 188.819 372.754L188.783 372.723L188.782 372.723C134.517 326.626 90.9042 289.514 60.6308 253.101C30.7374 217.145 15 183.189 15 143.598C15 68.8934 66.4631 15 132.812 15C156.559 15 178.228 22.4286 197.587 37.3529L206.527 25.7561L197.587 37.353C216.39 51.8488 229.18 70.5718 236.851 84.5451Z" stroke-width="30"/></svg>
-					</div>
-					5
-				</button>			
-			</div>
-		</div>
-		<div class="card-item__cols cols  is--date  is--chat  is--for  is--like">
-			<time datetime="2018-02-15 20:25" class="card-item__date  is--chat  is--for  is--like">
-				<div>8:25 pm</div>
-				<div>15 Feb</div>
-			</time>
-		</div>
-	</div>
-</div>	
-			</div>
-		</div>
-	</div>
-	<div class="content-block__message-block  is--group">
-		<div class="content-block__container container  is--group  is--nopadding">	
-			<div class="content-block__row row  is--message  is--group">
-				<div class="content-block__cols cols  is--message  is--group">
-					<textarea class="content-block__message  is--group" placeholder="Send a message..."></textarea>
-				</div>	
-				<div class="content-block__cols cols  is--send  is--group">
-					<button type="button" class="btn__icon is--send">
+			<div class="chat__message">
+				<div class="chat__message-body">
+					<div class="content-block__container container  is--group  is--nopadding">	
+						<div class="chat__row row  is--message    ">
+							<div class="content-block__cols cols  is--message  is--group">
+								<div class="chat__message-input      is--new" contenteditable="true"></div>
+							</div>	
+							<div class="chat__cols cols  is--send    ">
+								<button type="button" class="chat-btn__icon is--send">
 	<span><svg class="icon-svg icon-icon-send" role="img">
 	<use xlink:href="/var/static/cl/img/svg/sprite.svg#icon-send"></use>
 </svg></span>
 </button>
+							</div>
+						</div>			
+					</div>
 				</div>
-				<div class="content-block__cols cols  is--send-btn  is--group">	
-					<button type="button" class="btn__icon is--file">
-	<span><svg class="icon-svg icon-icon-file" role="img">
-	<use xlink:href="/var/static/cl/img/svg/sprite.svg#icon-file"></use>
-</svg></span>
-</button>
-				</div>		
-			</div>			
+			</div>
 		</div>
 	</div>
+</div>	
 </div>		
 		<div class="modal-right__modal is--meeting" id="modal-meeting" tabindex="-1"  aria-hidden="true">
 	<div class="modal-right__dialog  is--meeting  is--btn-bottom">
@@ -916,9 +921,9 @@
 				<div class="form__desc  is--meeting-create  is--time">Period of time</div>
 <div class="form__item  is--meeting-create  is--time">
 	<label class="form__label  is--meeting-create  is--white">from: 
-		<input type="text"     class="form__control form-control validate[required]  is--meeting-create  is--white  is--time  js-time-before" id="fmc[month]from" name="f[Period of time from]" value="00:00"></label>
+		<input type="text"     class="form__control form-control validate[required]  is--meeting-create  is--white  is--time  is--time-input" id="fmc[time]from" name="f[Period of time from]" value="00:00"></label>
 	<label class="form__label  is--meeting-create  is--white">to: 
-		<input type="text"     class="form__control form-control validate[required]  is--meeting-create  is--white  is--time  js-time-after" id="fmc[month]to" name="f[Period of time to]" value="00:00"></label>
+		<input type="text"     class="form__control form-control validate[required]  is--meeting-create  is--white  is--time  is--time-input" id="fmc[time]to" name="f[Period of time to]" value="00:00"></label>
 </div>
 			</div>
 			<div class="cols form__cols  is--invite  is--meeting-create">
@@ -1123,11 +1128,34 @@
 	<use xlink:href="/var/static/cl/img/svg/sprite.svg#modal-close"></use>
 </svg>
 			</button> 
-			<div class="page-header__block  is--modals">
+			<ul class="social-friends__block  is--tabs">	
+	<li class="social-friends__item  is--tabs">
+		<a href="#tabs-invite-tel" data-toggle="tab"  class="social-friends__btn  is--tel  is--tabs"> 
+			<div class="social-friends__btn-icon  is--tel  is--tabs">
+				<svg class="icon-svg icon-soc-tel" role="img">
+	<use xlink:href="/var/static/cl/img/svg/sprite.svg#soc-tel"></use>
+</svg>
+			</div>	
+			Number phone		
+		</a>
+	</li>
+	<li class="social-friends__item  is--tabs">
+		<a href="#tabs-invite-google" data-toggle="tab" class="social-friends__btn  is--google  is--tabs">
+			<div class="social-friends__btn-icon  is--google  is--tabs">
+				<svg class="icon-svg icon-soc-google" role="img">
+	<use xlink:href="/var/static/cl/img/svg/sprite.svg#soc-google"></use>
+</svg>
+			</div>
+			Google
+		</a>
+	</li>
+</ul>
+			<div class="tabs__pane" id="tabs-invite-tel">
+				<div class="page-header__block  is--modals">
 	<h3 class="page-header__heading  is--modals"><span>Invite a friend via phone number</span></h3>	
 	<div class="page-header__heading-small  is--modals">The invitation will be sent to the phone or email you specify. Your friends and relatives will be able to immediately start using the service without making additional actions.</div>	
 </div>
-			<form action="#" class="form__block  is--invite-tel"  >
+				<form action="#" class="form__block  is--invite-tel"  >
 	<input type="hidden" name="key" value="londonisthecapitalofgreatbritain">
 	<input type="hidden" name="f[Форма: Invite a friend via phone number]">
 	<div class="form__inner  is--invite-tel"  >
@@ -1155,6 +1183,8 @@
 		</div>
 	</div> 
 </form> 
+			</div>
+			<div class="tabs__pane" id="tabs-invite-google"></div>
 		</div>
 	</div>
 </div>  
@@ -1256,12 +1286,12 @@
 </div>
 								</div>
 							</div>
-							<div class="form__item  is--search-modal  is--time">
+							<div class="form__item  is--search-modal  is--time is--time-input">
 	<label class="form__label  is--search-modal    ">from: 
-		<input type="input" max='12'  class="form__control form-control validate[required]  is--search-modal      is--time  js-time-before" id="{{form_id}}[month]from" name="f[Period of time from]" value="00:00">
+		<input type="input" max='12'  class="form__control form-control validate[required]  is--search-modal      is--time is--time-input  js-time-before" id="{{form_id}}[month]from" name="f[Period of time from]" value="00:00">
 	</label>
 	<label class="form__label  is--search-modal    ">to: 
-		<input type="input" max='12'  class="form__control form-control validate[required]  is--search-modal      is--time js-time-after" id="{{form_id}}[month]to" name="f[Period of time to]" value="00:00">
+		<input type="input" max='12'  class="form__control form-control validate[required]  is--search-modal      is--time is--time-input js-time-after" id="{{form_id}}[month]to" name="f[Period of time to]" value="00:00">
 	</label>	
 </div>
 						</div>

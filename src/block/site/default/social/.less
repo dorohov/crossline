@@ -35,9 +35,21 @@
 }
 .social-friends__{
 	&block{
+		&.is--tabs{
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 30px 20px -5px;
+			list-style: none;
+		}
 	}
 	&item{
 		margin-bottom: 10px;
+		&.is--tabs{
+			padding: 0 5px;
+			@media @media-point-screen {
+				.makeCols(4, 12);
+			}
+		}
 	}
 	&btn{
 		display: block;
@@ -48,6 +60,7 @@
 		border-radius: 5px;
 		padding: 25px 20px 24px 55px;
 		background-color: @white-deep-dim;
+		.social-friends__item.active &,
 		&:hover{
 			background-color: @b-color-a;
 			color: @white;
@@ -62,6 +75,8 @@
 		height: 26px;
 		color: @b-color-a;
 		transition: @trs-site;
+
+		.social-friends__item.active &,
 		.social-friends__btn:hover &{
 			color: @white;
 		}

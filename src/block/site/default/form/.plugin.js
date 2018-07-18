@@ -2771,6 +2771,7 @@ Ru
  *
  * @requires jQuery
  * -- DO NOT REMOVE -- */
+ /*
  if (typeof jQuery === 'undefined') { throw new Error('MDTimePicker: This plugin requires jQuery'); }
 +function ($) {
 	var MDTP_DATA = "mdtimepicker", HOUR_START_DEG = 120, MIN_START_DEG = 90, END_DEG = 360, HOUR_DEG_INCR = 30, MIN_DEG_INCR = 6,
@@ -3205,7 +3206,7 @@ Ru
 		hourPadding: false			// determines if display value has zero padding for hour value less than 10 (i.e. 05:30 PM); 24-hour format has padding by default
 	};
 }(jQuery);
-
+*/
 
 // Ion.RangeSlider
 // version 2.2.0 Build: 380

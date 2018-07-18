@@ -1,5 +1,5 @@
 <div class="{{block_prefix}}panel  {{block_mod}}">						
-	<div class="{{block_prefix}}row  row  is--gutter  is--wrap  {{block_mod}}">		
+	<div class="{{block_prefix}}row  row  is--gutter  is--wrap  {{block_mod}}">
 		<div class="{{block_prefix}}cols cols  is--heading  {{block_mod}}">		
 			[[azbntple 
 				tpl="/src/block/site/default/page-header/heading-sup.html" 
@@ -34,6 +34,21 @@
 					button_icon="icon-filter" 
 				]]
 			</div>
+		</div>
+		<div class="{{block_prefix}}cols cols  is--add  {{block_mod}}">
+			[[azbntple 
+				tpl="/src/block/site/default/button/button-modal.html"
+				button_prefix="btn__" 
+				button_mod="is--heading"
+				button_target="modal-invite-tel"
+				button_name="Invited friend" 
+			]]
+			[[azbntple 
+				tpl="8/src/block/site/default/modals/modal-inner-friends.html"
+				modals_prefix="modal-inner__" 
+				modals_id="modal-invite-friends"
+				modals_mod="is--friends"
+			]]
 		</div>
 	</div>
 </div>
