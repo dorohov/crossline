@@ -1,0 +1,65 @@
+.alert__{	
+	&panel{
+		display: block;
+		position: absolute;
+		z-index: 20;
+		left: 0px;
+		top: 0;
+		width: 100%;
+		background-color: @green;
+		color: @white;
+		transition: @trs-site;
+		opacity: 0;
+		visibility: hidden;
+		.calcFontSize(16, 20, 320, 1680);
+		.calcLineHeight(20, 24, 320, 1680);
+		&.is--open{
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	&inner{
+		position: relative;
+		padding: 28px 50px 28px 0;
+	}
+	&close{
+		.btn-clearfix();		
+		width: 30px;
+		height: 30px;
+		padding: 8px;
+		border-radius: 50%;
+		border-width: 2px;
+		border-style: solid;
+		border-color: @white;
+		color: @white;
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+		transition: @trs-site;
+		svg{display: block;}
+		&:hover{
+			background-color: @orange;
+			color: @white;
+			border-color: @orange;
+		}
+	}
+	&heading{
+		position: relative;
+		padding-left: 65px;
+	}
+	&icon{		
+		position: absolute;
+		top: 50%;
+		left: 0px;
+		transform: translateY(-50%);
+		width: 44px;
+		height: 44px;
+		padding: 10px;
+		border-radius: 50%;
+		background-color: @orange;
+		color: #645b49;
+		transition: @trs-site;
+		svg{display: block;}
+	}
+}
