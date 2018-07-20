@@ -4,13 +4,15 @@
 		height: ~"calc(100vh - @{navbar-device})";
 		//height: ~"calc(100vh - @{navbar-device} - 55px)";
 		//height: ~"calc(100vh - 55px)";
-		height: ~"calc(100vh - @{navbar-device} - 57px)";
-		html.yabrowser &{			
+		html.mobile &{
+			height: ~"calc(100vh - @{navbar-device} - 57px)";
+		}			
+		html.yabrowser.mobile &{			
 			@media @media-point-xs-p {
 				height: ~"calc(100vh - @{navbar-device} - 35px)";
 			}	
 		}
-		html.safari &{
+		html.safari.mobile &{
 			@media @media-point-xs-p {
 				height: ~"calc(100vh - @{navbar-device} - 70px)";
 			}

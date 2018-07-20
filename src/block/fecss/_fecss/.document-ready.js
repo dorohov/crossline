@@ -15,10 +15,11 @@ $(function(){
 	if (userAgent.indexOf('chromium') != -1) res = 'chromium';
 	if (userAgent.indexOf('opera') != -1) res = 'opera';
 	if (userAgent.indexOf('yabrowser') != -1) res = 'yabrowser';
+	if (userAgent.indexOf('mobile') != -1) res = res + ' mobile';
 	//if (userAgent.indexOf('iphone') != -1) res = res + 'iphone';
 	//if (userAgent.indexOf('ipad') != -1) res = res + 'ipad';
 
-	$('html').eq(0).addClass(res);
+	$('html').eq(0).addClass(res); 
 }); 
 
 $(function(){
