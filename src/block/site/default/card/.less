@@ -20,7 +20,8 @@
 			font-size: @b-fs - 2;
 			line-height: @b-lh - 6;
 			font-weight: 300;
-			margin-bottom: 20px;	
+			margin-bottom: 20px;
+			color: @b-color;	
 			&.is--modal{
 				margin-top: 20px;
 				padding-left: 70px;
@@ -1338,6 +1339,9 @@
 			}
 			&.is--check{
 				opacity: 0;
+			}
+			&.is--message{
+				color:fadeout(@green-dim, 0%);
 			}
 			.card-item__card:hover &,
 			.card-item__card.is--active &{

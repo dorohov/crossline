@@ -482,12 +482,22 @@
 		@media @media-point-xxl {	
 			left: @navbar_width_xxl;			
 		}
+		&.is--left{
+		}
 		&.in{
 			transform: translate(100%, 0);
 			@media @media-point-smart {
 				transform: translate(0%, 0%);
 			}
 		}	
+		&.is--left{
+			&.in{
+				transform: translate(0%, 0);
+				@media @media-point-smart {
+					transform: translate(0%, 0%);
+				}
+			}
+		}
 	}
 	&dialog {
 		.modal-dialog();
@@ -497,6 +507,9 @@
 		}	
 		&.is--meeting-create{
 			background-color: @green-dark;
+		}
+		&.is--left{
+			padding-bottom: 0;
 		}
 	}
 	&body{
