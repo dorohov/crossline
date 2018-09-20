@@ -4,12 +4,17 @@
 		height: ~"calc(100vh - @{navbar-device})";
 		//height: ~"calc(100vh - @{navbar-device} - 55px)";
 		//height: ~"calc(100vh - 55px)";
-		html.mobile &{
-			height: ~"calc(100vh - @{navbar-device} - 57px)";
+		html.mobile.chrome &{		
+			@media @media-point-smart {
+				height: ~"calc(100vh - @{navbar-device} - 57px)";
+			}			
 		}			
 		html.yabrowser.mobile &{			
-			@media @media-point-xs-p {
+			@media @media-point-xxs {
 				height: ~"calc(100vh - @{navbar-device} - 35px)";
+			}			
+			@media @media-point-xs {				
+				height: ~"calc(100vh - @{navbar-device} - 60px)";
 			}	
 		}
 		html.safari.mobile &{
